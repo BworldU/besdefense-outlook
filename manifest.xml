@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" 
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+           xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.1" 
+           xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides/1.0" 
+           xsi:type="MailApp">
+
+  <!-- Begin Basic Settings: Add-in metadata, used for all versions of Office unless override provided. -->
+  <Id>BESdefense-Outlook-Quantum-Neural</Id>
+  <Version>2025.1.0</Version>
+  <ProviderName>Bright Eke Systems</ProviderName>
+  <DefaultLocale>en-US</DefaultLocale>
+  <DisplayName DefaultValue="BESdefense QUANTUM NEURAL" />
+  <Description DefaultValue="Revolutionary Quantum-Neural Email Security and Threat Intelligence for Microsoft 365" />
+  <IconUrl DefaultValue="https://besdefense.com/assets/icon-32.png"/>
+  <HighResolutionIconUrl DefaultValue="https://besdefense.com/assets/icon-80.png"/>
+  <SupportUrl DefaultValue="https://besdefense.com/support" />
+  
+  <!-- Hosts: Outlook Desktop, Web, and Mobile -->
+  <Hosts>
+    <Host xsi:type="MailHost" />
+  </Hosts>
+  
+  <!-- Requirements: Office.js API sets -->
+  <Requirements>
+    <Sets>
+      <Set Name="Mailbox" MinVersion="1.1" />
+    </Sets>
+  </Requirements>
+  
+  <!-- Form Settings: Specify which item types and contexts the add-in supports -->
+  <FormSettings>
+    <Form xsi:type="ItemRead">
+      <DesktopSettings>
+        <SourceLocation DefaultValue="https://besdefense.com/outlook/index.html"/>
+        <RequestedHeight>450</RequestedHeight>
+      </DesktopSettings>
+      <TabletSettings>
+        <SourceLocation DefaultValue="https://besdefense.com/outlook/index.html"/>
+        <RequestedHeight>450</RequestedHeight>
+      </TabletSettings>
+      <PhoneSettings>
+        <SourceLocation DefaultValue="https://besdefense.com/outlook/index.html"/>
+      </PhoneSettings>
+    </Form>
+    <Form xsi:type="ItemEdit">
+      <DesktopSettings>
+        <SourceLocation DefaultValue="https://besdefense.com/outlook/index.html"/>
+        <RequestedHeight>450</RequestedHeight>
+      </DesktopSettings>
+      <TabletSettings>
+        <SourceLocation DefaultValue="https://besdefense.com/outlook/index.html"/>
+        <RequestedHeight>450</RequestedHeight>
+      </TabletSettings>
+      <PhoneSettings>
+        <SourceLocation DefaultValue="https://besdefense.com/outlook/index.html"/>
+      </PhoneSettings>
+    </Form>
+  </FormSettings>
+
+  <!-- Permissions: Specify the level of permissions the add-in requests -->
+  <Permissions>ReadWriteMailbox</Permissions>
+  
+  <!-- Dictionary: Unused for mail add-ins -->
+  <Rule xsi:type="RuleCollection" Mode="Or">
+    <Rule xsi:type="ItemIs" ItemType="Message" FormType="Read" />
+    <Rule xsi:type="ItemIs" ItemType="Message" FormType="Edit" />
+    <Rule xsi:type="ItemIs" ItemType="Appointment" FormType="Read" />
+    <Rule xsi:type="ItemIs" ItemType="Appointment" FormType="Edit" />
+  </Rule>
+  
+</OfficeApp>
