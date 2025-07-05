@@ -32,28 +32,28 @@
   <FormSettings>
     <Form xsi:type="ItemRead">
       <DesktopSettings>
-        <SourceLocation DefaultValue="https://besdefense.com/outlook/index.html"/>
+        <SourceLocation DefaultValue="https://bworldu.github.io/besdefense-outlook/index.html"/>
         <RequestedHeight>450</RequestedHeight>
       </DesktopSettings>
       <TabletSettings>
-        <SourceLocation DefaultValue="https://besdefense.com/outlook/index.html"/>
+        <SourceLocation DefaultValue="https://bworldu.github.io/besdefense-outlook/index.html"/>
         <RequestedHeight>450</RequestedHeight>
       </TabletSettings>
       <PhoneSettings>
-        <SourceLocation DefaultValue="https://besdefense.com/outlook/index.html"/>
+        <SourceLocation DefaultValue="https://bworldu.github.io/besdefense-outlook/index.html"/>
       </PhoneSettings>
     </Form>
     <Form xsi:type="ItemEdit">
       <DesktopSettings>
-        <SourceLocation DefaultValue="https://besdefense.com/outlook/index.html"/>
+        <SourceLocation DefaultValue="https://bworldu.github.io/besdefense-outlook/index.html"/>
         <RequestedHeight>450</RequestedHeight>
       </DesktopSettings>
       <TabletSettings>
-        <SourceLocation DefaultValue="https://besdefense.com/outlook/index.html"/>
+        <SourceLocation DefaultValue="https://bworldu.github.io/besdefense-outlook/index.html"/>
         <RequestedHeight>450</RequestedHeight>
       </TabletSettings>
       <PhoneSettings>
-        <SourceLocation DefaultValue="https://besdefense.com/outlook/index.html"/>
+        <SourceLocation DefaultValue="https://bworldu.github.io/besdefense-outlook/index.html"/>
       </PhoneSettings>
     </Form>
   </FormSettings>
