@@ -3,1062 +3,497 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BESdefense QUANTUM NEURAL</title>
-    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+    <title>BESdefense QUANTUM NEURAL - 2030</title>
     <style>
-        /* OUTLOOK TASK PANE OPTIMIZED STYLES */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #0f1419 0%, #1a2332 50%, #2d3748 100%);
-            color: #ffffff;
-            overflow-x: hidden;
-            min-height: 100vh;
-            position: relative;
-            width: 100%;
+            font-family: 'Inter', system-ui, sans-serif;
+            background: radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%), linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #16213e 100%);
+            color: #e2e8f0; min-height: 100vh; overflow-x: hidden; position: relative; perspective: 1000px;
         }
-
-        /* Quantum particle effects optimized for narrow width */
-        .quantum-particles {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            z-index: 1;
-            pointer-events: none;
-        }
-
-        .particle {
-            position: absolute;
-            width: 2px;
-            height: 2px;
-            background: #00d4ff;
-            border-radius: 50%;
-            animation: quantumFloat 8s infinite linear;
-            opacity: 0.6;
-        }
-
-        @keyframes quantumFloat {
-            0% { transform: translateY(100vh) translateX(0); opacity: 0; }
-            10% { opacity: 1; }
-            90% { opacity: 1; }
-            100% { transform: translateY(-10px) translateX(20px); opacity: 0; }
-        }
-
-        /* Main container optimized for task pane */
-        .container {
-            position: relative;
-            z-index: 10;
-            width: 100%;
-            max-width: 320px;
-            margin: 0 auto;
-            padding: 8px;
-        }
-
-        /* Header optimized for narrow width */
-        .header {
-            text-align: center;
-            margin-bottom: 12px;
-            background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
-            padding: 12px 8px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
-        }
-
-        .header h1 {
-            font-size: 16px;
-            font-weight: 700;
-            background: linear-gradient(45deg, #ffffff, #e2e8f0);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-            margin-bottom: 4px;
-        }
-
-        .header .subtitle {
-            font-size: 10px;
-            color: #cbd5e0;
-            font-weight: 300;
-        }
-
-        /* Status grid optimized for narrow display */
-        .status-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 6px;
-            margin-bottom: 12px;
-        }
-
-        .status-card {
-            background: linear-gradient(135deg, rgba(45, 55, 72, 0.8), rgba(26, 35, 50, 0.9));
-            border: 1px solid rgba(102, 126, 234, 0.3);
-            border-radius: 6px;
-            padding: 8px;
-            text-align: center;
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-        }
-
-        .status-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
-            border-color: rgba(102, 126, 234, 0.6);
-        }
-
-        .status-value {
-            font-size: 12px;
-            font-weight: 700;
-            color: #48bb78;
-            display: block;
-            margin-bottom: 2px;
-        }
-
-        .status-label {
-            font-size: 8px;
-            color: #a0aec0;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        /* Threat analysis section optimized */
-        .threat-analysis {
-            background: linear-gradient(135deg, rgba(251, 191, 36, 0.1), rgba(245, 101, 101, 0.1));
-            border: 1px solid rgba(251, 191, 36, 0.3);
-            border-radius: 8px;
-            padding: 10px;
-            margin-bottom: 12px;
-        }
-
-        .threat-analysis h3 {
-            font-size: 12px;
-            color: #fbbf24;
-            margin-bottom: 8px;
-            display: flex;
-            align-items: center;
-            gap: 4px;
-        }
-
-        .threat-metrics {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 6px;
-        }
-
-        .threat-metric {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 9px;
-            margin-bottom: 3px;
-        }
-
-        .metric-label {
-            color: #e2e8f0;
-        }
-
-        .metric-value {
-            font-weight: 700;
-            color: #48bb78;
-        }
-
-        .metric-value.secure { color: #48bb78; }
-        .metric-value.warning { color: #fbbf24; }
-        .metric-value.danger { color: #f56565; }
-
-        /* Integration section optimized */
-        .integration-section {
-            background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(59, 130, 246, 0.1));
-            border: 1px solid rgba(139, 92, 246, 0.3);
-            border-radius: 8px;
-            padding: 10px;
-            margin-bottom: 12px;
-        }
-
-        .integration-section h3 {
-            font-size: 12px;
-            color: #8b5cf6;
-            margin-bottom: 8px;
-            display: flex;
-            align-items: center;
-            gap: 4px;
-        }
-
-        /* Action buttons optimized for narrow width */
-        .action-buttons {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            margin-bottom: 12px;
-        }
-
-        .action-btn {
-            background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
-            border: none;
-            color: white;
-            padding: 10px 12px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 11px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-            width: 100%;
-        }
-
-        .action-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
-        }
-
-        .action-btn.secondary {
-            background: linear-gradient(45deg, #4a5568 0%, #2d3748 100%);
-        }
-
-        .action-btn.secondary:hover {
-            box-shadow: 0 6px 20px rgba(74, 85, 104, 0.4);
-        }
-
-        /* Footer optimized */
-        .footer {
-            text-align: center;
-            padding: 8px;
-            border-top: 1px solid rgba(102, 126, 234, 0.2);
-            margin-top: 8px;
-        }
-
-        .footer-brand {
-            font-size: 9px;
-            color: #718096;
-            margin-bottom: 2px;
-        }
-
-        .footer-version {
-            font-size: 8px;
-            color: #4a5568;
-        }
-
-        /* Modal optimized for task pane */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.95);
-            z-index: 1000;
-            backdrop-filter: blur(10px);
-        }
-
-        .modal-content {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, #1a202c, #2d3748);
-            padding: 8px;
-            border-radius: 0;
-            overflow-y: auto;
-            border: none;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .modal h2 {
-            font-size: 12px;
-            color: #667eea;
-            margin-bottom: 8px;
-            text-align: center;
-            padding-right: 25px;
-            flex-shrink: 0;
-        }
-
-        .modal-section {
-            margin-bottom: 8px;
-            padding: 6px;
-            background: rgba(45, 55, 72, 0.5);
-            border-radius: 6px;
-            flex-shrink: 0;
-        }
-
-        .modal-section h3 {
-            font-size: 10px;
-            color: #fbbf24;
-            margin-bottom: 6px;
-            display: flex;
-            align-items: center;
-            gap: 4px;
-        }
-
-        .modal-metric {
-            display: flex;
-            justify-content: space-between;
-            font-size: 8px;
-            margin-bottom: 3px;
-            padding: 2px 0;
-        }
-
-        .modal-metric span:first-child {
-            color: #e2e8f0;
-            font-size: 8px;
-        }
-
-        .modal-metric span:last-child {
-            color: #48bb78;
-            font-weight: 600;
-            font-size: 8px;
-        }
-
-        .close-btn {
-            position: fixed;
-            top: 8px;
-            right: 8px;
-            background: #ef4444;
-            border: none;
-            color: white;
-            font-size: 10px;
-            cursor: pointer;
-            padding: 4px 6px;
-            width: auto;
-            height: auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 1001;
-            border-radius: 4px;
-            font-weight: 600;
-        }
-
-        .close-btn:hover {
-            background: #dc2626;
-        }
-
-        .modal-content {
-            position: absolute;
-            top: 5%;
-            left: 50%;
-            transform: translateX(-50%);
-            background: linear-gradient(135deg, #1a202c, #2d3748);
-            padding: 12px;
-            border-radius: 8px;
-            width: 95%;
-            max-width: 300px;
-            max-height: 90vh;
-            overflow-y: auto;
-            border: 2px solid rgba(102, 126, 234, 0.5);
-        }
-
-        .modal h2 {
-            font-size: 12px;
-            color: #667eea;
-            margin-bottom: 8px;
-            text-align: center;
-            padding-right: 20px;
-        }
-
-        .modal-section {
-            margin-bottom: 8px;
-            padding: 6px;
-            background: rgba(45, 55, 72, 0.5);
-            border-radius: 4px;
-        }
-
-        .modal-section h3 {
-            font-size: 10px;
-            color: #fbbf24;
-            margin-bottom: 4px;
-        }
-
-        .modal-metric {
-            display: flex;
-            justify-content: space-between;
-            font-size: 8px;
-            margin-bottom: 2px;
-            padding: 2px 0;
-        }
-
-        .modal-metric span:first-child {
-            color: #e2e8f0;
-            font-size: 8px;
-        }
-
-        .modal-metric span:last-child {
-            color: #48bb78;
-            font-weight: 600;
-            font-size: 8px;
-        }
-
-        .close-btn {
-            position: absolute;
-            top: 4px;
-            right: 8px;
-            background: none;
-            border: none;
-            color: #a0aec0;
-            font-size: 16px;
-            cursor: pointer;
-            padding: 0;
-            width: 20px;
-            height: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 10;
-        }
-
-        .close-btn:hover {
-            color: #ffffff;
-        }
-
-        /* Email analysis results */
-        .email-analysis {
-            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(5, 150, 105, 0.1));
-            border: 1px solid rgba(16, 185, 129, 0.3);
-            border-radius: 8px;
-            padding: 10px;
-            margin-bottom: 12px;
-        }
-
-        .email-analysis h3 {
-            font-size: 12px;
-            color: #10b981;
-            margin-bottom: 8px;
-            display: flex;
-            align-items: center;
-            gap: 4px;
-        }
-
-        .analysis-result {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 10px;
-            margin-bottom: 4px;
-            padding: 4px 8px;
-            background: rgba(16, 185, 129, 0.1);
-            border-radius: 4px;
-        }
-
-        /* Responsive adjustments for very narrow widths */
-        @media (max-width: 300px) {
-            .container {
-                padding: 4px;
-            }
-            
-            .status-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .header h1 {
-                font-size: 14px;
-            }
-            
-            .action-btn {
-                font-size: 10px;
-                padding: 8px 10px;
-            }
-        }
+        .neural-network { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1; }
+        .neural-node { position: absolute; width: 4px; height: 4px; border-radius: 50%; background: radial-gradient(circle, #00ffff 0%, transparent 70%); animation: neuralPulse 3s ease-in-out infinite; }
+        .neural-connection { position: absolute; height: 1px; background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.3), transparent); animation: neuralFlow 4s linear infinite; }
+        @keyframes neuralPulse { 0%, 100% { opacity: 0.4; transform: scale(1); box-shadow: 0 0 5px rgba(0, 255, 255, 0.5); } 50% { opacity: 1; transform: scale(1.5); box-shadow: 0 0 15px rgba(0, 255, 255, 0.8); } }
+        @keyframes neuralFlow { 0% { width: 0; opacity: 0; } 20% { opacity: 1; } 80% { opacity: 1; } 100% { width: 100px; opacity: 0; } }
+        .container { padding: 16px; position: relative; z-index: 10; transform-style: preserve-3d; }
+        .header { background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(147, 51, 234, 0.1) 50%, rgba(59, 130, 246, 0.1) 100%); backdrop-filter: blur(25px) saturate(180%); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 24px; padding: 24px; text-align: center; margin-bottom: 24px; position: relative; overflow: hidden; transform: translateZ(20px); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2); }
+        .header::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: conic-gradient(from 0deg, transparent, rgba(59, 130, 246, 0.3), transparent); animation: holoSpin 8s linear infinite; z-index: -1; }
+        @keyframes holoSpin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        .header h1 { font-size: 22px; font-weight: 900; margin-bottom: 8px; background: linear-gradient(135deg, #ffffff 0%, #00ffff 25%, #ffffff 50%, #ff00ff 75%, #ffffff 100%); background-size: 300% 300%; background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; animation: holographicText 4s ease infinite; position: relative; z-index: 1; }
+        @keyframes holographicText { 0%, 100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+        .header p { font-size: 13px; opacity: 0.9; font-weight: 600; color: #cbd5e1; position: relative; z-index: 1; }
+        .status-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; }
+        .status-card { background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(20px) saturate(180%); border: 1px solid rgba(59, 130, 246, 0.3); border-radius: 20px; padding: 20px; text-align: center; transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; }
+        .status-card:hover { transform: translateY(-8px) translateZ(30px) rotateX(5deg); box-shadow: 0 30px 60px rgba(59, 130, 246, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.3); border-color: rgba(59, 130, 246, 0.8); }
+        .status-value { font-size: 18px; font-weight: 900; background: linear-gradient(135deg, #00ff88 0%, #00ffff 50%, #0088ff 100%); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 8px; filter: drop-shadow(0 0 10px rgba(0, 255, 136, 0.5)); }
+        .status-label { font-size: 11px; color: rgba(255, 255, 255, 0.7); text-transform: uppercase; letter-spacing: 2px; font-weight: 700; }
+        .analysis-section { background: rgba(15, 23, 42, 0.7); backdrop-filter: blur(25px) saturate(180%); border: 1px solid rgba(34, 197, 94, 0.4); border-radius: 24px; padding: 24px; margin-bottom: 24px; position: relative; overflow: hidden; }
+        .analysis-section::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, #00ff88 0%, #00ffff 25%, #0088ff 50%, #00ffff 75%, #00ff88 100%); background-size: 400% 100%; animation: neuralScan 3s ease infinite; }
+        @keyframes neuralScan { 0%, 100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+        .section-header { display: flex; align-items: center; margin-bottom: 20px; }
+        .section-icon { font-size: 18px; margin-right: 12px; filter: drop-shadow(0 0 10px rgba(34, 197, 94, 0.8)); animation: iconQuantum 4s ease infinite; }
+        @keyframes iconQuantum { 0%, 100% { transform: scale(1) rotate(0deg); filter: drop-shadow(0 0 10px rgba(34, 197, 94, 0.8)); } 50% { transform: scale(1.1) rotate(180deg); filter: drop-shadow(0 0 20px rgba(0, 255, 255, 0.8)); } }
+        .section-title { font-size: 18px; font-weight: 900; background: linear-gradient(135deg, #00ff88 0%, #00ffff 50%, #ffffff 100%); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .analysis-row { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid rgba(34, 197, 94, 0.2); transition: all 0.4s ease; }
+        .analysis-row:last-child { border-bottom: none; }
+        .analysis-row:hover { background: rgba(34, 197, 94, 0.1); padding-left: 16px; padding-right: 16px; border-radius: 12px; transform: translateX(8px); box-shadow: 0 4px 20px rgba(34, 197, 94, 0.3); }
+        .analysis-label { font-size: 14px; color: #e2e8f0; font-weight: 600; }
+        .analysis-value { font-size: 14px; font-weight: 900; background: linear-gradient(135deg, #00ff88 0%, #00ffff 100%); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; filter: drop-shadow(0 0 8px rgba(0, 255, 136, 0.6)); }
+        .intelligence-section { background: rgba(15, 23, 42, 0.7); backdrop-filter: blur(25px) saturate(180%); border: 1px solid rgba(251, 146, 60, 0.4); border-radius: 24px; padding: 24px; margin-bottom: 24px; position: relative; overflow: hidden; }
+        .intelligence-section::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, #ff6b35 0%, #f7931e 25%, #ffcd3c 50%, #f7931e 75%, #ff6b35 100%); background-size: 400% 100%; animation: quantumPulse 3s ease infinite; }
+        @keyframes quantumPulse { 0%, 100% { background-position: 0% 50%; opacity: 0.8; } 50% { background-position: 100% 50%; opacity: 1; } }
+        .intelligence-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; }
+        .intel-item { text-align: center; padding: 16px; background: rgba(251, 146, 60, 0.1); border-radius: 16px; transition: all 0.4s ease; cursor: pointer; }
+        .intel-item:hover { transform: translateY(-4px) scale(1.05); background: rgba(251, 146, 60, 0.2); box-shadow: 0 8px 25px rgba(251, 146, 60, 0.4); }
+        .intel-value { font-size: 16px; font-weight: 900; background: linear-gradient(135deg, #ff6b35 0%, #ffcd3c 100%); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 6px; filter: drop-shadow(0 0 10px rgba(255, 107, 53, 0.6)); }
+        .intel-label { font-size: 10px; color: rgba(255, 255, 255, 0.7); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+        .microsoft-section { background: rgba(15, 23, 42, 0.7); backdrop-filter: blur(25px) saturate(180%); border: 1px solid rgba(56, 189, 248, 0.4); border-radius: 24px; padding: 24px; margin-bottom: 24px; position: relative; overflow: hidden; }
+        .microsoft-section::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, #0078d4 0%, #00bcf2 25%, #40e0d0 50%, #00bcf2 75%, #0078d4 100%); background-size: 400% 100%; animation: microsoftFlow 3s ease infinite; }
+        @keyframes microsoftFlow { 0%, 100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+        .microsoft-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; }
+        .ms-item { text-align: center; padding: 16px; background: rgba(56, 189, 248, 0.1); border-radius: 16px; transition: all 0.4s ease; cursor: pointer; }
+        .ms-item:hover { transform: translateY(-4px) scale(1.05); background: rgba(56, 189, 248, 0.2); box-shadow: 0 8px 25px rgba(56, 189, 248, 0.4); }
+        .ms-value { font-size: 16px; font-weight: 900; background: linear-gradient(135deg, #0078d4 0%, #40e0d0 100%); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 6px; filter: drop-shadow(0 0 10px rgba(0, 120, 212, 0.6)); }
+        .ms-label { font-size: 10px; color: rgba(255, 255, 255, 0.7); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+        .action-buttons { display: flex; flex-direction: column; gap: 16px; margin-bottom: 24px; }
+        .action-btn { background: linear-gradient(135deg, rgba(59, 130, 246, 0.8) 0%, rgba(147, 51, 234, 0.8) 50%, rgba(59, 130, 246, 0.8) 100%); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 20px; padding: 20px; color: white; font-size: 16px; font-weight: 900; cursor: pointer; transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1); text-transform: uppercase; letter-spacing: 2px; position: relative; overflow: hidden; text-align: center; display: block; text-decoration: none; }
+        .action-btn::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent); transition: left 0.8s ease; }
+        .action-btn:hover { transform: translateY(-6px) translateZ(20px) rotateX(5deg); box-shadow: 0 20px 40px rgba(59, 130, 246, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.4); }
+        .action-btn:hover::before { left: 100%; }
+        .action-btn .btn-icon { margin-right: 10px; font-size: 18px; filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8)); }
+        .footer { text-align: center; padding: 20px; border-top: 1px solid rgba(255, 255, 255, 0.1); font-size: 11px; color: rgba(255, 255, 255, 0.6); background: rgba(15, 23, 42, 0.5); backdrop-filter: blur(15px); border-radius: 16px; }
+        
+        /* WORKING CHECKBOX MODAL SYSTEM */
+        .modal-checkbox { display: none; }
+        .modal-checkbox:checked + .modal { display: block; }
+        
+        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 30% 70%, rgba(59, 130, 246, 0.2) 0%, transparent 50%), radial-gradient(circle at 70% 30%, rgba(147, 51, 234, 0.2) 0%, transparent 50%), rgba(0, 0, 0, 0.95); backdrop-filter: blur(30px) saturate(180%); z-index: 1000; animation: modalQuantumFadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
+        @keyframes modalQuantumFadeIn { from { opacity: 0; backdrop-filter: blur(0px); transform: scale(0.9); } to { opacity: 1; backdrop-filter: blur(30px) saturate(180%); transform: scale(1); } }
+        .modal-content { background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.98) 25%, rgba(15, 23, 42, 0.95) 50%, rgba(30, 41, 59, 0.98) 75%, rgba(15, 23, 42, 0.95) 100%); background-size: 400% 400%; animation: neuralBackgroundShift 12s ease infinite; margin: 0; padding: 0; width: 100%; height: 100%; border: none; border-radius: 0; position: relative; overflow-y: auto; backdrop-filter: blur(40px) saturate(200%); box-shadow: 0 0 200px rgba(59, 130, 246, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.15); }
+        @keyframes neuralBackgroundShift { 0%, 100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+        .modal-header { background: linear-gradient(135deg, rgba(59, 130, 246, 0.9) 0%, rgba(147, 51, 234, 0.9) 25%, rgba(59, 130, 246, 0.9) 50%, rgba(147, 51, 234, 0.9) 75%, rgba(59, 130, 246, 0.9) 100%); background-size: 400% 400%; animation: headerQuantumShift 8s ease infinite; padding: 28px 32px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1001; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.3); backdrop-filter: blur(30px); border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
+        @keyframes headerQuantumShift { 0%, 100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+        .modal-header::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: conic-gradient(from 0deg, transparent, rgba(255, 255, 255, 0.3), transparent); animation: quantumSpin 6s linear infinite; z-index: -1; }
+        @keyframes quantumSpin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        .modal-title { font-size: 18px; font-weight: 900; color: white; display: flex; align-items: center; }
+        .modal-title .icon { margin-right: 10px; font-size: 20px; }
+        .close-btn { background: linear-gradient(135deg, rgba(239, 68, 68, 0.9) 0%, rgba(220, 38, 38, 0.9) 50%, rgba(185, 28, 28, 0.9) 100%); color: white; padding: 8px 16px; border-radius: 8px; cursor: pointer; font-size: 12px; font-weight: 900; text-transform: uppercase; letter-spacing: 1px; text-decoration: none; display: inline-block; }
+        .modal-body { padding: 10px; overflow-y: auto; height: calc(100vh - 100px); max-height: none; }
+        .modal-section { background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(30px) saturate(200%); border: 1px solid rgba(59, 130, 246, 0.6); border-radius: 12px; padding: 12px; margin-bottom: 10px; position: relative; overflow: hidden; transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.15); }
+        .modal-section::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #00ff88 0%, #00ffff 20%, #0088ff 40%, #8800ff 60%, #ff0088 80%, #ff8800 100%); background-size: 600% 100%; animation: quantumRainbow 4s ease infinite; }
+        @keyframes quantumRainbow { 0%, 100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+        .modal-section:hover { transform: translateY(-6px) translateZ(30px) rotateX(2deg); box-shadow: 0 25px 60px rgba(59, 130, 246, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.3); border-color: rgba(59, 130, 246, 0.9); }
+        .modal-section-header { display: flex; align-items: center; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid rgba(59, 130, 246, 0.5); }
+        .modal-section-icon { font-size: 18px; margin-right: 12px; filter: drop-shadow(0 2px 10px rgba(0,0,0,0.5)) drop-shadow(0 0 20px rgba(251, 191, 36, 0.6)); animation: sectionIconQuantum 6s ease infinite; }
+        @keyframes sectionIconQuantum { 0%, 100% { transform: scale(1) rotateZ(0deg); filter: drop-shadow(0 2px 10px rgba(0,0,0,0.5)) drop-shadow(0 0 20px rgba(251, 191, 36, 0.6)); } 33% { transform: scale(1.1) rotateZ(120deg); filter: drop-shadow(0 2px 15px rgba(0,0,0,0.7)) drop-shadow(0 0 25px rgba(0, 255, 255, 0.8)); } 66% { transform: scale(1.05) rotateZ(240deg); filter: drop-shadow(0 2px 12px rgba(0,0,0,0.6)) drop-shadow(0 0 22px rgba(255, 0, 255, 0.7)); } }
+        .modal-section-title { font-size: 18px; font-weight: 900; background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 25%, #d97706 50%, #92400e 75%, #fbbf24 100%); background-size: 300% 300%; background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; animation: titleQuantumShift 4s ease infinite; text-shadow: 0 2px 10px rgba(0,0,0,0.5); }
+        @keyframes titleQuantumShift { 0%, 100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+        .modal-row { display: flex; justify-content: space-between; align-items: center; padding: 6px 10px; border-bottom: 1px solid rgba(59, 130, 246, 0.25); min-height: 28px; transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1); border-radius: 6px; margin-bottom: 1px; position: relative; overflow: hidden; }
+        .modal-row:last-child { border-bottom: none; margin-bottom: 0; }
+        .modal-row::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(147, 51, 234, 0.2) 50%, rgba(0, 255, 255, 0.2) 100%); transition: left 0.8s ease; }
+        .modal-row:hover { background: rgba(59, 130, 246, 0.15); transform: translateX(8px) scale(1.01); box-shadow: 0 6px 25px rgba(59, 130, 246, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2); border-color: rgba(59, 130, 246, 0.6); }
+        .modal-row:hover::before { left: 0; }
+        .modal-label { font-size: 13px; color: #f1f5f9; flex: 1; font-weight: 700; line-height: 1.3; text-shadow: 0 1px 4px rgba(0,0,0,0.4); transition: all 0.4s ease; }
+        .modal-row:hover .modal-label { color: #ffffff; text-shadow: 0 1px 6px rgba(0,0,0,0.6); transform: translateX(4px); }
+        .modal-value { font-size: 13px; font-weight: 900; background: linear-gradient(135deg, #00ff88 0%, #00ffff 25%, #0088ff 50%, #8800ff 75%, #00ff88 100%); background-size: 300% 300%; background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; animation: valueQuantumShift 3s ease infinite; text-align: right; flex: 1; line-height: 1.3; text-shadow: 0 2px 10px rgba(0,0,0,0.5); transition: all 0.4s ease; }
+        @keyframes valueQuantumShift { 0%, 100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+        .modal-row:hover .modal-value { filter: drop-shadow(0 0 12px rgba(0, 255, 136, 0.8)); transform: translateX(-4px) scale(1.05); }
     </style>
 </head>
 <body>
-    <div class="quantum-particles" id="particles"></div>
+    <div class="neural-network" id="neuralNetwork">
+        <!-- STATIC NEURAL NODES -->
+        <div class="neural-node" style="left: 10%; top: 20%;"></div>
+        <div class="neural-node" style="left: 30%; top: 40%;"></div>
+        <div class="neural-node" style="left: 70%; top: 10%;"></div>
+        <div class="neural-node" style="left: 80%; top: 60%;"></div>
+        <div class="neural-node" style="left: 50%; top: 80%;"></div>
+        <div class="neural-node" style="left: 15%; top: 75%;"></div>
+        <div class="neural-node" style="left: 85%; top: 25%;"></div>
+        <div class="neural-node" style="left: 45%; top: 15%;"></div>
+        <div class="neural-node" style="left: 65%; top: 85%;"></div>
+        <div class="neural-node" style="left: 25%; top: 55%;"></div>
+        <!-- STATIC NEURAL CONNECTIONS -->
+        <div class="neural-connection" style="left: 20%; top: 30%; width: 80px; transform: rotate(45deg);"></div>
+        <div class="neural-connection" style="left: 60%; top: 50%; width: 60px; transform: rotate(120deg);"></div>
+        <div class="neural-connection" style="left: 40%; top: 70%; width: 100px; transform: rotate(270deg);"></div>
+        <div class="neural-connection" style="left: 75%; top: 20%; width: 90px; transform: rotate(30deg);"></div>
+        <div class="neural-connection" style="left: 35%; top: 60%; width: 70px; transform: rotate(150deg);"></div>
+    </div>
     
     <div class="container">
-        <!-- Optimized Header -->
         <div class="header">
             <h1>BESdefense QUANTUM</h1>
-            <div class="subtitle">Neural Email Security</div>
+            <p>Neural Email Security • 2030 Interface</p>
         </div>
-
-        <!-- Compact Status Grid -->
+        
         <div class="status-grid">
             <div class="status-card">
-                <span class="status-value">ACTIVE</span>
-                <span class="status-label">Quantum</span>
+                <div class="status-value">ACTIVE</div>
+                <div class="status-label">QUANTUM</div>
             </div>
             <div class="status-card">
-                <span class="status-value">ONLINE</span>
-                <span class="status-label">Core</span>
+                <div class="status-value">ONLINE</div>
+                <div class="status-label">CORE</div>
             </div>
             <div class="status-card">
-                <span class="status-value">500M+</span>
-                <span class="status-label">Signatures</span>
+                <div class="status-value">500M+</div>
+                <div class="status-label">SIGNATURES</div>
             </div>
             <div class="status-card">
-                <span class="status-value">0.001s</span>
-                <span class="status-label">Speed</span>
+                <div class="status-value">0.001s</div>
+                <div class="status-label">SPEED</div>
             </div>
         </div>
-
-        <!-- Email Analysis Results -->
-        <div class="email-analysis" id="emailAnalysis">
-            <h3>📧 Current Email Analysis</h3>
-            <div class="analysis-result">
-                <span>Email Classification:</span>
-                <span class="metric-value secure" id="emailClassification">SECURE</span>
+        
+        <div class="analysis-section">
+            <div class="section-header">
+                <span class="section-icon">🧠</span>
+                <span class="section-title">Neural Email Analysis</span>
             </div>
-            <div class="analysis-result">
-                <span>Confidence Level:</span>
-                <span class="metric-value secure" id="confidenceLevel">99.97%</span>
+            <div class="analysis-row">
+                <span class="analysis-label">Email Classification:</span>
+                <span class="analysis-value" id="emailClassification">SECURE</span>
             </div>
-            <div class="analysis-result">
-                <span>BEC Risk:</span>
-                <span class="metric-value secure" id="becRisk">MINIMAL</span>
+            <div class="analysis-row">
+                <span class="analysis-label">Confidence Level:</span>
+                <span class="analysis-value" id="confidenceLevel">99.97%</span>
             </div>
-            <div class="analysis-result">
-                <span>Protection Value:</span>
-                <span class="metric-value secure" id="protectionValue">$285K+</span>
+            <div class="analysis-row">
+                <span class="analysis-label">BEC Risk:</span>
+                <span class="analysis-value" id="becRisk">MINIMAL</span>
             </div>
-        </div>
-
-        <!-- Compact Threat Analysis -->
-        <div class="threat-analysis">
-            <h3>🎯 Global Intelligence</h3>
-            <div class="threat-metrics">
-                <div class="threat-metric">
-                    <span class="metric-label">Active Threats:</span>
-                    <span class="metric-value warning">1,247</span>
-                </div>
-                <div class="threat-metric">
-                    <span class="metric-label">Success Rate:</span>
-                    <span class="metric-value secure">98.7%</span>
-                </div>
-                <div class="threat-metric">
-                    <span class="metric-label">Countries:</span>
-                    <span class="metric-value">195+</span>
-                </div>
-                <div class="threat-metric">
-                    <span class="metric-label">Response:</span>
-                    <span class="metric-value secure">&lt;0.001s</span>
-                </div>
+            <div class="analysis-row">
+                <span class="analysis-label">Protection Value:</span>
+                <span class="analysis-value">$285K+</span>
             </div>
         </div>
-
-        <!-- Compact Integration Status -->
-        <div class="integration-section">
-            <h3>🔗 Microsoft 365</h3>
-            <div class="threat-metrics">
-                <div class="threat-metric">
-                    <span class="metric-label">Integration:</span>
-                    <span class="metric-value secure">ENTERPRISE</span>
+        
+        <div class="intelligence-section">
+            <div class="section-header">
+                <span class="section-icon">🌌</span>
+                <span class="section-title">Quantum Intelligence</span>
+            </div>
+            <div class="intelligence-grid">
+                <div class="intel-item">
+                    <div class="intel-value">1,247</div>
+                    <div class="intel-label">ACTIVE THREATS</div>
                 </div>
-                <div class="threat-metric">
-                    <span class="metric-label">Status:</span>
-                    <span class="metric-value secure">CONNECTED</span>
+                <div class="intel-item">
+                    <div class="intel-value">98.7%</div>
+                    <div class="intel-label">SUCCESS RATE</div>
                 </div>
-                <div class="threat-metric">
-                    <span class="metric-label">Platforms:</span>
-                    <span class="metric-value">ALL</span>
+                <div class="intel-item">
+                    <div class="intel-value">195+</div>
+                    <div class="intel-label">COUNTRIES</div>
                 </div>
-                <div class="threat-metric">
-                    <span class="metric-label">Level:</span>
-                    <span class="metric-value secure">MAXIMUM</span>
+                <div class="intel-item">
+                    <div class="intel-value">&lt;0.001s</div>
+                    <div class="intel-label">RESPONSE</div>
                 </div>
             </div>
         </div>
-
-        <!-- Optimized Action Buttons -->
+        
+        <div class="microsoft-section">
+            <div class="section-header">
+                <span class="section-icon">⚡</span>
+                <span class="section-title">Microsoft Nexus</span>
+            </div>
+            <div class="microsoft-grid">
+                <div class="ms-item">
+                    <div class="ms-value">QUANTUM</div>
+                    <div class="ms-label">INTEGRATION</div>
+                </div>
+                <div class="ms-item">
+                    <div class="ms-value">NEURAL</div>
+                    <div class="ms-label">STATUS</div>
+                </div>
+                <div class="ms-item">
+                    <div class="ms-value">∞</div>
+                    <div class="ms-label">PLATFORMS</div>
+                </div>
+                <div class="ms-item">
+                    <div class="ms-value">MAXIMUM</div>
+                    <div class="ms-label">LEVEL</div>
+                </div>
+            </div>
+        </div>
+        
         <div class="action-buttons">
-            <button class="action-btn" onclick="generateExecutiveReport()">
-                📊 Generate Report
-            </button>
-            <button class="action-btn secondary" onclick="openCommandCenter()">
-                🖥️ Command Center
-            </button>
+            <label for="executiveCheck" class="action-btn">
+                <span class="btn-icon">🚀</span>
+                GENERATE NEURAL REPORT
+            </label>
+            <label for="commandCheck" class="action-btn">
+                <span class="btn-icon">🌌</span>
+                QUANTUM COMMAND CENTER
+            </label>
         </div>
-
-        <!-- Compact Footer -->
+        
         <div class="footer">
-            <div class="footer-brand">Powered by Bright Eke Systems</div>
-            <div class="footer-version">v2025.1.0-OUTLOOK-QUANTUM | 16+ Languages | Post-Quantum Cryptography</div>
+            <p>Bright Eke Systems | 2030 Neural Security Interface</p>
         </div>
     </div>
 
-    <!-- Executive Report Modal -->
-    <div id="executiveModal" class="modal">
+    <!-- WORKING CHECKBOX MODALS -->
+    <input type="checkbox" id="executiveCheck" class="modal-checkbox">
+    <div class="modal">
         <div class="modal-content">
-            <button class="close-btn" onclick="closeModal()">✕ Close</button>
-            <h2>🚀 BESdefense Quantum Executive Report</h2>
-            
-            <div class="modal-section">
-                <h3>📊 Executive Security Summary</h3>
-                <div class="modal-metric">
-                    <span>Current Email Classification:</span>
-                    <span class="metric-value secure">99.97% SECURE</span>
+            <div class="modal-header">
+                <div class="modal-title">
+                    <span class="icon">🚀</span>
+                    Quantum Executive Analysis
                 </div>
-                <div class="modal-metric">
-                    <span>BEC Attack Prevention:</span>
-                    <span class="metric-value secure">$285K+ Protected</span>
-                </div>
-                <div class="modal-metric">
-                    <span>Threat Confidence Level:</span>
-                    <span class="metric-value secure">MAXIMUM</span>
-                </div>
-                <div class="modal-metric">
-                    <span>Neural Analysis Speed:</span>
-                    <span class="metric-value secure">0.001 seconds</span>
-                </div>
+                <label for="executiveCheck" class="close-btn">✕ CLOSE</label>
             </div>
-
-            <div class="modal-section">
-                <h3>🌍 Global Threat Intelligence</h3>
-                <div class="modal-metric">
-                    <span>Countries Monitored:</span>
-                    <span class="metric-value">195+ Nations</span>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <div class="modal-section-header">
+                        <span class="modal-section-icon">🛡️</span>
+                        <span class="modal-section-title">Neural Security Summary</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Email Classification:</span>
+                        <span class="modal-value">99.97% SECURE</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">BEC Prevention:</span>
+                        <span class="modal-value">$285K+ Protected</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Quantum Confidence:</span>
+                        <span class="modal-value">MAXIMUM</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Neural Speed:</span>
+                        <span class="modal-value">0.001 seconds</span>
+                    </div>
                 </div>
-                <div class="modal-metric">
-                    <span>Threat Pattern Database:</span>
-                    <span class="metric-value">500M+ Signatures</span>
+                
+                <div class="modal-section">
+                    <div class="modal-section-header">
+                        <span class="modal-section-icon">🌍</span>
+                        <span class="modal-section-title">Global Quantum Intelligence</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Monitored Dimensions:</span>
+                        <span class="modal-value">195+ Nations</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Neural Database:</span>
+                        <span class="modal-value">500M+ Signatures</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Quantum Networks:</span>
+                        <span class="modal-value">847 Active Nodes</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Threat Neutralized:</span>
+                        <span class="modal-value">1,247 Eliminated</span>
+                    </div>
                 </div>
-                <div class="modal-metric">
-                    <span>Active Neural Networks:</span>
-                    <span class="metric-value">847 Quantum Nodes</span>
+                
+                <div class="modal-section">
+                    <div class="modal-section-header">
+                        <span class="modal-section-icon">🏢</span>
+                        <span class="modal-section-title">Enterprise Quantum Shield</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Neural Analysis:</span>
+                        <span class="modal-value">50,000+ Daily</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Quantum Savings:</span>
+                        <span class="modal-value">$2.8M Protected</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Compliance Matrix:</span>
+                        <span class="modal-value">SOC 2 Quantum</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Neural Integration:</span>
+                        <span class="modal-value">ENTERPRISE</span>
+                    </div>
                 </div>
-                <div class="modal-metric">
-                    <span>Daily Threat Blocks:</span>
-                    <span class="metric-value warning">1,247 Prevented</span>
+                
+                <div class="modal-section">
+                    <div class="modal-section-header">
+                        <span class="modal-section-icon">🔒</span>
+                        <span class="modal-section-title">Advanced Quantum Security</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Neural Scanning:</span>
+                        <span class="modal-value">ACTIVE</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Behavioral AI:</span>
+                        <span class="modal-value">ENABLED</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Quantum Encryption:</span>
+                        <span class="modal-value">Post-Quantum</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Zero-Day Neural:</span>
+                        <span class="modal-value">MAXIMUM</span>
+                    </div>
                 </div>
-            </div>
-
-            <div class="modal-section">
-                <h3>⚡ Quantum Performance Metrics</h3>
-                <div class="modal-metric">
-                    <span>Email Analysis Speed:</span>
-                    <span class="metric-value secure">0.001 seconds</span>
-                </div>
-                <div class="modal-metric">
-                    <span>Detection Accuracy Rate:</span>
-                    <span class="metric-value secure">99.97%</span>
-                </div>
-                <div class="modal-metric">
-                    <span>System Uptime:</span>
-                    <span class="metric-value secure">99.99%</span>
-                </div>
-                <div class="modal-metric">
-                    <span>Processing Capacity:</span>
-                    <span class="metric-value">10^15 calc/sec</span>
-                </div>
-            </div>
-
-            <div class="modal-section">
-                <h3>🏢 Enterprise Protection Metrics</h3>
-                <div class="modal-metric">
-                    <span>Total Emails Analyzed:</span>
-                    <span class="metric-value">50,000+ Daily</span>
-                </div>
-                <div class="modal-metric">
-                    <span>Threats Blocked (Total):</span>
-                    <span class="metric-value warning">12,847 Stopped</span>
-                </div>
-                <div class="modal-metric">
-                    <span>Financial Loss Prevention:</span>
-                    <span class="metric-value secure">$2.8M Saved</span>
-                </div>
-                <div class="modal-metric">
-                    <span>Zero-Day Detection:</span>
-                    <span class="metric-value secure">847 Novel Threats</span>
-                </div>
-            </div>
-
-            <div class="modal-section">
-                <h3>🔒 Advanced Security Features</h3>
-                <div class="modal-metric">
-                    <span>Post-Quantum Cryptography:</span>
-                    <span class="metric-value secure">ACTIVE</span>
-                </div>
-                <div class="modal-metric">
-                    <span>Real-time Sandboxing:</span>
-                    <span class="metric-value secure">ENABLED</span>
-                </div>
-                <div class="modal-metric">
-                    <span>AI-Powered Content Analysis:</span>
-                    <span class="metric-value secure">OPERATIONAL</span>
-                </div>
-                <div class="modal-metric">
-                    <span>Behavioral Pattern Detection:</span>
-                    <span class="metric-value secure">MAXIMUM</span>
-                </div>
-            </div>
-
-            <div class="modal-section">
-                <h3>🌐 Platform Integration Status</h3>
-                <div class="modal-metric">
-                    <span>Microsoft 365 Integration:</span>
-                    <span class="metric-value secure">ENTERPRISE</span>
-                </div>
-                <div class="modal-metric">
-                    <span>Azure Active Directory:</span>
-                    <span class="metric-value secure">CONNECTED</span>
-                </div>
-                <div class="modal-metric">
-                    <span>Exchange Online:</span>
-                    <span class="metric-value secure">SYNCHRONIZED</span>
-                </div>
-                <div class="modal-metric">
-                    <span>Teams Integration:</span>
-                    <span class="metric-value secure">ACTIVE</span>
+                
+                <div class="modal-section">
+                    <div class="modal-section-header">
+                        <span class="modal-section-icon">⚡</span>
+                        <span class="modal-section-title">Quantum Performance Matrix</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Neural Processing:</span>
+                        <span class="modal-value">0.001 nanoseconds</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Quantum Accuracy:</span>
+                        <span class="modal-value">99.97%</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">System Coherence:</span>
+                        <span class="modal-value">99.99%</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Processing Capacity:</span>
+                        <span class="modal-value">∞ calc/sec</span>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Command Center Modal -->
-    <div id="commandModal" class="modal">
+    <input type="checkbox" id="commandCheck" class="modal-checkbox">
+    <div class="modal">
         <div class="modal-content">
-            <button class="close-btn" onclick="closeModal()">✕ Close</button>
-            <h2>🖥️ BESdefense Neural Command Center</h2>
-            
-            <div class="modal-section">
-                <h3>🎯 Real-Time Threat Intelligence</h3>
-                <div class="modal-metric">
-                    <span>Active Global Threats:</span>
-                    <span class="metric-value warning">1,247 detected</span>
+            <div class="modal-header">
+                <div class="modal-title">
+                    <span class="icon">🌌</span>
+                    Quantum Neural Command Center
                 </div>
-                <div class="modal-metric">
-                    <span>Threats Blocked Today:</span>
-                    <span class="metric-value secure">98.7% success rate</span>
-                </div>
-                <div class="modal-metric">
-                    <span>Countries Under Monitoring:</span>
-                    <span class="metric-value">195+ nations</span>
-                </div>
-                <div class="modal-metric">
-                    <span>Average Response Time:</span>
-                    <span class="metric-value secure">&lt;0.001 seconds</span>
-                </div>
+                <label for="commandCheck" class="close-btn">✕ CLOSE</label>
             </div>
-
-            <div class="modal-section">
-                <h3>🧠 Quantum Neural Processing Status</h3>
-                <div class="modal-metric">
-                    <span>Quantum Engine State:</span>
-                    <span class="metric-value secure">OPTIMAL</span>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <div class="modal-section-header">
+                        <span class="modal-section-icon">⚡</span>
+                        <span class="modal-section-title">Quantum Neural Processing</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Neural Networks:</span>
+                        <span class="modal-value">847/891 (95.1%)</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Quantum State:</span>
+                        <span class="modal-value">99.7% OPTIMAL</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Detection Matrix:</span>
+                        <span class="modal-value">98.7% SUCCESS</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Processing Power:</span>
+                        <span class="modal-value">∞ calc/sec</span>
+                    </div>
                 </div>
-                <div class="modal-metric">
-                    <span>Neural Processing Power:</span>
-                    <span class="metric-value">10^15 calculations/sec</span>
+                
+                <div class="modal-section">
+                    <div class="modal-section-header">
+                        <span class="modal-section-icon">🎯</span>
+                        <span class="modal-section-title">Neural Threat Intelligence</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Global Threats:</span>
+                        <span class="modal-value">1,247 detected</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Neutralized Today:</span>
+                        <span class="modal-value">98.7% success rate</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Quantum Nodes:</span>
+                        <span class="modal-value">195+ monitored</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Neural Response:</span>
+                        <span class="modal-value">&lt;0.001 seconds</span>
+                    </div>
                 </div>
-                <div class="modal-metric">
-                    <span>Accuracy Achievement:</span>
-                    <span class="metric-value secure">99.97%</span>
+                
+                <div class="modal-section">
+                    <div class="modal-section-header">
+                        <span class="modal-section-icon">🏢</span>
+                        <span class="modal-section-title">Enterprise Quantum Command</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Integration Level:</span>
+                        <span class="modal-value">QUANTUM</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">BEC Prevention:</span>
+                        <span class="modal-value">$2.8M saved</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Neural Monitoring:</span>
+                        <span class="modal-value">24/7 ACTIVE</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Threat Level:</span>
+                        <span class="modal-value">DEFCON QUANTUM</span>
+                    </div>
                 </div>
-                <div class="modal-metric">
-                    <span>Active Neural Networks:</span>
-                    <span class="metric-value">847 quantum nodes</span>
+                
+                <div class="modal-section">
+                    <div class="modal-section-header">
+                        <span class="modal-section-icon">📊</span>
+                        <span class="modal-section-title">Neural Analytics Matrix</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Neural Processing (24h):</span>
+                        <span class="modal-value">50,000+ messages</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Quantum Malware:</span>
+                        <span class="modal-value">847 variants</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Neural Phishing:</span>
+                        <span class="modal-value">1,205 attempts</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">False Positives:</span>
+                        <span class="modal-value">0.03%</span>
+                    </div>
                 </div>
-            </div>
-
-            <div class="modal-section">
-                <h3>🏢 Enterprise Command Metrics</h3>
-                <div class="modal-metric">
-                    <span>Integration Level:</span>
-                    <span class="metric-value secure">ENTERPRISE</span>
-                </div>
-                <div class="modal-metric">
-                    <span>BEC Attack Prevention:</span>
-                    <span class="metric-value secure">$2.8M saved</span>
-                </div>
-                <div class="modal-metric">
-                    <span>24/7 Monitoring Status:</span>
-                    <span class="metric-value secure">ACTIVE</span>
-                </div>
-                <div class="modal-metric">
-                    <span>Threat Escalation Level:</span>
-                    <span class="metric-value secure">DEFCON 5</span>
-                </div>
-            </div>
-
-            <div class="modal-section">
-                <h3>📈 Real-Time Analytics Dashboard</h3>
-                <div class="modal-metric">
-                    <span>Emails Processed (24h):</span>
-                    <span class="metric-value">50,000+ messages</span>
-                </div>
-                <div class="modal-metric">
-                    <span>Malware Samples Detected:</span>
-                    <span class="metric-value warning">847 variants</span>
-                </div>
-                <div class="modal-metric">
-                    <span>Phishing Attempts Blocked:</span>
-                    <span class="metric-value warning">1,205 attempts</span>
-                </div>
-                <div class="modal-metric">
-                    <span>False Positive Rate:</span>
-                    <span class="metric-value secure">0.03%</span>
-                </div>
-            </div>
-
-            <div class="modal-section">
-                <h3>🔐 Advanced Security Operations</h3>
-                <div class="modal-metric">
-                    <span>Sandbox Analysis Queue:</span>
-                    <span class="metric-value">15 samples processing</span>
-                </div>
-                <div class="modal-metric">
-                    <span>Signature Database Updates:</span>
-                    <span class="metric-value secure">Real-time sync</span>
-                </div>
-                <div class="modal-metric">
-                    <span>Threat Hunting Operations:</span>
-                    <span class="metric-value secure">CONTINUOUS</span>
-                </div>
-                <div class="modal-metric">
-                    <span>Incident Response Time:</span>
-                    <span class="metric-value secure">15 seconds avg</span>
-                </div>
-            </div>
-
-            <div class="modal-section">
-                <h3>🌐 Global Infrastructure Status</h3>
-                <div class="modal-metric">
-                    <span>Data Centers Online:</span>
-                    <span class="metric-value secure">12 regions</span>
-                </div>
-                <div class="modal-metric">
-                    <span>CDN Performance:</span>
-                    <span class="metric-value secure">99.99% uptime</span>
-                </div>
-                <div class="modal-metric">
-                    <span>API Response Time:</span>
-                    <span class="metric-value secure">45ms average</span>
-                </div>
-                <div class="modal-metric">
-                    <span>Load Balancer Status:</span>
-                    <span class="metric-value secure">OPTIMAL</span>
+                
+                <div class="modal-section">
+                    <div class="modal-section-header">
+                        <span class="modal-section-icon">🔐</span>
+                        <span class="modal-section-title">Quantum Security Operations</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Neural Sandbox:</span>
+                        <span class="modal-value">15 processing</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Quantum Quarantine:</span>
+                        <span class="modal-value">247 isolated</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Auto Neural Response:</span>
+                        <span class="modal-value">ENABLED</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Active Incidents:</span>
+                        <span class="modal-value">0 open</span>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <script>
-        // Initialize Office.js with error handling
-        function initializeBESdefense() {
-            try {
-                if (typeof Office !== 'undefined' && Office.onReady) {
-                    Office.onReady((info) => {
-                        console.log('BESdefense Quantum Interface - Outlook Mode');
-                        console.log('Office Host:', info.host);
-                        console.log('Office Platform:', info.platform);
-                        
-                        // Analyze current email when ready
-                        if (info.host === Office.HostType.Outlook) {
-                            analyzeCurrentEmail();
-                        }
-                    });
-                } else {
-                    console.log('BESdefense Quantum Interface - Browser Mode');
-                    console.log('Available functions: generateExecutiveReport, openCommandCenter');
-                    // Initialize demo mode
-                    initializeDemoMode();
-                }
-            } catch (error) {
-                console.log('BESdefense Quantum Interface - Demo Mode');
-                initializeDemoMode();
-            }
-        }
-
-        // Initialize demo mode for browser testing
-        function initializeDemoMode() {
-            // Set demo analysis results
-            document.getElementById('emailClassification').textContent = 'SECURE';
-            document.getElementById('confidenceLevel').textContent = '99.97%';
-            document.getElementById('becRisk').textContent = 'MINIMAL';
-            document.getElementById('protectionValue').textContent = '$285K+';
-        }
-
-        // Initialize on page load
-        document.addEventListener('DOMContentLoaded', function() {
-            initializeBESdefense();
-            createQuantumParticles();
-        });
-
-        // Create quantum particles optimized for narrow width
-        function createQuantumParticles() {
-            const particlesContainer = document.getElementById('particles');
-            const particleCount = 15; // Reduced for narrow width
-            
-            for (let i = 0; i < particleCount; i++) {
-                const particle = document.createElement('div');
-                particle.className = 'particle';
-                particle.style.left = Math.random() * 100 + '%';
-                particle.style.animationDelay = Math.random() * 8 + 's';
-                particle.style.animationDuration = (8 + Math.random() * 4) + 's';
-                particlesContainer.appendChild(particle);
-            }
-        }
-
-        // Analyze current email with error handling
-        function analyzeCurrentEmail() {
-            try {
-                if (typeof Office !== 'undefined' && Office.context && Office.context.mailbox && Office.context.mailbox.item) {
-                    // Get email properties
-                    const item = Office.context.mailbox.item;
-                    
-                    // Analyze sender
-                    const sender = item.from || item.organizer;
-                    let senderAnalysis = analyzeSender(sender);
-                    
-                    // Analyze subject
-                    const subject = item.subject || '';
-                    let subjectAnalysis = analyzeSubject(subject);
-                    
-                    // Get email body and analyze
-                    item.body.getAsync(Office.CoercionType.Text, (result) => {
-                        if (result.status === Office.AsyncResultStatus.Succeeded) {
-                            const bodyText = result.value;
-                            let bodyAnalysis = analyzeEmailBody(bodyText);
-                            
-                            // Combine analysis results
-                            updateEmailAnalysis(senderAnalysis, subjectAnalysis, bodyAnalysis);
-                        }
-                    });
-                } else {
-                    // Fallback for demo mode
-                    initializeDemoMode();
-                }
-            } catch (error) {
-                console.log('BESdefense running in demo mode');
-                initializeDemoMode();
-            }
-        }
-
-        // Analyze sender reputation
-        function analyzeSender(sender) {
-            if (!sender) return { risk: 'MINIMAL', confidence: 99.97 };
-            
-            const senderEmail = sender.emailAddress || '';
-            const trustedDomains = ['microsoft.com', 'outlook.com', 'gmail.com', 'company.com'];
-            
-            const domain = senderEmail.split('@')[1] || '';
-            const isTrusted = trustedDomains.some(trusted => domain.includes(trusted));
-            
-            return {
-                risk: isTrusted ? 'MINIMAL' : 'MODERATE',
-                confidence: isTrusted ? 99.97 : 87.34,
-                domain: domain
-            };
-        }
-
-        // Analyze email subject
-        function analyzeSubject(subject) {
-            const suspiciousWords = ['urgent', 'immediate', 'verify', 'suspend', 'click here', 'wire transfer'];
-            const foundSuspicious = suspiciousWords.some(word => 
-                subject.toLowerCase().includes(word.toLowerCase())
-            );
-            
-            return {
-                risk: foundSuspicious ? 'HIGH' : 'MINIMAL',
-                confidence: foundSuspicious ? 76.23 : 99.97,
-                suspicious: foundSuspicious
-            };
-        }
-
-        // Analyze email body content
-        function analyzeEmailBody(bodyText) {
-            const phishingIndicators = ['click here', 'verify account', 'suspended', 'urgent action'];
-            const financialWords = ['wire transfer', 'payment', 'invoice', 'bank account'];
-            
-            let riskScore = 0;
-            phishingIndicators.forEach(indicator => {
-                if (bodyText.toLowerCase().includes(indicator.toLowerCase())) {
-                    riskScore += 25;
-                }
-            });
-            
-            financialWords.forEach(word => {
-                if (bodyText.toLowerCase().includes(word.toLowerCase())) {
-                    riskScore += 15;
-                }
-            });
-            
-            const risk = riskScore > 50 ? 'HIGH' : riskScore > 20 ? 'MODERATE' : 'MINIMAL';
-            const confidence = Math.max(60, 100 - riskScore);
-            
-            return { risk, confidence, riskScore };
-        }
-
-        // Update email analysis display
-        function updateEmailAnalysis(senderAnalysis, subjectAnalysis, bodyAnalysis) {
-            const overallRisk = Math.max(
-                getRiskLevel(senderAnalysis.risk),
-                getRiskLevel(subjectAnalysis.risk),
-                getRiskLevel(bodyAnalysis.risk)
-            );
-            
-            const overallConfidence = Math.min(
-                senderAnalysis.confidence,
-                subjectAnalysis.confidence,
-                bodyAnalysis.confidence
-            );
-            
-            const riskNames = ['MINIMAL', 'MODERATE', 'HIGH'];
-            const finalRisk = riskNames[overallRisk];
-            
-            // Update display
-            document.getElementById('emailClassification').textContent = 
-                finalRisk === 'MINIMAL' ? 'SECURE' : finalRisk === 'MODERATE' ? 'SUSPICIOUS' : 'DANGEROUS';
-            document.getElementById('confidenceLevel').textContent = overallConfidence.toFixed(2) + '%';
-            document.getElementById('becRisk').textContent = finalRisk;
-            
-            // Update colors based on risk
-            const elements = ['emailClassification', 'confidenceLevel', 'becRisk'];
-            elements.forEach(id => {
-                const element = document.getElementById(id);
-                element.className = 'metric-value ' + (finalRisk === 'MINIMAL' ? 'secure' : finalRisk === 'MODERATE' ? 'warning' : 'danger');
-            });
-        }
-
-        function getRiskLevel(risk) {
-            switch(risk) {
-                case 'MINIMAL': return 0;
-                case 'MODERATE': return 1;
-                case 'HIGH': return 2;
-                default: return 0;
-            }
-        }
-
-        // Generate executive report
-        function generateExecutiveReport() {
-            document.getElementById('executiveModal').style.display = 'block';
-        }
-
-        // Open command center
-        function openCommandCenter() {
-            document.getElementById('commandModal').style.display = 'block';
-        }
-
-        // Close modals
-        function closeModal() {
-            document.getElementById('executiveModal').style.display = 'none';
-            document.getElementById('commandModal').style.display = 'none';
-        }
-
-        // Close modal when clicking outside
-        window.onclick = function(event) {
-            const executiveModal = document.getElementById('executiveModal');
-            const commandModal = document.getElementById('commandModal');
-            if (event.target === executiveModal) {
-                executiveModal.style.display = 'none';
-            }
-            if (event.target === commandModal) {
-                commandModal.style.display = 'none';
-            }
-        }
-
-        // Initialize particles when page loads
-        // (Initialization moved to DOMContentLoaded above)
-    </script>
 </body>
 </html>
