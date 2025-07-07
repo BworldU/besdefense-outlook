@@ -256,9 +256,90 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.9);
+            background: rgba(0, 0, 0, 0.95);
             z-index: 1000;
             backdrop-filter: blur(10px);
+        }
+
+        .modal-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #1a202c, #2d3748);
+            padding: 8px;
+            border-radius: 0;
+            overflow-y: auto;
+            border: none;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .modal h2 {
+            font-size: 10px;
+            color: #667eea;
+            margin-bottom: 6px;
+            text-align: center;
+            padding-right: 20px;
+            flex-shrink: 0;
+        }
+
+        .modal-section {
+            margin-bottom: 6px;
+            padding: 4px;
+            background: rgba(45, 55, 72, 0.5);
+            border-radius: 4px;
+            flex-shrink: 0;
+        }
+
+        .modal-section h3 {
+            font-size: 8px;
+            color: #fbbf24;
+            margin-bottom: 3px;
+        }
+
+        .modal-metric {
+            display: flex;
+            justify-content: space-between;
+            font-size: 7px;
+            margin-bottom: 1px;
+            padding: 1px 0;
+        }
+
+        .modal-metric span:first-child {
+            color: #e2e8f0;
+            font-size: 7px;
+        }
+
+        .modal-metric span:last-child {
+            color: #48bb78;
+            font-weight: 600;
+            font-size: 7px;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 4px;
+            right: 8px;
+            background: #ef4444;
+            border: none;
+            color: white;
+            font-size: 12px;
+            cursor: pointer;
+            padding: 4px 8px;
+            width: auto;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .close-btn:hover {
+            background: #dc2626;
         }
 
         .modal-content {
@@ -505,7 +586,7 @@
     <!-- Executive Report Modal -->
     <div id="executiveModal" class="modal">
         <div class="modal-content">
-            <button class="close-btn" onclick="closeModal()">&times;</button>
+            <button class="close-btn" onclick="closeModal()">✕ Close</button>
             <h2>🚀 Executive Security Report</h2>
             
             <div class="modal-section">
@@ -561,7 +642,7 @@
     <!-- Command Center Modal -->
     <div id="commandModal" class="modal">
         <div class="modal-content">
-            <button class="close-btn" onclick="closeModal()">&times;</button>
+            <button class="close-btn" onclick="closeModal()">✕ Close</button>
             <h2>🖥️ Neural Command Center</h2>
             
             <div class="modal-section">
