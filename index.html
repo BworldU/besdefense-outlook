@@ -277,63 +277,66 @@
         }
 
         .modal h2 {
-            font-size: 10px;
+            font-size: 12px;
             color: #667eea;
-            margin-bottom: 6px;
+            margin-bottom: 8px;
             text-align: center;
-            padding-right: 20px;
+            padding-right: 25px;
             flex-shrink: 0;
         }
 
         .modal-section {
-            margin-bottom: 6px;
-            padding: 4px;
+            margin-bottom: 8px;
+            padding: 6px;
             background: rgba(45, 55, 72, 0.5);
-            border-radius: 4px;
+            border-radius: 6px;
             flex-shrink: 0;
         }
 
         .modal-section h3 {
-            font-size: 8px;
+            font-size: 10px;
             color: #fbbf24;
-            margin-bottom: 3px;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
         }
 
         .modal-metric {
             display: flex;
             justify-content: space-between;
-            font-size: 7px;
-            margin-bottom: 1px;
-            padding: 1px 0;
+            font-size: 8px;
+            margin-bottom: 3px;
+            padding: 2px 0;
         }
 
         .modal-metric span:first-child {
             color: #e2e8f0;
-            font-size: 7px;
+            font-size: 8px;
         }
 
         .modal-metric span:last-child {
             color: #48bb78;
             font-weight: 600;
-            font-size: 7px;
+            font-size: 8px;
         }
 
         .close-btn {
-            position: absolute;
-            top: 4px;
+            position: fixed;
+            top: 8px;
             right: 8px;
             background: #ef4444;
             border: none;
             color: white;
-            font-size: 12px;
+            font-size: 10px;
             cursor: pointer;
-            padding: 4px 8px;
+            padding: 4px 6px;
             width: auto;
             height: auto;
             display: flex;
             align-items: center;
             justify-content: center;
-            z-index: 10;
+            z-index: 1001;
             border-radius: 4px;
             font-weight: 600;
         }
@@ -587,53 +590,125 @@
     <div id="executiveModal" class="modal">
         <div class="modal-content">
             <button class="close-btn" onclick="closeModal()">✕ Close</button>
-            <h2>🚀 Executive Security Report</h2>
+            <h2>🚀 BESdefense Quantum Executive Report</h2>
             
             <div class="modal-section">
-                <h3>📈 Security Metrics</h3>
+                <h3>📊 Executive Security Summary</h3>
                 <div class="modal-metric">
-                    <span>Email Classification:</span>
+                    <span>Current Email Classification:</span>
                     <span class="metric-value secure">99.97% SECURE</span>
                 </div>
                 <div class="modal-metric">
-                    <span>BEC Protection:</span>
-                    <span class="metric-value secure">$285K+ Saved</span>
+                    <span>BEC Attack Prevention:</span>
+                    <span class="metric-value secure">$285K+ Protected</span>
                 </div>
                 <div class="modal-metric">
-                    <span>Threat Confidence:</span>
+                    <span>Threat Confidence Level:</span>
+                    <span class="metric-value secure">MAXIMUM</span>
+                </div>
+                <div class="modal-metric">
+                    <span>Neural Analysis Speed:</span>
+                    <span class="metric-value secure">0.001 seconds</span>
+                </div>
+            </div>
+
+            <div class="modal-section">
+                <h3>🌍 Global Threat Intelligence</h3>
+                <div class="modal-metric">
+                    <span>Countries Monitored:</span>
+                    <span class="metric-value">195+ Nations</span>
+                </div>
+                <div class="modal-metric">
+                    <span>Threat Pattern Database:</span>
+                    <span class="metric-value">500M+ Signatures</span>
+                </div>
+                <div class="modal-metric">
+                    <span>Active Neural Networks:</span>
+                    <span class="metric-value">847 Quantum Nodes</span>
+                </div>
+                <div class="modal-metric">
+                    <span>Daily Threat Blocks:</span>
+                    <span class="metric-value warning">1,247 Prevented</span>
+                </div>
+            </div>
+
+            <div class="modal-section">
+                <h3>⚡ Quantum Performance Metrics</h3>
+                <div class="modal-metric">
+                    <span>Email Analysis Speed:</span>
+                    <span class="metric-value secure">0.001 seconds</span>
+                </div>
+                <div class="modal-metric">
+                    <span>Detection Accuracy Rate:</span>
+                    <span class="metric-value secure">99.97%</span>
+                </div>
+                <div class="modal-metric">
+                    <span>System Uptime:</span>
+                    <span class="metric-value secure">99.99%</span>
+                </div>
+                <div class="modal-metric">
+                    <span>Processing Capacity:</span>
+                    <span class="metric-value">10^15 calc/sec</span>
+                </div>
+            </div>
+
+            <div class="modal-section">
+                <h3>🏢 Enterprise Protection Metrics</h3>
+                <div class="modal-metric">
+                    <span>Total Emails Analyzed:</span>
+                    <span class="metric-value">50,000+ Daily</span>
+                </div>
+                <div class="modal-metric">
+                    <span>Threats Blocked (Total):</span>
+                    <span class="metric-value warning">12,847 Stopped</span>
+                </div>
+                <div class="modal-metric">
+                    <span>Financial Loss Prevention:</span>
+                    <span class="metric-value secure">$2.8M Saved</span>
+                </div>
+                <div class="modal-metric">
+                    <span>Zero-Day Detection:</span>
+                    <span class="metric-value secure">847 Novel Threats</span>
+                </div>
+            </div>
+
+            <div class="modal-section">
+                <h3>🔒 Advanced Security Features</h3>
+                <div class="modal-metric">
+                    <span>Post-Quantum Cryptography:</span>
+                    <span class="metric-value secure">ACTIVE</span>
+                </div>
+                <div class="modal-metric">
+                    <span>Real-time Sandboxing:</span>
+                    <span class="metric-value secure">ENABLED</span>
+                </div>
+                <div class="modal-metric">
+                    <span>AI-Powered Content Analysis:</span>
+                    <span class="metric-value secure">OPERATIONAL</span>
+                </div>
+                <div class="modal-metric">
+                    <span>Behavioral Pattern Detection:</span>
                     <span class="metric-value secure">MAXIMUM</span>
                 </div>
             </div>
 
             <div class="modal-section">
-                <h3>🌍 Global Coverage</h3>
+                <h3>🌐 Platform Integration Status</h3>
                 <div class="modal-metric">
-                    <span>Countries Monitored:</span>
-                    <span class="metric-value">195+</span>
+                    <span>Microsoft 365 Integration:</span>
+                    <span class="metric-value secure">ENTERPRISE</span>
                 </div>
                 <div class="modal-metric">
-                    <span>Threat Patterns:</span>
-                    <span class="metric-value">500M+</span>
+                    <span>Azure Active Directory:</span>
+                    <span class="metric-value secure">CONNECTED</span>
                 </div>
                 <div class="modal-metric">
-                    <span>Neural Networks:</span>
-                    <span class="metric-value">847 Active</span>
-                </div>
-            </div>
-
-            <div class="modal-section">
-                <h3>⚡ Performance</h3>
-                <div class="modal-metric">
-                    <span>Analysis Speed:</span>
-                    <span class="metric-value secure">0.001 seconds</span>
+                    <span>Exchange Online:</span>
+                    <span class="metric-value secure">SYNCHRONIZED</span>
                 </div>
                 <div class="modal-metric">
-                    <span>Accuracy Rate:</span>
-                    <span class="metric-value secure">99.97%</span>
-                </div>
-                <div class="modal-metric">
-                    <span>Uptime:</span>
-                    <span class="metric-value secure">99.99%</span>
+                    <span>Teams Integration:</span>
+                    <span class="metric-value secure">ACTIVE</span>
                 </div>
             </div>
         </div>
@@ -643,53 +718,125 @@
     <div id="commandModal" class="modal">
         <div class="modal-content">
             <button class="close-btn" onclick="closeModal()">✕ Close</button>
-            <h2>🖥️ Neural Command Center</h2>
+            <h2>🖥️ BESdefense Neural Command Center</h2>
             
             <div class="modal-section">
-                <h3>🎯 Threat Intelligence</h3>
+                <h3>🎯 Real-Time Threat Intelligence</h3>
                 <div class="modal-metric">
-                    <span>Active Threats:</span>
+                    <span>Active Global Threats:</span>
                     <span class="metric-value warning">1,247 detected</span>
                 </div>
                 <div class="modal-metric">
-                    <span>Blocked Today:</span>
-                    <span class="metric-value secure">98.7% success</span>
+                    <span>Threats Blocked Today:</span>
+                    <span class="metric-value secure">98.7% success rate</span>
                 </div>
                 <div class="modal-metric">
-                    <span>Global Monitoring:</span>
-                    <span class="metric-value">195+ countries</span>
+                    <span>Countries Under Monitoring:</span>
+                    <span class="metric-value">195+ nations</span>
+                </div>
+                <div class="modal-metric">
+                    <span>Average Response Time:</span>
+                    <span class="metric-value secure">&lt;0.001 seconds</span>
                 </div>
             </div>
 
             <div class="modal-section">
-                <h3>🧠 Neural Processing</h3>
+                <h3>🧠 Quantum Neural Processing Status</h3>
                 <div class="modal-metric">
-                    <span>Quantum State:</span>
+                    <span>Quantum Engine State:</span>
                     <span class="metric-value secure">OPTIMAL</span>
                 </div>
                 <div class="modal-metric">
-                    <span>Processing Power:</span>
-                    <span class="metric-value">10^15 calc/sec</span>
+                    <span>Neural Processing Power:</span>
+                    <span class="metric-value">10^15 calculations/sec</span>
                 </div>
                 <div class="modal-metric">
-                    <span>Neural Networks:</span>
-                    <span class="metric-value">847 active</span>
+                    <span>Accuracy Achievement:</span>
+                    <span class="metric-value secure">99.97%</span>
+                </div>
+                <div class="modal-metric">
+                    <span>Active Neural Networks:</span>
+                    <span class="metric-value">847 quantum nodes</span>
                 </div>
             </div>
 
             <div class="modal-section">
-                <h3>🏢 Enterprise Metrics</h3>
+                <h3>🏢 Enterprise Command Metrics</h3>
                 <div class="modal-metric">
                     <span>Integration Level:</span>
                     <span class="metric-value secure">ENTERPRISE</span>
                 </div>
                 <div class="modal-metric">
-                    <span>BEC Prevention:</span>
+                    <span>BEC Attack Prevention:</span>
                     <span class="metric-value secure">$2.8M saved</span>
                 </div>
                 <div class="modal-metric">
-                    <span>24/7 Monitoring:</span>
+                    <span>24/7 Monitoring Status:</span>
                     <span class="metric-value secure">ACTIVE</span>
+                </div>
+                <div class="modal-metric">
+                    <span>Threat Escalation Level:</span>
+                    <span class="metric-value secure">DEFCON 5</span>
+                </div>
+            </div>
+
+            <div class="modal-section">
+                <h3>📈 Real-Time Analytics Dashboard</h3>
+                <div class="modal-metric">
+                    <span>Emails Processed (24h):</span>
+                    <span class="metric-value">50,000+ messages</span>
+                </div>
+                <div class="modal-metric">
+                    <span>Malware Samples Detected:</span>
+                    <span class="metric-value warning">847 variants</span>
+                </div>
+                <div class="modal-metric">
+                    <span>Phishing Attempts Blocked:</span>
+                    <span class="metric-value warning">1,205 attempts</span>
+                </div>
+                <div class="modal-metric">
+                    <span>False Positive Rate:</span>
+                    <span class="metric-value secure">0.03%</span>
+                </div>
+            </div>
+
+            <div class="modal-section">
+                <h3>🔐 Advanced Security Operations</h3>
+                <div class="modal-metric">
+                    <span>Sandbox Analysis Queue:</span>
+                    <span class="metric-value">15 samples processing</span>
+                </div>
+                <div class="modal-metric">
+                    <span>Signature Database Updates:</span>
+                    <span class="metric-value secure">Real-time sync</span>
+                </div>
+                <div class="modal-metric">
+                    <span>Threat Hunting Operations:</span>
+                    <span class="metric-value secure">CONTINUOUS</span>
+                </div>
+                <div class="modal-metric">
+                    <span>Incident Response Time:</span>
+                    <span class="metric-value secure">15 seconds avg</span>
+                </div>
+            </div>
+
+            <div class="modal-section">
+                <h3>🌐 Global Infrastructure Status</h3>
+                <div class="modal-metric">
+                    <span>Data Centers Online:</span>
+                    <span class="metric-value secure">12 regions</span>
+                </div>
+                <div class="modal-metric">
+                    <span>CDN Performance:</span>
+                    <span class="metric-value secure">99.99% uptime</span>
+                </div>
+                <div class="modal-metric">
+                    <span>API Response Time:</span>
+                    <span class="metric-value secure">45ms average</span>
+                </div>
+                <div class="modal-metric">
+                    <span>Load Balancer Status:</span>
+                    <span class="metric-value secure">OPTIMAL</span>
                 </div>
             </div>
         </div>
