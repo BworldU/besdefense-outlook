@@ -1,35 +1,176 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1">
-  <Id>your-unique-id-here</Id>
-  <Version>2.0.0</Version>
-  <ProviderName>Bright Eke Systems</ProviderName>
-  <DefaultLocale>en-US</DefaultLocale>
-  <DisplayName DefaultValue="BESdefense QUANTUM Neural"/>
-  <Description DefaultValue="Revolutionary Neural-Quantum Email Security with AI Threat Intelligence"/>
-  <IconUrl DefaultValue="https://your-repo-url/icon.png"/>
-  <SupportUrl DefaultValue="https://your-website.com"/>
-  
-  <Hosts>
-    <Host Name="Mailbox"/>
-  </Hosts>
-  
-  <Requirements>
-    <Sets>
-      <Set Name="Mailbox" MinVersion="1.1"/>
-    </Sets>
-  </Requirements>
-  
-  <FormSettings>
-    <Form xsi:type="ItemRead">
-      <DesktopSettings>
-        <SourceLocation DefaultValue="https://your-github-pages-url/index.html"/>
-        <RequestedHeight>500</RequestedHeight>
-      </DesktopSettings>
-    </Form>
-  </FormSettings>
-  
-  <Permissions>ReadWriteMailbox</Permissions>
-  <Rule xsi:type="RuleCollection" Mode="Or">
-    <Rule xsi:type="ItemIs" ItemType="Message" FormType="Read"/>
-  </Rule>
-</OfficeApp>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BESdefense QUANTUM NEURAL</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Inter', system-ui, sans-serif; 
+            background: radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%), 
+                       radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%), 
+                       linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #16213e 100%); 
+            color: #e2e8f0; 
+            min-height: 100vh; 
+            overflow-x: hidden; 
+            position: relative; 
+        }
+        .neural-network { 
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100%; 
+            pointer-events: none; 
+            z-index: 1; 
+            opacity: 0.8; 
+        }
+        .neural-node { 
+            position: absolute; 
+            width: 6px; 
+            height: 6px; 
+            border-radius: 50%; 
+            background: radial-gradient(circle, #00ffff 0%, #0099ff 50%, transparent 70%); 
+            animation: neuralPulse 3s ease-in-out infinite; 
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.8); 
+        }
+        @keyframes neuralPulse { 
+            0%, 100% { opacity: 0.4; transform: scale(1); } 
+            50% { opacity: 1; transform: scale(1.8); } 
+        }
+        .neural-connection { 
+            position: absolute; 
+            height: 2px; 
+            background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.6), transparent); 
+            animation: neuralFlow 4s linear infinite; 
+            border-radius: 1px; 
+        }
+        @keyframes neuralFlow { 
+            0% { width: 0; opacity: 0; } 
+            50% { opacity: 1; } 
+            100% { width: 120px; opacity: 0; } 
+        }
+        .container { 
+            padding: 16px; 
+            position: relative; 
+            z-index: 10; 
+        }
+        .header { 
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(147, 51, 234, 0.15) 50%, rgba(59, 130, 246, 0.15) 100%); 
+            backdrop-filter: blur(30px); 
+            border: 2px solid rgba(255, 255, 255, 0.3); 
+            border-radius: 28px; 
+            padding: 28px; 
+            text-align: center; 
+            margin-bottom: 28px; 
+            position: relative; 
+            overflow: hidden; 
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4); 
+        }
+        .header h1 { 
+            font-size: 26px; 
+            font-weight: 900; 
+            margin-bottom: 12px; 
+            background: linear-gradient(135deg, #ffffff 0%, #00ffff 20%, #ffffff 40%, #ff00ff 60%, #ffffff 80%, #00ff88 100%); 
+            background-size: 400% 400%; 
+            background-clip: text; 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+            animation: holographicText 6s ease infinite; 
+        }
+        @keyframes holographicText { 
+            0%, 100% { background-position: 0% 50%; } 
+            50% { background-position: 100% 50%; } 
+        }
+        .status-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; }
+        .status-card { 
+            background: rgba(15, 23, 42, 0.8); 
+            backdrop-filter: blur(25px); 
+            border: 2px solid rgba(59, 130, 246, 0.4); 
+            border-radius: 24px; 
+            padding: 24px; 
+            text-align: center; 
+            transition: all 0.4s ease; 
+        }
+        .status-value { 
+            font-size: 20px; 
+            font-weight: 900; 
+            background: linear-gradient(135deg, #00ff88 0%, #00ffff 100%); 
+            background-clip: text; 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+            margin-bottom: 10px; 
+        }
+        .status-label { 
+            font-size: 11px; 
+            color: rgba(255, 255, 255, 0.7); 
+            text-transform: uppercase; 
+            letter-spacing: 2px; 
+            font-weight: 700; 
+        }
+        .creator-section { 
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(147, 51, 234, 0.1) 100%); 
+            border: 2px solid rgba(59, 130, 246, 0.4); 
+            border-radius: 24px; 
+            padding: 24px; 
+            margin-bottom: 24px; 
+        }
+        .creator-name { 
+            font-size: 20px; 
+            font-weight: 900; 
+            background: linear-gradient(135deg, #ffffff 0%, #00ffff 50%, #ffffff 100%); 
+            background-clip: text; 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+        }
+    </style>
+</head>
+<body>
+    <div class="neural-network">
+        <div class="neural-node" style="left: 10%; top: 20%; animation-delay: 0s;"></div>
+        <div class="neural-node" style="left: 30%; top: 40%; animation-delay: 0.5s;"></div>
+        <div class="neural-node" style="left: 70%; top: 10%; animation-delay: 1s;"></div>
+        <div class="neural-node" style="left: 80%; top: 60%; animation-delay: 1.5s;"></div>
+        <div class="neural-node" style="left: 50%; top: 80%; animation-delay: 2s;"></div>
+        <div class="neural-connection" style="left: 20%; top: 30%; width: 120px; transform: rotate(45deg); animation-delay: 0s;"></div>
+        <div class="neural-connection" style="left: 60%; top: 50%; width: 80px; transform: rotate(120deg); animation-delay: 0.8s;"></div>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1>BESdefense QUANTUM</h1>
+            <p>Neural Email Security</p>
+        </div>
+        
+        <div class="status-grid">
+            <div class="status-card">
+                <div class="status-value">ACTIVE</div>
+                <div class="status-label">QUANTUM</div>
+            </div>
+            <div class="status-card">
+                <div class="status-value">ONLINE</div>
+                <div class="status-label">CORE</div>
+            </div>
+            <div class="status-card">
+                <div class="status-value">500M+</div>
+                <div class="status-label">SIGNATURES</div>
+            </div>
+            <div class="status-card">
+                <div class="status-value">0.001s</div>
+                <div class="status-label">SPEED</div>
+            </div>
+        </div>
+        
+        <div class="creator-section">
+            <h3>Created by: Bright Eke</h3>
+            <div class="creator-name">Bright Eke Systems</div>
+            <p>Leading revolutionary Neural-Quantum cybersecurity innovation through advanced AI threat intelligence systems.</p>
+        </div>
+    </div>
+
+    <script>
+        console.log('BESdefense QUANTUM Neural - Ready!');
+    </script>
+</body>
+</html>
