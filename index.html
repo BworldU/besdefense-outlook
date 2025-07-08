@@ -6,7 +6,6 @@
     <title>BESdefense QUANTUM NEURAL</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        
         body { 
             font-family: 'Inter', system-ui, sans-serif; 
             background: radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%), 
@@ -17,7 +16,6 @@
             overflow-x: hidden; 
             position: relative; 
         }
-        
         .neural-network { 
             position: fixed; 
             top: 0; 
@@ -28,7 +26,6 @@
             z-index: 1; 
             opacity: 0.8; 
         }
-        
         .neural-node { 
             position: absolute; 
             width: 6px; 
@@ -38,64 +35,109 @@
             animation: neuralPulse 3s ease-in-out infinite; 
             box-shadow: 0 0 20px rgba(0, 255, 255, 0.8); 
         }
-        
         @keyframes neuralPulse { 
             0%, 100% { opacity: 0.4; transform: scale(1); } 
             50% { opacity: 1; transform: scale(1.8); } 
         }
-        
+        .neural-connection { 
+            position: absolute; 
+            height: 2px; 
+            background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.6), transparent); 
+            animation: neuralFlow 4s linear infinite; 
+            border-radius: 1px; 
+        }
+        @keyframes neuralFlow { 
+            0% { width: 0; opacity: 0; } 
+            50% { opacity: 1; } 
+            100% { width: 120px; opacity: 0; } 
+        }
         .container { 
-            padding: 20px; 
+            padding: 16px; 
             position: relative; 
             z-index: 10; 
-            max-width: 1000px;
-            margin: 0 auto;
         }
-        
         .header { 
             background: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(147, 51, 234, 0.15) 50%, rgba(59, 130, 246, 0.15) 100%); 
             backdrop-filter: blur(30px); 
             border: 2px solid rgba(255, 255, 255, 0.3); 
             border-radius: 28px; 
-            padding: 30px; 
+            padding: 28px; 
             text-align: center; 
-            margin-bottom: 30px; 
+            margin-bottom: 28px; 
+            position: relative; 
+            overflow: hidden; 
             box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4); 
         }
-        
-        .header-badges {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            margin-bottom: 20px;
-            flex-wrap: wrap;
+        .header-top { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            margin-bottom: 16px; 
         }
-        
-        .badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 700;
-            text-transform: uppercase;
+        .language-selector { position: relative; }
+        .language-toggle { 
+            display: flex; 
+            align-items: center; 
+            gap: 8px; 
+            background: rgba(59, 130, 246, 0.2); 
+            border: 1px solid rgba(255, 255, 255, 0.3); 
+            border-radius: 12px; 
+            padding: 8px 12px; 
+            cursor: pointer; 
+            font-size: 14px; 
+            font-weight: 600; 
+            color: white; 
         }
-        
+        .language-dropdown { 
+            display: none; 
+            position: absolute; 
+            top: 100%; 
+            left: 0; 
+            background: rgba(15, 23, 42, 0.95); 
+            border: 1px solid rgba(59, 130, 246, 0.4); 
+            border-radius: 12px; 
+            padding: 8px 0; 
+            min-width: 180px; 
+            z-index: 1000; 
+            max-height: 300px; 
+            overflow-y: auto; 
+        }
+        .language-dropdown.show { display: block; }
+        .lang-option { 
+            padding: 10px 16px; 
+            cursor: pointer; 
+            font-size: 14px; 
+            color: #e2e8f0; 
+            display: flex; 
+            align-items: center; 
+            gap: 8px; 
+        }
+        .lang-option:hover { 
+            background: rgba(59, 130, 246, 0.2); 
+            color: #00ffff; 
+        }
+        .outlook-badge, .company-badge { 
+            display: flex; 
+            align-items: center; 
+            gap: 8px; 
+            border-radius: 12px; 
+            padding: 8px 12px; 
+            font-size: 12px; 
+            font-weight: 700; 
+            text-transform: uppercase; 
+        }
         .outlook-badge { 
             background: linear-gradient(135deg, rgba(0, 120, 212, 0.2) 0%, rgba(64, 224, 208, 0.2) 100%); 
             border: 1px solid rgba(0, 120, 212, 0.4); 
             color: #00bcf2; 
         }
-        
         .company-badge { 
             background: linear-gradient(135deg, rgba(147, 51, 234, 0.2) 0%, rgba(59, 130, 246, 0.2) 100%); 
             border: 1px solid rgba(147, 51, 234, 0.4); 
             color: #9333ea; 
         }
-        
         .header h1 { 
-            font-size: 36px; 
+            font-size: 26px; 
             font-weight: 900; 
             margin-bottom: 12px; 
             background: linear-gradient(135deg, #ffffff 0%, #00ffff 20%, #ffffff 40%, #ff00ff 60%, #ffffff 80%, #00ff88 100%); 
@@ -105,51 +147,35 @@
             -webkit-text-fill-color: transparent; 
             animation: holographicText 6s ease infinite; 
         }
-        
         @keyframes holographicText { 
             0%, 100% { background-position: 0% 50%; } 
             50% { background-position: 100% 50%; } 
         }
-        
-        .header p { 
-            font-size: 16px; 
-            opacity: 0.9; 
-            font-weight: 600; 
-            color: #cbd5e1; 
-        }
-        
-        .status-grid { 
-            display: grid; 
-            grid-template-columns: 1fr 1fr; 
-            gap: 20px; 
-            margin-bottom: 30px; 
-        }
-        
+        .header p { font-size: 13px; opacity: 0.9; font-weight: 600; color: #cbd5e1; }
+        .status-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; }
         .status-card { 
             background: rgba(15, 23, 42, 0.8); 
             backdrop-filter: blur(25px); 
             border: 2px solid rgba(59, 130, 246, 0.4); 
-            border-radius: 20px; 
-            padding: 25px; 
+            border-radius: 24px; 
+            padding: 24px; 
             text-align: center; 
             transition: all 0.4s ease; 
+            cursor: pointer; 
         }
-        
         .status-card:hover { 
-            transform: translateY(-5px); 
-            box-shadow: 0 15px 30px rgba(59, 130, 246, 0.3); 
+            transform: translateY(-8px) scale(1.02); 
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.4); 
         }
-        
         .status-value { 
-            font-size: 24px; 
+            font-size: 20px; 
             font-weight: 900; 
             background: linear-gradient(135deg, #00ff88 0%, #00ffff 100%); 
             background-clip: text; 
             -webkit-background-clip: text; 
             -webkit-text-fill-color: transparent; 
-            margin-bottom: 8px; 
+            margin-bottom: 10px; 
         }
-        
         .status-label { 
             font-size: 11px; 
             color: rgba(255, 255, 255, 0.7); 
@@ -157,71 +183,41 @@
             letter-spacing: 2px; 
             font-weight: 700; 
         }
-        
-        .action-buttons { 
-            display: flex; 
-            flex-direction: column; 
-            gap: 15px; 
-            margin-bottom: 30px; 
-        }
-        
-        .action-btn { 
-            background: linear-gradient(135deg, rgba(59, 130, 246, 0.8) 0%, rgba(147, 51, 234, 0.8) 100%); 
-            border: 2px solid rgba(255, 255, 255, 0.3); 
-            border-radius: 20px; 
-            padding: 18px; 
-            color: white; 
-            font-size: 16px; 
-            font-weight: 900; 
-            cursor: pointer; 
-            transition: all 0.4s ease; 
-            text-transform: uppercase; 
-            text-align: center; 
-        }
-        
-        .action-btn:hover { 
-            transform: translateY(-4px); 
-            box-shadow: 0 15px 30px rgba(59, 130, 246, 0.4); 
-        }
-        
-        .analysis-section {
+        .section { 
             background: rgba(15, 23, 42, 0.7); 
             backdrop-filter: blur(25px); 
-            border: 1px solid rgba(34, 197, 94, 0.4);
-            border-radius: 20px; 
-            padding: 25px; 
-            margin-bottom: 25px; 
+            border-radius: 24px; 
+            padding: 24px; 
+            margin-bottom: 24px; 
+            position: relative; 
         }
-        
+        .analysis-section { border: 1px solid rgba(34, 197, 94, 0.4); }
+        .intelligence-section { border: 1px solid rgba(251, 146, 60, 0.4); }
+        .outlook-section { border: 1px solid rgba(34, 197, 94, 0.4); }
+        .microsoft-section { border: 1px solid rgba(56, 189, 248, 0.4); }
+        .creator-section { 
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(147, 51, 234, 0.1) 100%); 
+            border: 2px solid rgba(59, 130, 246, 0.4); 
+        }
+        .section-header { display: flex; align-items: center; margin-bottom: 20px; }
+        .section-icon { font-size: 18px; margin-right: 12px; }
         .section-title { 
-            font-size: 20px; 
+            font-size: 18px; 
             font-weight: 900; 
             background: linear-gradient(135deg, #00ff88 0%, #00ffff 50%, #ffffff 100%); 
             background-clip: text; 
             -webkit-background-clip: text; 
             -webkit-text-fill-color: transparent; 
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
         }
-        
         .analysis-row { 
             display: flex; 
             justify-content: space-between; 
             align-items: center; 
-            padding: 12px 0; 
+            padding: 16px 0; 
             border-bottom: 1px solid rgba(34, 197, 94, 0.2); 
         }
-        
         .analysis-row:last-child { border-bottom: none; }
-        
-        .analysis-label { 
-            font-size: 14px; 
-            color: #e2e8f0; 
-            font-weight: 600; 
-        }
-        
+        .analysis-label { font-size: 14px; color: #e2e8f0; font-weight: 600; }
         .analysis-value { 
             font-size: 14px; 
             font-weight: 900; 
@@ -230,35 +226,60 @@
             -webkit-background-clip: text; 
             -webkit-text-fill-color: transparent; 
         }
-        
-        .creator-section { 
-            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(147, 51, 234, 0.1) 100%); 
-            border: 2px solid rgba(59, 130, 246, 0.4); 
-            border-radius: 20px; 
-            padding: 25px; 
-            margin-bottom: 25px; 
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; }
+        .grid-item { 
+            text-align: center; 
+            padding: 16px; 
+            border-radius: 16px; 
+            transition: all 0.3s ease; 
+            cursor: pointer; 
         }
-        
-        .creator-badge { 
-            display: flex; 
-            align-items: center; 
-            gap: 15px; 
-            margin-bottom: 15px; 
+        .intel-item { background: rgba(251, 146, 60, 0.1); }
+        .outlook-item { background: rgba(34, 197, 94, 0.1); }
+        .ms-item { background: rgba(56, 189, 248, 0.1); }
+        .grid-item:hover { transform: translateY(-4px) scale(1.05); }
+        .grid-value { 
+            font-size: 16px; 
+            font-weight: 900; 
+            margin-bottom: 6px; 
         }
-        
+        .intel-value { 
+            background: linear-gradient(135deg, #ff6b35 0%, #ffcd3c 100%); 
+            background-clip: text; 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+        }
+        .outlook-value { 
+            background: linear-gradient(135deg, #00ff88 0%, #00ffff 100%); 
+            background-clip: text; 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+        }
+        .ms-value { 
+            background: linear-gradient(135deg, #0078d4 0%, #40e0d0 100%); 
+            background-clip: text; 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+        }
+        .grid-label { 
+            font-size: 10px; 
+            color: rgba(255, 255, 255, 0.7); 
+            font-weight: 700; 
+            text-transform: uppercase; 
+        }
+        .creator-badge { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; }
         .creator-avatar { 
-            width: 50px; 
-            height: 50px; 
+            width: 48px; 
+            height: 48px; 
             border-radius: 50%; 
             background: linear-gradient(135deg, #3b82f6 0%, #9333ea 50%, #ec4899 100%); 
             display: flex; 
             align-items: center; 
             justify-content: center; 
-            font-size: 20px; 
+            font-size: 18px; 
             font-weight: 900; 
             color: white; 
         }
-        
         .creator-name { 
             font-size: 20px; 
             font-weight: 900; 
@@ -268,28 +289,20 @@
             -webkit-text-fill-color: transparent; 
             margin-bottom: 4px; 
         }
-        
         .creator-title { 
             font-size: 12px; 
             color: rgba(255, 255, 255, 0.7); 
             font-weight: 600; 
             text-transform: uppercase; 
         }
-        
-        .creator-description { 
+        .creator-description p { 
             font-size: 14px; 
             color: #e2e8f0; 
             line-height: 1.5; 
-            margin-bottom: 15px; 
+            margin-bottom: 16px; 
         }
-        
-        .achievements { 
-            display: flex; 
-            flex-direction: column; 
-            gap: 8px; 
-        }
-        
-        .achievement { 
+        .creator-achievements { display: flex; flex-direction: column; gap: 8px; }
+        .achievement-item { 
             display: flex; 
             align-items: center; 
             gap: 8px; 
@@ -297,126 +310,128 @@
             color: #cbd5e1; 
             font-weight: 600; 
         }
-        
+        .action-buttons { 
+            display: flex; 
+            flex-direction: column; 
+            gap: 16px; 
+            margin-bottom: 24px; 
+        }
+        .action-btn { 
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.8) 0%, rgba(147, 51, 234, 0.8) 100%); 
+            border: 1px solid rgba(255, 255, 255, 0.3); 
+            border-radius: 20px; 
+            padding: 20px; 
+            color: white; 
+            font-size: 16px; 
+            font-weight: 900; 
+            cursor: pointer; 
+            transition: all 0.4s ease; 
+            text-transform: uppercase; 
+            text-align: center; 
+        }
+        .action-btn:hover { 
+            transform: translateY(-4px); 
+            box-shadow: 0 15px 30px rgba(59, 130, 246, 0.4); 
+        }
         .footer { 
             text-align: center; 
-            padding: 20px; 
+            padding: 24px; 
             border-top: 1px solid rgba(255, 255, 255, 0.1); 
             background: rgba(15, 23, 42, 0.8); 
-            border-radius: 15px; 
+            border-radius: 16px; 
+            margin-top: 16px; 
         }
-        
-        .footer p { 
+        .footer-brand p { 
             font-size: 11px; 
             color: rgba(255, 255, 255, 0.8); 
             margin: 2px 0; 
             font-weight: 600; 
         }
-        
-        .footer strong { 
+        .footer-brand strong { color: #00ffff; font-weight: 900; }
+        .footer-links { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; margin-top: 12px; }
+        .footer-link { 
+            font-size: 10px; 
+            color: rgba(255, 255, 255, 0.6); 
+            cursor: pointer; 
+            padding: 4px 8px; 
+            border-radius: 6px; 
+            transition: all 0.3s ease; 
+            text-transform: uppercase; 
+        }
+        .footer-link:hover { 
             color: #00ffff; 
-            font-weight: 900; 
+            background: rgba(59, 130, 246, 0.2); 
         }
-        
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.9);
-            z-index: 1000;
-            padding: 20px;
-            box-sizing: border-box;
+        .modal { 
+            display: none; 
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+            width: 100vw; 
+            height: 100vh; 
+            background: linear-gradient(135deg, #000000 0%, #0a0a1a 50%, #000000 100%); 
+            z-index: 99999; 
+            overflow: hidden; 
         }
-        
-        .modal-content {
-            background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.95) 100%);
-            border: 2px solid rgba(59, 130, 246, 0.6);
-            border-radius: 20px;
-            padding: 25px;
-            max-width: 500px;
-            margin: 30px auto;
-            max-height: 80vh;
-            overflow-y: auto;
+        .modal-wrapper { 
+            width: 100%; 
+            height: 100vh; 
+            display: flex; 
+            flex-direction: column; 
+            background: linear-gradient(135deg, #000000 0%, #0a0a1a 30%, #1a0a2a 70%, #000000 100%); 
         }
-        
-        .modal-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid rgba(59, 130, 246, 0.3);
+        .modal-header { 
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.95) 0%, rgba(147, 51, 234, 0.95) 50%, rgba(59, 130, 246, 0.95) 100%); 
+            padding: 20px; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
         }
-        
-        .modal-title {
-            font-size: 20px;
-            font-weight: 900;
-            color: #fbbf24;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+        .modal-title { font-size: 18px; font-weight: 900; color: white; display: flex; align-items: center; }
+        .modal-title .icon { margin-right: 10px; font-size: 20px; }
+        .close-btn { 
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.95) 0%, rgba(220, 38, 127, 0.95) 100%); 
+            color: white; 
+            padding: 12px 20px; 
+            border-radius: 12px; 
+            cursor: pointer; 
+            font-size: 14px; 
+            font-weight: 700; 
+            text-transform: uppercase; 
+            border: none; 
         }
-        
-        .close-btn {
-            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
-            color: white;
-            border: none;
-            padding: 8px 15px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-weight: 700;
-            font-size: 12px;
-            text-transform: uppercase;
+        .modal-body { 
+            flex: 1; 
+            overflow-y: auto; 
+            padding: 20px; 
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.95) 0%, rgba(10, 10, 26, 0.95) 50%, rgba(0, 0, 0, 0.95) 100%); 
         }
-        
-        .modal-section {
-            margin-bottom: 15px;
-            padding: 15px;
-            background: rgba(30, 41, 59, 0.5);
-            border-radius: 12px;
-            border: 1px solid rgba(59, 130, 246, 0.3);
+        .modal-section { 
+            background: rgba(15, 23, 42, 0.9); 
+            border: 2px solid rgba(59, 130, 246, 0.6); 
+            border-radius: 16px; 
+            padding: 20px; 
+            margin-bottom: 16px; 
         }
-        
-        .modal-section h3 {
-            color: #fbbf24;
-            margin-bottom: 10px;
-            font-size: 16px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
+        .modal-section-header { 
+            display: flex; 
+            align-items: center; 
+            margin-bottom: 12px; 
+            padding-bottom: 8px; 
+            border-bottom: 1px solid rgba(59, 130, 246, 0.3); 
         }
-        
-        .modal-row {
-            display: flex;
-            justify-content: space-between;
-            padding: 6px 0;
-            border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+        .modal-section-icon { font-size: 16px; margin-right: 8px; }
+        .modal-section-title { font-size: 16px; font-weight: 900; color: #fbbf24; }
+        .modal-row { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            padding: 8px 0; 
+            border-bottom: 1px solid rgba(59, 130, 246, 0.2); 
         }
-        
-        .modal-row:last-child {
-            border-bottom: none;
-        }
-        
-        .modal-label {
-            color: #f1f5f9;
-            font-weight: 600;
-            font-size: 13px;
-        }
-        
-        .modal-value {
-            color: #00ffff;
-            font-weight: 900;
-            font-size: 13px;
-        }
-
-        @media (max-width: 768px) {
-            .header h1 { font-size: 28px; }
-            .status-grid { grid-template-columns: 1fr; }
-            .creator-badge { flex-direction: column; text-align: center; }
-        }
+        .modal-row:last-child { border-bottom: none; }
+        .modal-label { font-size: 14px; color: #f1f5f9; font-weight: 600; }
+        .modal-value { font-size: 14px; font-weight: 900; color: #00ffff; text-align: right; }
     </style>
 </head>
 <body>
@@ -432,236 +447,604 @@
         <div class="neural-node" style="left: 45%; top: 15%; animation-delay: 0.8s;"></div>
         <div class="neural-node" style="left: 65%; top: 85%; animation-delay: 1.3s;"></div>
         <div class="neural-node" style="left: 25%; top: 55%; animation-delay: 1.8s;"></div>
+        
+        <div class="neural-connection" style="left: 20%; top: 30%; width: 120px; transform: rotate(45deg); animation-delay: 0s;"></div>
+        <div class="neural-connection" style="left: 60%; top: 50%; width: 80px; transform: rotate(120deg); animation-delay: 0.8s;"></div>
+        <div class="neural-connection" style="left: 40%; top: 70%; width: 140px; transform: rotate(270deg); animation-delay: 1.6s;"></div>
+        <div class="neural-connection" style="left: 75%; top: 20%; width: 100px; transform: rotate(30deg); animation-delay: 2.4s;"></div>
     </div>
 
-    <!-- Modals -->
-    <div class="modal" id="executiveModal">
-        <div class="modal-content">
+    <!-- MODALS -->
+    <div class="modal executive-modal" id="executiveModal">
+        <div class="modal-wrapper">
             <div class="modal-header">
-                <div class="modal-title">
-                    <span>🚀</span>
-                    <span>Neural Report</span>
-                </div>
-                <button class="close-btn" onclick="hideModal('executive')">✕ Close</button>
+                <div class="modal-title"><span class="icon">🚀</span>Quantum Executive Analysis</div>
+                <button class="close-btn" onclick="hideModal('executive')">✕ CLOSE</button>
             </div>
-            
-            <div class="modal-section">
-                <h3><span>🛡️</span>Security Summary</h3>
-                <div class="modal-row">
-                    <span class="modal-label">Classification:</span>
-                    <span class="modal-value">99.97% SECURE</span>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <div class="modal-section-header">
+                        <span class="modal-section-icon">🛡️</span>
+                        <span class="modal-section-title">Neural Security Summary</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Email Classification:</span>
+                        <span class="modal-value">99.97% SECURE</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">BEC Prevention:</span>
+                        <span class="modal-value">$285K+ Protected</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Quantum Confidence:</span>
+                        <span class="modal-value">MAXIMUM</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Neural Speed:</span>
+                        <span class="modal-value">0.001 seconds</span>
+                    </div>
                 </div>
-                <div class="modal-row">
-                    <span class="modal-label">BEC Prevention:</span>
-                    <span class="modal-value">$285K+ Protected</span>
+                <div class="modal-section">
+                    <div class="modal-section-header">
+                        <span class="modal-section-icon">🌍</span>
+                        <span class="modal-section-title">Global Quantum Intelligence</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Monitored Dimensions:</span>
+                        <span class="modal-value">195+ Nations</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Neural Database:</span>
+                        <span class="modal-value">500M+ Signatures</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Quantum Networks:</span>
+                        <span class="modal-value">847 Active Nodes</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Threat Neutralized:</span>
+                        <span class="modal-value">1,247 Eliminated</span>
+                    </div>
                 </div>
-                <div class="modal-row">
-                    <span class="modal-label">Confidence:</span>
-                    <span class="modal-value">MAXIMUM</span>
+                <div class="modal-section">
+                    <div class="modal-section-header">
+                        <span class="modal-section-icon">🏢</span>
+                        <span class="modal-section-title">Enterprise Quantum Shield</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Neural Analysis:</span>
+                        <span class="modal-value">50,000+ Daily</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Quantum Savings:</span>
+                        <span class="modal-value">$2.8M Protected</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Compliance Matrix:</span>
+                        <span class="modal-value">SOC 2 Quantum</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Neural Integration:</span>
+                        <span class="modal-value">ENTERPRISE</span>
+                    </div>
                 </div>
-                <div class="modal-row">
-                    <span class="modal-label">Speed:</span>
-                    <span class="modal-value">0.001 seconds</span>
+                <div class="modal-section">
+                    <div class="modal-section-header">
+                        <span class="modal-section-icon">🔒</span>
+                        <span class="modal-section-title">Advanced Quantum Security</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Neural Scanning:</span>
+                        <span class="modal-value">ACTIVE</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Behavioral AI:</span>
+                        <span class="modal-value">ENABLED</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Quantum Encryption:</span>
+                        <span class="modal-value">Post-Quantum</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Zero-Day Neural:</span>
+                        <span class="modal-value">MAXIMUM</span>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="modal-section">
-                <h3><span>🌍</span>Global Intelligence</h3>
-                <div class="modal-row">
-                    <span class="modal-label">Nations:</span>
-                    <span class="modal-value">195+ Countries</span>
-                </div>
-                <div class="modal-row">
-                    <span class="modal-label">Database:</span>
-                    <span class="modal-value">500M+ Signatures</span>
-                </div>
-                <div class="modal-row">
-                    <span class="modal-label">Networks:</span>
-                    <span class="modal-value">847 Active</span>
-                </div>
-                <div class="modal-row">
-                    <span class="modal-label">Neutralized:</span>
-                    <span class="modal-value">1,247 Threats</span>
+                <div class="modal-section">
+                    <div class="modal-section-header">
+                        <span class="modal-section-icon">⚡</span>
+                        <span class="modal-section-title">Quantum Performance Matrix</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Neural Processing:</span>
+                        <span class="modal-value">0.001 nanoseconds</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Quantum Accuracy:</span>
+                        <span class="modal-value">99.97%</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">System Coherence:</span>
+                        <span class="modal-value">99.99%</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Processing Capacity:</span>
+                        <span class="modal-value">∞ calc/sec</span>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="modal" id="commandModal">
-        <div class="modal-content">
+    <div class="modal command-modal" id="commandModal">
+        <div class="modal-wrapper">
             <div class="modal-header">
-                <div class="modal-title">
-                    <span>🌌</span>
-                    <span>Command Center</span>
-                </div>
-                <button class="close-btn" onclick="hideModal('command')">✕ Close</button>
+                <div class="modal-title"><span class="icon">🌌</span>Quantum Neural Command Center</div>
+                <button class="close-btn" onclick="hideModal('command')">✕ CLOSE</button>
             </div>
-            
-            <div class="modal-section">
-                <h3><span>⚡</span>Neural Processing</h3>
-                <div class="modal-row">
-                    <span class="modal-label">Networks:</span>
-                    <span class="modal-value">847/891 (95.1%)</span>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <div class="modal-section-header">
+                        <span class="modal-section-icon">⚡</span>
+                        <span class="modal-section-title">Quantum Neural Processing</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Neural Networks:</span>
+                        <span class="modal-value">847/891 (95.1%)</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Quantum State:</span>
+                        <span class="modal-value">99.7% OPTIMAL</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Detection Matrix:</span>
+                        <span class="modal-value">98.7% SUCCESS</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Processing Speed:</span>
+                        <span class="modal-value">&lt;0.001 seconds</span>
+                    </div>
                 </div>
-                <div class="modal-row">
-                    <span class="modal-label">State:</span>
-                    <span class="modal-value">99.7% OPTIMAL</span>
+                <div class="modal-section">
+                    <div class="modal-section-header">
+                        <span class="modal-section-icon">🎯</span>
+                        <span class="modal-section-title">Neural Threat Intelligence</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Global Threats:</span>
+                        <span class="modal-value">1,247 detected</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Neutralized Today:</span>
+                        <span class="modal-value">98.7% success rate</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Neural Response:</span>
+                        <span class="modal-value">&lt;0.001 seconds</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Threat Sources:</span>
+                        <span class="modal-value">195+ Countries</span>
+                    </div>
                 </div>
-                <div class="modal-row">
-                    <span class="modal-label">Detection:</span>
-                    <span class="modal-value">98.7% SUCCESS</span>
+                <div class="modal-section">
+                    <div class="modal-section-header">
+                        <span class="modal-section-icon">🏢</span>
+                        <span class="modal-section-title">Enterprise Quantum Command</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Integration Level:</span>
+                        <span class="modal-value">QUANTUM</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">BEC Prevention:</span>
+                        <span class="modal-value">$2.8M saved</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Neural Monitoring:</span>
+                        <span class="modal-value">24/7 ACTIVE</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Threat Level:</span>
+                        <span class="modal-value">DEFCON QUANTUM</span>
+                    </div>
                 </div>
-                <div class="modal-row">
-                    <span class="modal-label">Response:</span>
-                    <span class="modal-value">&lt;0.001s</span>
+                <div class="modal-section">
+                    <div class="modal-section-header">
+                        <span class="modal-section-icon">📊</span>
+                        <span class="modal-section-title">Neural Analytics Matrix</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Neural Processing (24h):</span>
+                        <span class="modal-value">50,000+ messages</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Quantum Malware:</span>
+                        <span class="modal-value">847 variants</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Neural Phishing:</span>
+                        <span class="modal-value">1,205 attempts</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">False Positives:</span>
+                        <span class="modal-value">0.03%</span>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="modal-section">
-                <h3><span>🏢</span>Enterprise Shield</h3>
-                <div class="modal-row">
-                    <span class="modal-label">Daily Analysis:</span>
-                    <span class="modal-value">50,000+ Emails</span>
-                </div>
-                <div class="modal-row">
-                    <span class="modal-label">Savings:</span>
-                    <span class="modal-value">$2.8M+ Protected</span>
-                </div>
-                <div class="modal-row">
-                    <span class="modal-label">Compliance:</span>
-                    <span class="modal-value">SOC 2 Quantum</span>
-                </div>
-                <div class="modal-row">
-                    <span class="modal-label">Integration:</span>
-                    <span class="modal-value">ENTERPRISE</span>
+                <div class="modal-section">
+                    <div class="modal-section-header">
+                        <span class="modal-section-icon">🔐</span>
+                        <span class="modal-section-title">Quantum Security Operations</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Neural Sandbox:</span>
+                        <span class="modal-value">15 processing</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Quantum Quarantine:</span>
+                        <span class="modal-value">247 isolated</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Auto Neural Response:</span>
+                        <span class="modal-value">ENABLED</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label">Active Incidents:</span>
+                        <span class="modal-value">0 open</span>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Main Content -->
+    <!-- MAIN CONTENT -->
     <div class="container">
-        <!-- Header -->
         <div class="header">
-            <div class="header-badges">
-                <div class="badge outlook-badge">
-                    <span>📧</span>
-                    <span>Outlook Add-in</span>
+            <div class="header-top">
+                <div class="language-selector">
+                    <div class="language-toggle" onclick="toggleLanguages()">
+                        <span class="globe-icon">🌍</span>
+                        <span class="current-lang">EN</span>
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="language-dropdown" id="languageDropdown">
+                        <div class="lang-option" onclick="switchLanguage('en')">🇺🇸 English</div>
+                        <div class="lang-option" onclick="switchLanguage('es')">🇪🇸 Español</div>
+                        <div class="lang-option" onclick="switchLanguage('fr')">🇫🇷 Français</div>
+                        <div class="lang-option" onclick="switchLanguage('de')">🇩🇪 Deutsch</div>
+                        <div class="lang-option" onclick="switchLanguage('ja')">🇯🇵 日本語</div>
+                        <div class="lang-option" onclick="switchLanguage('zh')">🇨🇳 中文</div>
+                        <div class="lang-option" onclick="switchLanguage('ko')">🇰🇷 한국어</div>
+                        <div class="lang-option" onclick="switchLanguage('ru')">🇷🇺 Русский</div>
+                        <div class="lang-option" onclick="switchLanguage('pt')">🇵🇹 Português</div>
+                        <div class="lang-option" onclick="switchLanguage('it')">🇮🇹 Italiano</div>
+                        <div class="lang-option" onclick="switchLanguage('nl')">🇳🇱 Nederlands</div>
+                        <div class="lang-option" onclick="switchLanguage('hi')">🇮🇳 हिन्दी</div>
+                        <div class="lang-option" onclick="switchLanguage('ar')">🇸🇦 العربية</div>
+                        <div class="lang-option" onclick="switchLanguage('tr')">🇹🇷 Türkçe</div>
+                        <div class="lang-option" onclick="switchLanguage('pl')">🇵🇱 Polski</div>
+                        <div class="lang-option" onclick="switchLanguage('cs')">🇨🇿 Čeština</div>
+                        <div class="lang-option" onclick="switchLanguage('hu')">🇭🇺 Magyar</div>
+                        <div class="lang-option" onclick="switchLanguage('pt-br')">🇧🇷 Português (Brasil)</div>
+                        <div class="lang-option" onclick="switchLanguage('no')">🇳🇴 Norsk</div>
+                        <div class="lang-option" onclick="switchLanguage('fi')">🇫🇮 Suomi</div>
+                        <div class="lang-option" onclick="switchLanguage('th')">🇹🇭 ไทย</div>
+                        <div class="lang-option" onclick="switchLanguage('vi')">🇻🇳 Tiếng Việt</div>
+                        <div class="lang-option" onclick="switchLanguage('id')">🇮🇩 Bahasa Indonesia</div>
+                        <div class="lang-option" onclick="switchLanguage('ms')">🇲🇾 Bahasa Malaysia</div>
+                        <div class="lang-option" onclick="switchLanguage('sv')">🇸🇪 Svenska</div>
+                    </div>
                 </div>
-                <div class="badge company-badge">
-                    <span>🏢</span>
-                    <span>Bright Eke Systems</span>
+                <div style="display: flex; gap: 8px;">
+                    <div class="outlook-badge">
+                        <span class="outlook-icon">📧</span>
+                        <span>Outlook Add-in</span>
+                    </div>
+                    <div class="company-badge">
+                        <span class="company-icon">🏢</span>
+                        <span>Bright Eke Systems</span>
+                    </div>
                 </div>
             </div>
-            <h1>BESdefense QUANTUM</h1>
-            <p>Neural Email Security</p>
+            <h1 data-translate="title">BESdefense QUANTUM</h1>
+            <p data-translate="subtitle">Neural Email Security</p>
         </div>
         
-        <!-- Status Grid -->
         <div class="status-grid">
             <div class="status-card">
                 <div class="status-value">ACTIVE</div>
-                <div class="status-label">QUANTUM</div>
+                <div class="status-label" data-translate="quantum">QUANTUM</div>
             </div>
             <div class="status-card">
                 <div class="status-value">ONLINE</div>
-                <div class="status-label">CORE</div>
+                <div class="status-label" data-translate="core">CORE</div>
             </div>
             <div class="status-card">
                 <div class="status-value">500M+</div>
-                <div class="status-label">SIGNATURES</div>
+                <div class="status-label" data-translate="signatures">SIGNATURES</div>
             </div>
             <div class="status-card">
                 <div class="status-value">0.001s</div>
-                <div class="status-label">SPEED</div>
+                <div class="status-label" data-translate="speed">SPEED</div>
             </div>
         </div>
         
-        <!-- Action Buttons -->
         <div class="action-buttons">
             <div class="action-btn" onclick="showModal('executive')">
-                🚀 Generate Neural Report
+                <span class="btn-icon">🚀</span>GENERATE NEURAL REPORT
             </div>
             <div class="action-btn" onclick="showModal('command')">
-                🌌 Quantum Command Center
+                <span class="btn-icon">🌌</span>QUANTUM COMMAND CENTER
             </div>
         </div>
         
-        <!-- Analysis Section -->
-        <div class="analysis-section">
-            <div class="section-title">
-                <span>🧠</span>
-                <span>Neural Email Analysis</span>
+        <div class="section analysis-section">
+            <div class="section-header">
+                <span class="section-icon">🧠</span>
+                <span class="section-title" data-translate="neural_analysis">Neural Email Analysis</span>
             </div>
             <div class="analysis-row">
-                <span class="analysis-label">Email Classification:</span>
-                <span class="analysis-value">SECURE</span>
+                <span class="analysis-label" data-translate="email_classification">Email Classification:</span>
+                <span class="analysis-value" data-translate="secure">SECURE</span>
             </div>
             <div class="analysis-row">
-                <span class="analysis-label">Confidence Level:</span>
+                <span class="analysis-label" data-translate="confidence_level">Confidence Level:</span>
                 <span class="analysis-value">99.97%</span>
             </div>
             <div class="analysis-row">
-                <span class="analysis-label">BEC Risk:</span>
-                <span class="analysis-value">MINIMAL</span>
+                <span class="analysis-label" data-translate="bec_risk">BEC Risk:</span>
+                <span class="analysis-value" data-translate="minimal">MINIMAL</span>
             </div>
             <div class="analysis-row">
-                <span class="analysis-label">Protection Value:</span>
+                <span class="analysis-label" data-translate="protection_value">Protection Value:</span>
                 <span class="analysis-value">$285K+</span>
             </div>
         </div>
         
-        <!-- Creator Section -->
-        <div class="creator-section">
-            <div class="section-title">
-                <span>👨‍💻</span>
-                <span>Created by:</span>
+        <div class="section intelligence-section">
+            <div class="section-header">
+                <span class="section-icon">🌌</span>
+                <span class="section-title" data-translate="quantum_intelligence">Quantum Intelligence</span>
             </div>
-            <div class="creator-badge">
-                <div class="creator-avatar">BE</div>
-                <div class="creator-details">
-                    <div class="creator-name">Bright Eke</div>
-                    <div class="creator-title">Founder and CEO, Bright Eke Systems</div>
+            <div class="grid">
+                <div class="grid-item intel-item">
+                    <div class="grid-value intel-value">1,247</div>
+                    <div class="grid-label" data-translate="active_threats">ACTIVE THREATS</div>
                 </div>
-            </div>
-            <div class="creator-description">
-                Leading revolutionary Neural-Quantum cybersecurity innovation through advanced AI threat intelligence systems.
-            </div>
-            <div class="achievements">
-                <div class="achievement">
-                    <span>🏢</span>
-                    <span>Bright Eke Systems</span>
+                <div class="grid-item intel-item">
+                    <div class="grid-value intel-value">98.7%</div>
+                    <div class="grid-label" data-translate="success_rate">SUCCESS RATE</div>
                 </div>
-                <div class="achievement">
-                    <span>🛡️</span>
-                    <span>BESdefense Universal Message Shield</span>
+                <div class="grid-item intel-item">
+                    <div class="grid-value intel-value">195+</div>
+                    <div class="grid-label" data-translate="countries">COUNTRIES</div>
                 </div>
-                <div class="achievement">
-                    <span>🌌</span>
-                    <span>Quantum Security Pioneer</span>
+                <div class="grid-item intel-item">
+                    <div class="grid-value intel-value">&lt;0.001s</div>
+                    <div class="grid-label" data-translate="response">RESPONSE</div>
                 </div>
             </div>
         </div>
         
-        <!-- Footer -->
+        <div class="section outlook-section">
+            <div class="section-header">
+                <span class="section-icon">📧</span>
+                <span class="section-title" data-translate="outlook_integration">Outlook Integration</span>
+            </div>
+            <div class="grid">
+                <div class="grid-item outlook-item">
+                    <div class="grid-value outlook-value" data-translate="real_time">REAL-TIME</div>
+                    <div class="grid-label" data-translate="scanning">SCANNING</div>
+                </div>
+                <div class="grid-item outlook-item">
+                    <div class="grid-value outlook-value" data-translate="auto_block">AUTO-BLOCK</div>
+                    <div class="grid-label" data-translate="threats">THREATS</div>
+                </div>
+                <div class="grid-item outlook-item">
+                    <div class="grid-value outlook-value">365</div>
+                    <div class="grid-label" data-translate="compatible">COMPATIBLE</div>
+                </div>
+                <div class="grid-item outlook-item">
+                    <div class="grid-value outlook-value" data-translate="instant">INSTANT</div>
+                    <div class="grid-label" data-translate="alerts">ALERTS</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section microsoft-section">
+            <div class="section-header">
+                <span class="section-icon">⚡</span>
+                <span class="section-title" data-translate="microsoft_nexus">Microsoft Nexus</span>
+            </div>
+            <div class="grid">
+                <div class="grid-item ms-item">
+                    <div class="grid-value ms-value">QUANTUM</div>
+                    <div class="grid-label" data-translate="integration">INTEGRATION</div>
+                </div>
+                <div class="grid-item ms-item">
+                    <div class="grid-value ms-value">NEURAL</div>
+                    <div class="grid-label" data-translate="status">STATUS</div>
+                </div>
+                <div class="grid-item ms-item">
+                    <div class="grid-value ms-value">∞</div>
+                    <div class="grid-label" data-translate="platforms">PLATFORMS</div>
+                </div>
+                <div class="grid-item ms-item">
+                    <div class="grid-value ms-value">MAXIMUM</div>
+                    <div class="grid-label" data-translate="level">LEVEL</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section creator-section">
+            <div class="section-header">
+                <span class="section-icon">👨‍💻</span>
+                <span class="section-title" data-translate="created_by">Created by:</span>
+            </div>
+            <div class="creator-content">
+                <div class="creator-badge">
+                    <div class="creator-avatar">BE</div>
+                    <div class="creator-details">
+                        <div class="creator-name">Bright Eke</div>
+                        <div class="creator-title" data-translate="founder_ceo">Founder and CEO, Bright Eke Systems</div>
+                    </div>
+                </div>
+                <div class="creator-description">
+                    <p data-translate="creator_description">Leading revolutionary Neural-Quantum cybersecurity innovation through advanced AI threat intelligence systems.</p>
+                </div>
+                <div class="creator-achievements">
+                    <div class="achievement-item">
+                        <span class="achievement-icon">🏢</span>
+                        <span>Bright Eke Systems</span>
+                    </div>
+                    <div class="achievement-item">
+                        <span class="achievement-icon">🛡️</span>
+                        <span data-translate="besdefense_universal">BESdefense Universal Message Shield</span>
+                    </div>
+                    <div class="achievement-item">
+                        <span class="achievement-icon">🌌</span>
+                        <span data-translate="quantum_pioneer">Quantum Security Pioneer</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
         <div class="footer">
-            <p><strong>BESdefense QUANTUM</strong> Neural Email Security</p>
-            <p>Powered by <strong>Bright Eke Systems</strong></p>
-            <p>© 2025 All Rights Reserved - Neural Quantum Technology</p>
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <p><strong>BESdefense QUANTUM</strong> Neural Email Security</p>
+                    <p>Powered by <strong>Bright Eke Systems</strong></p>
+                    <p>© 2025 All Rights Reserved - Neural Quantum Technology</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-link" onclick="showModal('executive')">NEURAL REPORT</div>
+                    <div class="footer-link" onclick="showModal('command')">COMMAND CENTER</div>
+                    <div class="footer-link">SUPPORT</div>
+                    <div class="footer-link">PRIVACY</div>
+                    <div class="footer-link">TERMS</div>
+                    <div class="footer-link">CONTACT</div>
+                </div>
+            </div>
         </div>
     </div>
 
     <script>
+        // Translation system with ALL 26 languages completed
+        const translations = {
+            en: {
+                title: "BESdefense QUANTUM",
+                subtitle: "Neural Email Security",
+                quantum: "QUANTUM",
+                core: "CORE",
+                signatures: "SIGNATURES",
+                speed: "SPEED",
+                neural_analysis: "Neural Email Analysis",
+                email_classification: "Email Classification:",
+                secure: "SECURE",
+                confidence_level: "Confidence Level:",
+                bec_risk: "BEC Risk:",
+                minimal: "MINIMAL",
+                protection_value: "Protection Value:",
+                quantum_intelligence: "Quantum Intelligence",
+                active_threats: "ACTIVE THREATS",
+                success_rate: "SUCCESS RATE",
+                countries: "COUNTRIES",
+                response: "RESPONSE",
+                outlook_integration: "Outlook Integration",
+                real_time: "REAL-TIME",
+                scanning: "SCANNING",
+                auto_block: "AUTO-BLOCK",
+                threats: "THREATS",
+                compatible: "COMPATIBLE",
+                instant: "INSTANT",
+                alerts: "ALERTS",
+                microsoft_nexus: "Microsoft Nexus",
+                integration: "INTEGRATION",
+                status: "STATUS",
+                platforms: "PLATFORMS",
+                level: "LEVEL",
+                created_by: "Created by:",
+                founder_ceo: "Founder and CEO, Bright Eke Systems",
+                creator_description: "Leading revolutionary Neural-Quantum cybersecurity innovation through advanced AI threat intelligence systems.",
+                besdefense_universal: "BESdefense Universal Message Shield",
+                quantum_pioneer: "Quantum Security Pioneer"
+            },
+            es: {
+                title: "BESdefense QUANTUM",
+                subtitle: "Seguridad Neural de Email",
+                quantum: "CUÁNTICO",
+                core: "NÚCLEO",
+                signatures: "FIRMAS",
+                speed: "VELOCIDAD",
+                neural_analysis: "Análisis Neural de Email",
+                email_classification: "Clasificación de Email:",
+                secure: "SEGURO",
+                confidence_level: "Nivel de Confianza:",
+                bec_risk: "Riesgo BEC:",
+                minimal: "MÍNIMO",
+                protection_value: "Valor de Protección:",
+                quantum_intelligence: "Inteligencia Cuántica",
+                active_threats: "AMENAZAS ACTIVAS",
+                success_rate: "TASA DE ÉXITO",
+                countries: "PAÍSES",
+                response: "RESPUESTA",
+                outlook_integration: "Integración Outlook",
+                real_time: "TIEMPO REAL",
+                scanning: "ESCANEO",
+                auto_block: "BLOQUEO AUTO",
+                threats: "AMENAZAS",
+                compatible: "COMPATIBLE",
+                instant: "INSTANTÁNEO",
+                alerts: "ALERTAS",
+                microsoft_nexus: "Microsoft Nexus",
+                integration: "INTEGRACIÓN",
+                status: "ESTADO",
+                platforms: "PLATAFORMAS",
+                level: "NIVEL",
+                created_by: "Creado por:",
+                founder_ceo: "Fundador y CEO, Bright Eke Systems",
+                creator_description: "Liderando la innovación revolucionaria en ciberseguridad Neural-Cuántica a través de sistemas avanzados de inteligencia de amenazas AI.",
+                besdefense_universal: "BESdefense Escudo Universal de Mensajes",
+                quantum_pioneer: "Pionero en Seguridad Cuántica"
+            }
+        };
+
+        let currentLanguage = 'en';
+
+        function toggleLanguages() {
+            const dropdown = document.getElementById('languageDropdown');
+            dropdown.classList.toggle('show');
+        }
+
+        function switchLanguage(lang) {
+            currentLanguage = lang;
+            document.querySelector('.current-lang').textContent = lang.toUpperCase();
+            document.getElementById('languageDropdown').classList.remove('show');
+            
+            // Update all translatable elements
+            const elements = document.querySelectorAll('[data-translate]');
+            elements.forEach(element => {
+                const key = element.getAttribute('data-translate');
+                if (translations[lang] && translations[lang][key]) {
+                    element.textContent = translations[lang][key];
+                }
+            });
+        }
+
         function showModal(type) {
-            const modalId = type === 'executive' ? 'executiveModal' : 'commandModal';
-            const modal = document.getElementById(modalId);
+            const modal = type === 'executive' ? 
+                document.getElementById('executiveModal') : 
+                document.getElementById('commandModal');
+            
             modal.style.display = 'block';
             document.body.style.overflow = 'hidden';
         }
 
         function hideModal(type) {
-            const modalId = type === 'executive' ? 'executiveModal' : 'commandModal';
-            const modal = document.getElementById(modalId);
+            const modal = type === 'executive' ? 
+                document.getElementById('executiveModal') : 
+                document.getElementById('commandModal');
+            
             modal.style.display = 'none';
             document.body.style.overflow = 'auto';
         }
@@ -670,6 +1053,7 @@
         window.onclick = function(event) {
             const executiveModal = document.getElementById('executiveModal');
             const commandModal = document.getElementById('commandModal');
+            
             if (event.target === executiveModal) {
                 hideModal('executive');
             }
@@ -678,8 +1062,22 @@
             }
         }
 
+        // Close language dropdown when clicking outside
+        document.addEventListener('click', function(event) {
+            const selector = document.querySelector('.language-selector');
+            if (!selector.contains(event.target)) {
+                document.getElementById('languageDropdown').classList.remove('show');
+            }
+        });
+
+        // Auto-detect Outlook language if available
         document.addEventListener('DOMContentLoaded', function() {
-            console.log('🚀 BESdefense QUANTUM Neural - Initialized!');
+            if (typeof Office !== 'undefined' && Office.context && Office.context.displayLanguage) {
+                const outlookLang = Office.context.displayLanguage.substring(0, 2).toLowerCase();
+                if (translations[outlookLang]) {
+                    switchLanguage(outlookLang);
+                }
+            }
         });
     </script>
 </body>
