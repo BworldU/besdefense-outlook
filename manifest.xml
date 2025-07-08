@@ -5,12 +5,12 @@
            xsi:type="MailApp">
   
   <Id>f8b4c2d1-9e3a-4526-b101-852e74fb9abc</Id>
-  <Version>1.0.0.0</Version>
+  <Version>2.0.0.0</Version>
   <ProviderName>Bright Eke Systems</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   
-  <DisplayName DefaultValue="BESdefense QUANTUM"/>
-  <Description DefaultValue="Revolutionary Quantum Neural Email Security"/>
+  <DisplayName DefaultValue="BESdefense QUANTUM Neural"/>
+  <Description DefaultValue="Revolutionary Neural-Quantum Email Security with AI Threat Intelligence - Advanced protection against phishing, BEC attacks, and malware through quantum-powered neural networks."/>
   
   <IconUrl DefaultValue="https://bworldu.github.io/besdefense-outlook/icon-64.png"/>
   <HighResolutionIconUrl DefaultValue="https://bworldu.github.io/besdefense-outlook/icon-128.png"/>
@@ -35,17 +35,18 @@
     <Form xsi:type="ItemRead">
       <DesktopSettings>
         <SourceLocation DefaultValue="https://bworldu.github.io/besdefense-outlook/index.html"/>
-        <RequestedHeight>300</RequestedHeight>
+        <RequestedHeight>600</RequestedHeight>
       </DesktopSettings>
     </Form>
   </FormSettings>
   
-  <Permissions>ReadWriteItem</Permissions>
+  <Permissions>ReadWriteMailbox</Permissions>
   
   <Rule xsi:type="RuleCollection" Mode="Or">
     <Rule xsi:type="ItemIs" ItemType="Message" FormType="Read"/>
+    <Rule xsi:type="ItemIs" ItemType="Message" FormType="Edit"/>
   </Rule>
-
+  
   <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides" xsi:type="VersionOverridesV1_0">
     <Description resid="residDescription"/>
     
@@ -77,7 +78,7 @@
         </DesktopFormFactor>
       </Host>
     </Hosts>
-
+    
     <Resources>
       <bt:Images>
         <bt:Image id="Icon.16x16" DefaultValue="https://bworldu.github.io/besdefense-outlook/icon-16.png"/>
@@ -88,12 +89,12 @@
         <bt:Url id="Taskpane.Url" DefaultValue="https://bworldu.github.io/besdefense-outlook/index.html"/>
       </bt:Urls>
       <bt:ShortStrings>
-        <bt:String id="GroupLabel" DefaultValue="BESdefense"/>
-        <bt:String id="TaskpaneButton.Label" DefaultValue="BESdefense"/>
+        <bt:String id="GroupLabel" DefaultValue="BESdefense QUANTUM"/>
+        <bt:String id="TaskpaneButton.Label" DefaultValue="BESdefense QUANTUM"/>
       </bt:ShortStrings>
       <bt:LongStrings>
-        <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Open BESdefense Quantum Neural Analysis"/>
-        <bt:String id="residDescription" DefaultValue="Revolutionary Quantum Neural Email Security"/>
+        <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Open BESdefense Quantum Neural Email Security Analysis"/>
+        <bt:String id="residDescription" DefaultValue="Revolutionary Neural-Quantum Email Security with AI Threat Intelligence"/>
       </bt:LongStrings>
     </Resources>
   </VersionOverrides>
