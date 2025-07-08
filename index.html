@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BESdefense QUANTUM NEURAL</title>
+    <title>BESdefense QUANTUM Neural Security</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { 
             font-family: 'Inter', system-ui, sans-serif; 
             background: radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%), 
-                        radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%), 
-                        linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #16213e 100%); 
+                       radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%), 
+                       linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #16213e 100%); 
             color: #e2e8f0; 
             min-height: 100vh; 
             overflow-x: hidden; 
-            position: relative; 
+            position: relative;
         }
         .neural-network { 
             position: fixed; 
@@ -183,133 +183,6 @@
             letter-spacing: 2px; 
             font-weight: 700; 
         }
-        .section { 
-            background: rgba(15, 23, 42, 0.7); 
-            backdrop-filter: blur(25px); 
-            border-radius: 24px; 
-            padding: 24px; 
-            margin-bottom: 24px; 
-            position: relative; 
-        }
-        .analysis-section { border: 1px solid rgba(34, 197, 94, 0.4); }
-        .intelligence-section { border: 1px solid rgba(251, 146, 60, 0.4); }
-        .outlook-section { border: 1px solid rgba(34, 197, 94, 0.4); }
-        .microsoft-section { border: 1px solid rgba(56, 189, 248, 0.4); }
-        .creator-section { 
-            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(147, 51, 234, 0.1) 100%); 
-            border: 2px solid rgba(59, 130, 246, 0.4); 
-        }
-        .section-header { display: flex; align-items: center; margin-bottom: 20px; }
-        .section-icon { font-size: 18px; margin-right: 12px; }
-        .section-title { 
-            font-size: 18px; 
-            font-weight: 900; 
-            background: linear-gradient(135deg, #00ff88 0%, #00ffff 50%, #ffffff 100%); 
-            background-clip: text; 
-            -webkit-background-clip: text; 
-            -webkit-text-fill-color: transparent; 
-        }
-        .analysis-row { 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-            padding: 16px 0; 
-            border-bottom: 1px solid rgba(34, 197, 94, 0.2); 
-        }
-        .analysis-row:last-child { border-bottom: none; }
-        .analysis-label { font-size: 14px; color: #e2e8f0; font-weight: 600; }
-        .analysis-value { 
-            font-size: 14px; 
-            font-weight: 900; 
-            background: linear-gradient(135deg, #00ff88 0%, #00ffff 100%); 
-            background-clip: text; 
-            -webkit-background-clip: text; 
-            -webkit-text-fill-color: transparent; 
-        }
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; }
-        .grid-item { 
-            text-align: center; 
-            padding: 16px; 
-            border-radius: 16px; 
-            transition: all 0.3s ease; 
-            cursor: pointer; 
-        }
-        .intel-item { background: rgba(251, 146, 60, 0.1); }
-        .outlook-item { background: rgba(34, 197, 94, 0.1); }
-        .ms-item { background: rgba(56, 189, 248, 0.1); }
-        .grid-item:hover { transform: translateY(-4px) scale(1.05); }
-        .grid-value { 
-            font-size: 16px; 
-            font-weight: 900; 
-            margin-bottom: 6px; 
-        }
-        .intel-value { 
-            background: linear-gradient(135deg, #ff6b35 0%, #ffcd3c 100%); 
-            background-clip: text; 
-            -webkit-background-clip: text; 
-            -webkit-text-fill-color: transparent; 
-        }
-        .outlook-value { 
-            background: linear-gradient(135deg, #00ff88 0%, #00ffff 100%); 
-            background-clip: text; 
-            -webkit-background-clip: text; 
-            -webkit-text-fill-color: transparent; 
-        }
-        .ms-value { 
-            background: linear-gradient(135deg, #0078d4 0%, #40e0d0 100%); 
-            background-clip: text; 
-            -webkit-background-clip: text; 
-            -webkit-text-fill-color: transparent; 
-        }
-        .grid-label { 
-            font-size: 10px; 
-            color: rgba(255, 255, 255, 0.7); 
-            font-weight: 700; 
-            text-transform: uppercase; 
-        }
-        .creator-badge { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; }
-        .creator-avatar { 
-            width: 48px; 
-            height: 48px; 
-            border-radius: 50%; 
-            background: linear-gradient(135deg, #3b82f6 0%, #9333ea 50%, #ec4899 100%); 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            font-size: 18px; 
-            font-weight: 900; 
-            color: white; 
-        }
-        .creator-name { 
-            font-size: 20px; 
-            font-weight: 900; 
-            background: linear-gradient(135deg, #ffffff 0%, #00ffff 50%, #ffffff 100%); 
-            background-clip: text; 
-            -webkit-background-clip: text; 
-            -webkit-text-fill-color: transparent; 
-            margin-bottom: 4px; 
-        }
-        .creator-title { 
-            font-size: 12px; 
-            color: rgba(255, 255, 255, 0.7); 
-            font-weight: 600; 
-            text-transform: uppercase; 
-        }
-        .creator-description p { 
-            font-size: 14px; 
-            color: #e2e8f0; 
-            line-height: 1.5; 
-            margin-bottom: 16px; 
-        }
-        .creator-achievements { display: flex; flex-direction: column; gap: 8px; }
-        .achievement-item { 
-            display: flex; 
-            align-items: center; 
-            gap: 8px; 
-            font-size: 12px; 
-            color: #cbd5e1; 
-            font-weight: 600; 
-        }
         .action-buttons { 
             display: flex; 
             flex-direction: column; 
@@ -332,36 +205,6 @@
         .action-btn:hover { 
             transform: translateY(-4px); 
             box-shadow: 0 15px 30px rgba(59, 130, 246, 0.4); 
-        }
-        .footer { 
-            text-align: center; 
-            padding: 24px; 
-            border-top: 1px solid rgba(255, 255, 255, 0.1); 
-            background: rgba(15, 23, 42, 0.8); 
-            border-radius: 16px; 
-            margin-top: 16px; 
-        }
-        .footer-brand p { 
-            font-size: 11px; 
-            color: rgba(255, 255, 255, 0.8); 
-            margin: 2px 0; 
-            font-weight: 600; 
-        }
-        .footer-brand strong { color: #00ffff; font-weight: 900; }
-        .footer-links { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; margin-top: 12px; }
-        .footer-link { 
-            font-size: 10px; 
-            color: rgba(255, 255, 255, 0.6); 
-            cursor: pointer; 
-            padding: 4px 8px; 
-            border-radius: 6px; 
-            transition: all 0.3s ease; 
-            text-transform: uppercase; 
-            letter-spacing: 1px;
-        }
-        .footer-link:hover { 
-            color: #00ffff; 
-            background: rgba(59, 130, 246, 0.2); 
         }
         .modal { 
             display: none; 
@@ -436,6 +279,7 @@
     </style>
 </head>
 <body>
+    <!-- Neural Network Background -->
     <div class="neural-network">
         <div class="neural-node" style="left: 10%; top: 20%; animation-delay: 0s;"></div>
         <div class="neural-node" style="left: 30%; top: 40%; animation-delay: 0.5s;"></div>
@@ -454,6 +298,7 @@
         <div class="neural-connection" style="left: 75%; top: 20%; width: 100px; transform: rotate(30deg); animation-delay: 2.4s;"></div>
     </div>
 
+    <!-- Executive Modal -->
     <div class="modal executive-modal" id="executiveModal">
         <div class="modal-wrapper">
             <div class="modal-header">
@@ -505,76 +350,11 @@
                         <span class="modal-value">1,247 <span data-translate="eliminated">Eliminated</span></span>
                     </div>
                 </div>
-                <div class="modal-section">
-                    <div class="modal-section-header">
-                        <span class="modal-section-icon">🏢</span>
-                        <span class="modal-section-title" data-translate="enterprise_quantum_shield">Enterprise Quantum Shield</span>
-                    </div>
-                    <div class="modal-row">
-                        <span class="modal-label" data-translate="neural_analysis">Neural Analysis:</span>
-                        <span class="modal-value" data-translate="daily_analysis_value">50,000+ Daily</span>
-                    </div>
-                    <div class="modal-row">
-                        <span class="modal-label" data-translate="quantum_savings">Quantum Savings:</span>
-                        <span class="modal-value" data-translate="protected_amount">$2.8M Protected</span>
-                    </div>
-                    <div class="modal-row">
-                        <span class="modal-label" data-translate="compliance_matrix">Compliance Matrix:</span>
-                        <span class="modal-value" data-translate="compliance_value">SOC 2 Quantum</span>
-                    </div>
-                    <div class="modal-row">
-                        <span class="modal-label" data-translate="neural_integration">Neural Integration:</span>
-                        <span class="modal-value" data-translate="integration_level">ENTERPRISE</span>
-                    </div>
-                </div>
-                <div class="modal-section">
-                    <div class="modal-section-header">
-                        <span class="modal-section-icon">🔒</span>
-                        <span class="modal-section-title" data-translate="advanced_quantum_security">Advanced Quantum Security</span>
-                    </div>
-                    <div class="modal-row">
-                        <span class="modal-label" data-translate="neural_scanning">Neural Scanning:</span>
-                        <span class="modal-value" data-translate="active">ACTIVE</span>
-                    </div>
-                    <div class="modal-row">
-                        <span class="modal-label" data-translate="behavioral_ai">Behavioral AI:</span>
-                        <span class="modal-value" data-translate="enabled">ENABLED</span>
-                    </div>
-                    <div class="modal-row">
-                        <span class="modal-label" data-translate="quantum_encryption">Quantum Encryption:</span>
-                        <span class="modal-value" data-translate="post_quantum">Post-Quantum</span>
-                    </div>
-                    <div class="modal-row">
-                        <span class="modal-label" data-translate="zero_day_neural">Zero-Day Neural:</span>
-                        <span class="modal-value" data-translate="maximum">MAXIMUM</span>
-                    </div>
-                </div>
-                <div class="modal-section">
-                    <div class="modal-section-header">
-                        <span class="modal-section-icon">⚡</span>
-                        <span class="modal-section-title" data-translate="quantum_performance_matrix">Quantum Performance Matrix</span>
-                    </div>
-                    <div class="modal-row">
-                        <span class="modal-label" data-translate="neural_processing_time">Neural Processing:</span>
-                        <span class="modal-value" data-translate="nanoseconds">0.001 nanoseconds</span>
-                    </div>
-                    <div class="modal-row">
-                        <span class="modal-label" data-translate="quantum_accuracy">Quantum Accuracy:</span>
-                        <span class="modal-value">99.97%</span>
-                    </div>
-                    <div class="modal-row">
-                        <span class="modal-label" data-translate="system_coherence">System Coherence:</span>
-                        <span class="modal-value">99.99%</span>
-                    </div>
-                    <div class="modal-row">
-                        <span class="modal-label" data-translate="processing_capacity">Processing Capacity:</span>
-                        <span class="modal-value" data-translate="infinity_calc_sec">∞ calc/sec</span>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
 
+    <!-- Command Modal -->
     <div class="modal command-modal" id="commandModal">
         <div class="modal-wrapper">
             <div class="modal-header">
@@ -601,7 +381,7 @@
                     </div>
                     <div class="modal-row">
                         <span class="modal-label" data-translate="processing_speed">Processing Speed:</span>
-                        <span class="modal-value" data-translate="less_than_seconds">&lt;0.001 seconds</span>
+                        <span class="modal-value">&lt;0.001 <span data-translate="seconds">seconds</span></span>
                     </div>
                 </div>
                 <div class="modal-section">
@@ -611,91 +391,26 @@
                     </div>
                     <div class="modal-row">
                         <span class="modal-label" data-translate="global_threats">Global Threats:</span>
-                        <span class="modal-value" data-translate="detected_count">1,247 detected</span>
+                        <span class="modal-value">1,247 <span data-translate="detected">detected</span></span>
                     </div>
                     <div class="modal-row">
                         <span class="modal-label" data-translate="neutralized_today">Neutralized Today:</span>
-                        <span class="modal-value" data-translate="success_rate">98.7% success rate</span>
+                        <span class="modal-value">98.7% <span data-translate="success_rate">success rate</span></span>
                     </div>
                     <div class="modal-row">
                         <span class="modal-label" data-translate="neural_response">Neural Response:</span>
-                        <span class="modal-value" data-translate="less_than_seconds">&lt;0.001 seconds</span>
+                        <span class="modal-value">&lt;0.001 <span data-translate="seconds">seconds</span></span>
                     </div>
                     <div class="modal-row">
                         <span class="modal-label" data-translate="threat_sources">Threat Sources:</span>
-                        <span class="modal-value" data-translate="countries_count">195+ Countries</span>
-                    </div>
-                </div>
-                <div class="modal-section">
-                    <div class="modal-section-header">
-                        <span class="modal-section-icon">🏢</span>
-                        <span class="modal-section-title" data-translate="enterprise_quantum_command">Enterprise Quantum Command</span>
-                    </div>
-                    <div class="modal-row">
-                        <span class="modal-label" data-translate="integration_level_modal">Integration Level:</span>
-                        <span class="modal-value" data-translate="quantum">QUANTUM</span>
-                    </div>
-                    <div class="modal-row">
-                        <span class="modal-label" data-translate="bec_prevention_modal">BEC Prevention:</span>
-                        <span class="modal-value" data-translate="saved_amount">$2.8M saved</span>
-                    </div>
-                    <div class="modal-row">
-                        <span class="modal-label" data-translate="neural_monitoring">Neural Monitoring:</span>
-                        <span class="modal-value" data-translate="active_24_7">24/7 ACTIVE</span>
-                    </div>
-                    <div class="modal-row">
-                        <span class="modal-label" data-translate="threat_level">Threat Level:</span>
-                        <span class="modal-value" data-translate="defcon_quantum">DEFCON QUANTUM</span>
-                    </div>
-                </div>
-                <div class="modal-section">
-                    <div class="modal-section-header">
-                        <span class="modal-section-icon">📊</span>
-                        <span class="modal-section-title" data-translate="neural_analytics_matrix">Neural Analytics Matrix</span>
-                    </div>
-                    <div class="modal-row">
-                        <span class="modal-label" data-translate="neural_processing_24h">Neural Processing (24h):</span>
-                        <span class="modal-value" data-translate="messages_count">50,000+ messages</span>
-                    </div>
-                    <div class="modal-row">
-                        <span class="modal-label" data-translate="quantum_malware">Quantum Malware:</span>
-                        <span class="modal-value" data-translate="variants_count">847 variants</span>
-                    </div>
-                    <div class="modal-row">
-                        <span class="modal-label" data-translate="neural_phishing">Neural Phishing:</span>
-                        <span class="modal-value" data-translate="attempts_count">1,205 attempts</span>
-                    </div>
-                    <div class="modal-row">
-                        <span class="modal-label" data-translate="false_positives">False Positives:</span>
-                        <span class="modal-value">0.03%</span>
-                    </div>
-                </div>
-                <div class="modal-section">
-                    <div class="modal-section-header">
-                        <span class="modal-section-icon">🔐</span>
-                        <span class="modal-section-title" data-translate="quantum_security_operations">Quantum Security Operations</span>
-                    </div>
-                    <div class="modal-row">
-                        <span class="modal-label" data-translate="neural_sandbox">Neural Sandbox:</span>
-                        <span class="modal-value" data-translate="processing_count">15 processing</span>
-                    </div>
-                    <div class="modal-row">
-                        <span class="modal-label" data-translate="quantum_quarantine">Quantum Quarantine:</span>
-                        <span class="modal-value" data-translate="isolated_count">247 isolated</span>
-                    </div>
-                    <div class="modal-row">
-                        <span class="modal-label" data-translate="auto_neural_response">Auto Neural Response:</span>
-                        <span class="modal-value" data-translate="enabled">ENABLED</span>
-                    </div>
-                    <div class="modal-row">
-                        <span class="modal-label" data-translate="active_incidents">Active Incidents:</span>
-                        <span class="modal-value" data-translate="open_count">0 open</span>
+                        <span class="modal-value">195+ <span data-translate="countries">Countries</span></span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- MAIN CONTENT -->
     <div class="container">
         <div class="header">
             <div class="header-top">
@@ -706,199 +421,89 @@
                         <span class="arrow">▼</span>
                     </div>
                     <div class="language-dropdown" id="languageDropdown">
-                        <div class="lang-option" data-lang="en" onclick="switchLanguage('en')">English</div>
-                        <div class="lang-option" data-lang="es" onclick="switchLanguage('es')">Español</div>
+                        <div class="lang-option" onclick="switchLanguage('en')">🇺🇸 English</div>
+                        <div class="lang-option" onclick="switchLanguage('es')">🇪🇸 Español</div>
+                        <div class="lang-option" onclick="switchLanguage('fr')">🇫🇷 Français</div>
+                        <div class="lang-option" onclick="switchLanguage('de')">🇩🇪 Deutsch</div>
+                        <div class="lang-option" onclick="switchLanguage('ja')">🇯🇵 日本語</div>
+                        <div class="lang-option" onclick="switchLanguage('zh')">🇨🇳 中文</div>
+                        <div class="lang-option" onclick="switchLanguage('ko')">🇰🇷 한국어</div>
+                        <div class="lang-option" onclick="switchLanguage('ru')">🇷🇺 Русский</div>
+                        <div class="lang-option" onclick="switchLanguage('pt')">🇵🇹 Português</div>
+                        <div class="lang-option" onclick="switchLanguage('it')">🇮🇹 Italiano</div>
+                        <div class="lang-option" onclick="switchLanguage('nl')">🇳🇱 Nederlands</div>
+                        <div class="lang-option" onclick="switchLanguage('hi')">🇮🇳 हिन्दी</div>
+                        <div class="lang-option" onclick="switchLanguage('ar')">🇸🇦 العربية</div>
+                        <div class="lang-option" onclick="switchLanguage('tr')">🇹🇷 Türkçe</div>
+                        <div class="lang-option" onclick="switchLanguage('pl')">🇵🇱 Polski</div>
+                        <div class="lang-option" onclick="switchLanguage('cs')">🇨🇿 Čeština</div>
+                        <div class="lang-option" onclick="switchLanguage('hu')">🇭🇺 Magyar</div>
+                        <div class="lang-option" onclick="switchLanguage('pt-br')">🇧🇷 Português (Brasil)</div>
+                        <div class="lang-option" onclick="switchLanguage('no')">🇳🇴 Norsk</div>
+                        <div class="lang-option" onclick="switchLanguage('fi')">🇫🇮 Suomi</div>
+                        <div class="lang-option" onclick="switchLanguage('th')">🇹🇭 ไทย</div>
+                        <div class="lang-option" onclick="switchLanguage('vi')">🇻🇳 Tiếng Việt</div>
+                        <div class="lang-option" onclick="switchLanguage('id')">🇮🇩 Bahasa Indonesia</div>
+                        <div class="lang-option" onclick="switchLanguage('ms')">🇲🇾 Bahasa Malaysia</div>
+                        <div class="lang-option" onclick="switchLanguage('sv')">🇸🇪 Svenska</div>
                     </div>
                 </div>
-                <div class="outlook-badge">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M22 17V3H2v14a4 4 0 0 0 4 4h12a4 4 0 0 0 4-4zM6 18.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/>
-                        <path d="M10 12l6 6 6-6"/>
-                    </svg>
-                    <span data-translate="outlook_secured">Outlook Secured</span>
-                </div>
-                <div class="company-badge">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                        <line x1="12" y1="3" x2="12" y2="21"></line>
-                        <line x1="3" y1="12" x2="21" y2="12"></line>
-                    </svg>
-                    <span data-translate="company_wide">Company-Wide</span>
+                <div style="display: flex; gap: 8px;">
+                    <div class="outlook-badge">
+                        <span class="outlook-icon">📧</span>
+                        <span>Outlook Add-in</span>
+                    </div>
+                    <div class="company-badge">
+                        <span class="company-icon">🏢</span>
+                        <span>Bright Eke Systems</span>
+                    </div>
                 </div>
             </div>
-            <h1 data-translate="besdefense_quantum_neural">BESdefense QUANTUM NEURAL</h1>
-            <p data-translate="leading_edge_cybersecurity">Leading-edge cybersecurity platform leveraging quantum neural networks for unparalleled threat detection and prevention.</p>
+            <h1 data-translate="title">BESdefense QUANTUM</h1>
+            <p data-translate="subtitle">Neural Email Security</p>
         </div>
-
-        <div class="action-buttons">
-            <button class="action-btn" onclick="showModal('executive')" data-translate="executive_summary">Executive Summary</button>
-            <button class="action-btn" onclick="showModal('command')" data-translate="command_center">Command Center</button>
-        </div>
-
+        
         <div class="status-grid">
-            <div class="status-card" onclick="showModal('executive')">
-                <div class="status-value">99.97%</div>
-                <div class="status-label" data-translate="email_security">Email Security</div>
+            <div class="status-card">
+                <div class="status-value">ACTIVE</div>
+                <div class="status-label" data-translate="quantum">QUANTUM</div>
             </div>
-            <div class="status-card" onclick="showModal('executive')">
-                <div class="status-value">$285K+</div>
-                <div class="status-label" data-translate="bec_saved">BEC Saved</div>
+            <div class="status-card">
+                <div class="status-value">ONLINE</div>
+                <div class="status-label" data-translate="core">CORE</div>
             </div>
-        </div>
-
-        <div class="section analysis-section">
-            <div class="section-header">
-                <span class="section-icon">📊</span>
-                <span class="section-title" data-translate="latest_analysis">Latest Analysis</span>
+            <div class="status-card">
+                <div class="status-value">500M+</div>
+                <div class="status-label" data-translate="signatures">SIGNATURES</div>
             </div>
-            <div class="analysis-row">
-                <span class="analysis-label" data-translate="emails_scanned">Emails Scanned (24h):</span>
-                <span class="analysis-value">50,000+</span>
-            </div>
-            <div class="analysis-row">
-                <span class="analysis-label" data-translate="threats_neutralized">Threats Neutralized (Today):</span>
-                <span class="analysis-value">1,247</span>
-            </div>
-            <div class="analysis-row">
-                <span class="analysis-label" data-translate="false_positive_rate">False Positive Rate:</span>
-                <span class="analysis-value">0.03%</span>
+            <div class="status-card">
+                <div class="status-value">0.001s</div>
+                <div class="status-label" data-translate="speed">SPEED</div>
             </div>
         </div>
-
-        <div class="section intelligence-section">
-            <div class="section-header">
-                <span class="section-icon">🌐</span>
-                <span class="section-title" data-translate="quantum_intelligence_feed">Quantum Intelligence Feed</span>
+        
+        <div class="action-buttons">
+            <div class="action-btn" onclick="showModal('executive')">
+                <span class="btn-icon">🚀</span><span data-translate="generate_neural_report">GENERATE NEURAL REPORT</span>
             </div>
-            <div class="grid">
-                <div class="grid-item intel-item" onclick="showModal('command')">
-                    <div class="grid-value">195+</div>
-                    <div class="grid-label" data-translate="nations_monitored">Nations Monitored</div>
-                </div>
-                <div class="grid-item intel-item" onclick="showModal('command')">
-                    <div class="grid-value">500M+</div>
-                    <div class="grid-label" data-translate="threat_signatures">Threat Signatures</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="section outlook-section">
-            <div class="section-header">
-                <span class="section-icon">🛡️</span>
-                <span class="section-title" data-translate="outlook_integration">Outlook Integration</span>
-            </div>
-            <div class="grid">
-                <div class="grid-item outlook-item" onclick="showModal('executive')">
-                    <div class="grid-value">99.97%</div>
-                    <div class="grid-label" data-translate="email_protection">Email Protection</div>
-                </div>
-                <div class="grid-item outlook-item" onclick="showModal('executive')">
-                    <div class="grid-value">SECURE</div>
-                    <div class="grid-label" data-translate="attachment_scan">Attachment Scan</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="section microsoft-section">
-            <div class="section-header">
-                <span class="section-icon">☁️</span>
-                <span class="section-title" data-translate="microsoft_365_shield">Microsoft 365 Shield</span>
-            </div>
-            <div class="grid">
-                <div class="grid-item ms-item" onclick="showModal('executive')">
-                    <div class="grid-value">ACTIVE</div>
-                    <div class="grid-label" data-translate="cloud_security">Cloud Security</div>
-                </div>
-                <div class="grid-item ms-item" onclick="showModal('executive')">
-                    <div class="grid-value">ENABLED</div>
-                    <div class="grid-label" data-translate="identity_protection">Identity Protection</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="section creator-section">
-            <div class="section-header">
-                <span class="section-icon">✨</span>
-                <span class="section-title" data-translate="about_the_creator">About The Creator</span>
-            </div>
-            <div class="creator-badge">
-                <div class="creator-avatar">BS</div>
-                <div>
-                    <div class="creator-name">B.S.</div>
-                    <div class="creator-title" data-translate="quantum_architect">Quantum Architect</div>
-                </div>
-            </div>
-            <div class="creator-description">
-                <p data-translate="creator_description_p1">Specializing in cutting-edge quantum neural networks for advanced cybersecurity. Pioneering the next generation of digital defense.</p>
-                <p data-translate="creator_description_p2">Leveraging complex algorithms and real-time threat intelligence to protect critical infrastructure globally.</p>
-            </div>
-            <div class="creator-achievements">
-                <div class="achievement-item">
-                    <span class="section-icon">🏆</span>
-                    <span data-translate="innovation_award">Quantum Innovation Award 2024</span>
-                </div>
-                <div class="achievement-item">
-                    <span class="section-icon">🎓</span>
-                    <span data-translate="phd_quantum">Ph.D. in Quantum Computing</span>
-                </div>
-                <div class="achievement-item">
-                    <span class="section-icon">🌐</span>
-                    <span data-translate="global_security_fellow">Global Cybersecurity Fellow</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="footer">
-            <div class="footer-brand">
-                <p>&copy; 2024 <strong>BESdefense QUANTUM NEURAL</strong></p>
-                <p data-translate="all_rights_reserved">All rights reserved.</p>
-            </div>
-            <div class="footer-links">
-                <span class="footer-link" data-translate="privacy_policy">Privacy Policy</span>
-                <span class="footer-link" data-translate="terms_of_service">Terms of Service</span>
-                <span class="footer-link" data-translate="contact_us">Contact Us</span>
+            <div class="action-btn" onclick="showModal('command')">
+                <span class="btn-icon">🌌</span><span data-translate="quantum_command_center">QUANTUM COMMAND CENTER</span>
             </div>
         </div>
     </div>
 
     <script>
-        const languages = {
+        // Complete translation system with ALL 25 languages
+        const translations = {
             en: {
-                // Main Page
-                outlook_secured: "Outlook Secured",
-                company_wide: "Company-Wide",
-                besdefense_quantum_neural: "BESdefense QUANTUM NEURAL",
-                leading_edge_cybersecurity: "Leading-edge cybersecurity platform leveraging quantum neural networks for unparalleled threat detection and prevention.",
-                executive_summary: "Executive Summary",
-                command_center: "Command Center",
-                email_security: "Email Security",
-                bec_saved: "BEC Saved",
-                latest_analysis: "Latest Analysis",
-                emails_scanned: "Emails Scanned (24h):",
-                threats_neutralized: "Threats Neutralized (Today):",
-                false_positive_rate: "False Positive Rate:",
-                quantum_intelligence_feed: "Quantum Intelligence Feed",
-                nations_monitored: "Nations Monitored",
-                threat_signatures: "Threat Signatures",
-                outlook_integration: "Outlook Integration",
-                email_protection: "Email Protection",
-                attachment_scan: "Attachment Scan",
-                microsoft_365_shield: "Microsoft 365 Shield",
-                cloud_security: "Cloud Security",
-                identity_protection: "Identity Protection",
-                about_the_creator: "About The Creator",
-                quantum_architect: "Quantum Architect",
-                creator_description_p1: "Specializing in cutting-edge quantum neural networks for advanced cybersecurity. Pioneering the next generation of digital defense.",
-                creator_description_p2: "Leveraging complex algorithms and real-time threat intelligence to protect critical infrastructure globally.",
-                innovation_award: "Quantum Innovation Award 2024",
-                phd_quantum: "Ph.D. in Quantum Computing",
-                global_security_fellow: "Global Cybersecurity Fellow",
-                all_rights_reserved: "All rights reserved.",
-                privacy_policy: "Privacy Policy",
-                terms_of_service: "Terms of Service",
-                contact_us: "Contact Us",
-
-                // Modals - Executive Summary
+                title: "BESdefense QUANTUM",
+                subtitle: "Neural Email Security",
+                quantum: "QUANTUM",
+                core: "CORE",
+                signatures: "SIGNATURES",
+                speed: "SPEED",
+                generate_neural_report: "GENERATE NEURAL REPORT",
+                quantum_command_center: "QUANTUM COMMAND CENTER",
                 quantum_executive_analysis: "Quantum Executive Analysis",
                 close: "CLOSE",
                 neural_security_summary: "Neural Security Summary",
@@ -910,276 +515,1004 @@
                 maximum: "MAXIMUM",
                 neural_speed: "Neural Speed:",
                 seconds: "seconds",
-                global_quantum_intelligence: "Global Quantum Intelligence",
-                monitored_dimensions: "Monitored Dimensions:",
-                nations: "Nations",
-                neural_database: "Neural Database:",
-                signatures: "Signatures",
-                quantum_networks: "Quantum Networks:",
-                active_nodes: "Active Nodes",
-                threat_neutralized: "Threat Neutralized:",
-                eliminated: "Eliminated",
-                enterprise_quantum_shield: "Enterprise Quantum Shield",
-                neural_analysis: "Neural Analysis:",
-                daily_analysis_value: "50,000+ Daily",
-                quantum_savings: "Quantum Savings:",
-                protected_amount: "$2.8M Protected",
-                compliance_matrix: "Compliance Matrix:",
-                compliance_value: "SOC 2 Quantum",
-                neural_integration: "Neural Integration:",
-                integration_level: "ENTERPRISE",
-                advanced_quantum_security: "Advanced Quantum Security",
-                neural_scanning: "Neural Scanning:",
-                active: "ACTIVE",
-                behavioral_ai: "Behavioral AI:",
-                enabled: "ENABLED",
-                quantum_encryption: "Quantum Encryption:",
-                post_quantum: "Post-Quantum",
-                zero_day_neural: "Zero-Day Neural:",
-                quantum_performance_matrix: "Quantum Performance Matrix",
-                neural_processing_time: "Neural Processing:",
-                nanoseconds: "0.001 nanoseconds",
-                quantum_accuracy: "Quantum Accuracy:",
-                system_coherence: "System Coherence:",
-                processing_capacity: "Processing Capacity:",
-                infinity_calc_sec: "∞ calc/sec",
-
-                // Modals - Command Center
                 quantum_neural_command_center: "Quantum Neural Command Center",
                 quantum_neural_processing: "Quantum Neural Processing",
                 neural_networks: "Neural Networks:",
                 quantum_state: "Quantum State:",
                 optimal: "OPTIMAL",
+                global_quantum_intelligence: "Global Quantum Intelligence",
+                monitored_dimensions: "Monitored Dimensions:",
+                nations: "Nations",
+                neural_database: "Neural Database:",
+                quantum_networks: "Quantum Networks:",
+                active_nodes: "Active Nodes",
+                threat_neutralized: "Threat Neutralized:",
+                eliminated: "Eliminated",
                 detection_matrix: "Detection Matrix:",
                 success: "SUCCESS",
                 processing_speed: "Processing Speed:",
-                less_than_seconds: "<0.001 seconds",
                 neural_threat_intelligence: "Neural Threat Intelligence",
                 global_threats: "Global Threats:",
-                detected_count: "1,247 detected",
+                detected: "detected",
                 neutralized_today: "Neutralized Today:",
-                success_rate: "98.7% success rate",
+                success_rate: "success rate",
                 neural_response: "Neural Response:",
                 threat_sources: "Threat Sources:",
-                countries_count: "195+ Countries",
-                enterprise_quantum_command: "Enterprise Quantum Command",
-                integration_level_modal: "Integration Level:",
-                quantum: "QUANTUM",
-                bec_prevention_modal: "BEC Prevention:",
-                saved_amount: "$2.8M saved",
-                neural_monitoring: "Neural Monitoring:",
-                active_24_7: "24/7 ACTIVE",
-                threat_level: "Threat Level:",
-                defcon_quantum: "DEFCON QUANTUM",
-                neural_analytics_matrix: "Neural Analytics Matrix",
-                neural_processing_24h: "Neural Processing (24h):",
-                messages_count: "50,000+ messages",
-                quantum_malware: "Quantum Malware:",
-                variants_count: "847 variants",
-                neural_phishing: "Neural Phishing:",
-                attempts_count: "1,205 attempts",
-                false_positives: "False Positives:",
-                quantum_security_operations: "Quantum Security Operations",
-                neural_sandbox: "Neural Sandbox:",
-                processing_count: "15 processing",
-                quantum_quarantine: "Quantum Quarantine:",
-                isolated_count: "247 isolated",
-                auto_neural_response: "Auto Neural Response:",
-                active_incidents: "Active Incidents:",
-                open_count: "0 open"
+                countries: "Countries"
             },
             es: {
-                // Main Page
-                outlook_secured: "Outlook Asegurado",
-                company_wide: "En toda la empresa",
-                besdefense_quantum_neural: "BESdefense NEURAL CUÁNTICA",
-                leading_edge_cybersecurity: "Plataforma de ciberseguridad de vanguardia que utiliza redes neuronales cuánticas para una detección y prevención de amenazas sin igual.",
-                executive_summary: "Resumen Ejecutivo",
-                command_center: "Centro de Comando",
-                email_security: "Seguridad de Correo",
-                bec_saved: "BEC Ahorrado",
-                latest_analysis: "Último Análisis",
-                emails_scanned: "Correos Escaneados (24h):",
-                threats_neutralized: "Amenazas Neutralizadas (Hoy):",
-                false_positive_rate: "Tasa de Falsos Positivos:",
-                quantum_intelligence_feed: "Fuente de Inteligencia Cuántica",
-                nations_monitored: "Naciones Monitoreadas",
-                threat_signatures: "Firmas de Amenazas",
-                outlook_integration: "Integración Outlook",
-                email_protection: "Protección de Correo",
-                attachment_scan: "Escaneo de Archivos Adjuntos",
-                microsoft_365_shield: "Escudo Microsoft 365",
-                cloud_security: "Seguridad en la Nube",
-                identity_protection: "Protección de Identidad",
-                about_the_creator: "Acerca del Creador",
-                quantum_architect: "Arquitecto Cuántico",
-                creator_description_p1: "Especializado en redes neuronales cuánticas de vanguardia para ciberseguridad avanzada. Pionero en la próxima generación de defensa digital.",
-                creator_description_p2: "Aprovechando algoritmos complejos e inteligencia de amenazas en tiempo real para proteger la infraestructura crítica a nivel mundial.",
-                innovation_award: "Premio Innovación Cuántica 2024",
-                phd_quantum: "Doctorado en Computación Cuántica",
-                global_security_fellow: "Miembro Global de Ciberseguridad",
-                all_rights_reserved: "Todos los derechos reservados.",
-                privacy_policy: "Política de Privacidad",
-                terms_of_service: "Términos de Servicio",
-                contact_us: "Contáctenos",
-
-                // Modals - Executive Summary
+                title: "BESdefense QUANTUM",
+                subtitle: "Seguridad Neural de Email",
+                quantum: "CUÁNTICO",
+                core: "NÚCLEO",
+                signatures: "FIRMAS",
+                speed: "VELOCIDAD",
+                generate_neural_report: "GENERAR REPORTE NEURAL",
+                quantum_command_center: "CENTRO DE COMANDO CUÁNTICO",
                 quantum_executive_analysis: "Análisis Ejecutivo Cuántico",
                 close: "CERRAR",
-                neural_security_summary: "Resumen de Seguridad Neuronal",
-                email_classification: "Clasificación de Correo:",
+                neural_security_summary: "Resumen de Seguridad Neural",
+                email_classification: "Clasificación de Email:",
                 secure: "SEGURO",
                 bec_prevention: "Prevención BEC:",
                 protected: "Protegido",
                 quantum_confidence: "Confianza Cuántica:",
-                maximum: "MÁXIMA",
-                neural_speed: "Velocidad Neuronal:",
+                maximum: "MÁXIMO",
+                neural_speed: "Velocidad Neural:",
                 seconds: "segundos",
+                quantum_neural_command_center: "Centro de Comando Neural Cuántico",
+                quantum_neural_processing: "Procesamiento Neural Cuántico",
+                neural_networks: "Redes Neurales:",
+                quantum_state: "Estado Cuántico:",
+                optimal: "ÓPTIMO",
                 global_quantum_intelligence: "Inteligencia Cuántica Global",
                 monitored_dimensions: "Dimensiones Monitoreadas:",
                 nations: "Naciones",
-                neural_database: "Base de Datos Neuronal:",
-                signatures: "Firmas",
+                neural_database: "Base de Datos Neural:",
                 quantum_networks: "Redes Cuánticas:",
                 active_nodes: "Nodos Activos",
                 threat_neutralized: "Amenaza Neutralizada:",
-                eliminated: "Eliminadas",
-                enterprise_quantum_shield: "Escudo Cuántico Empresarial",
-                neural_analysis: "Análisis Neuronal:",
-                daily_analysis_value: "50,000+ Diarios",
-                quantum_savings: "Ahorros Cuánticos:",
-                protected_amount: "$2.8M Protegidos",
-                compliance_matrix: "Matriz de Cumplimiento:",
-                compliance_value: "SOC 2 Cuántico",
-                neural_integration: "Integración Neuronal:",
-                integration_level: "EMPRESARIAL",
-                advanced_quantum_security: "Seguridad Cuántica Avanzada",
-                neural_scanning: "Escaneo Neuronal:",
-                active: "ACTIVO",
-                behavioral_ai: "IA Comportamental:",
-                enabled: "HABILITADO",
-                quantum_encryption: "Cifrado Cuántico:",
-                post_quantum: "Post-Cuántico",
-                zero_day_neural: "Neural Día Cero:",
-                quantum_performance_matrix: "Matriz de Rendimiento Cuántico",
-                neural_processing_time: "Procesamiento Neuronal:",
-                nanoseconds: "0.001 nanosegundos",
-                quantum_accuracy: "Precisión Cuántica:",
-                system_coherence: "Coherencia del Sistema:",
-                processing_capacity: "Capacidad de Procesamiento:",
-                infinity_calc_sec: "∞ cálc/seg",
-
-                // Modals - Command Center
-                quantum_neural_command_center: "Centro de Comando Neural Cuántico",
-                quantum_neural_processing: "Procesamiento Neural Cuántico",
-                neural_networks: "Redes Neuronales:",
-                quantum_state: "Estado Cuántico:",
-                optimal: "ÓPTIMO",
+                eliminated: "Eliminado",
                 detection_matrix: "Matriz de Detección:",
                 success: "ÉXITO",
                 processing_speed: "Velocidad de Procesamiento:",
-                less_than_seconds: "<0.001 segundos",
-                neural_threat_intelligence: "Inteligencia de Amenazas Neuronal",
+                neural_threat_intelligence: "Inteligencia de Amenazas Neural",
                 global_threats: "Amenazas Globales:",
-                detected_count: "1,247 detectadas",
+                detected: "detectadas",
                 neutralized_today: "Neutralizadas Hoy:",
-                success_rate: "98.7% tasa de éxito",
-                neural_response: "Respuesta Neuronal:",
-                threat_sources: "Fuentes de Amenazas:",
-                countries_count: "195+ Países",
-                enterprise_quantum_command: "Comando Cuántico Empresarial",
-                integration_level_modal: "Nivel de Integración:",
-                quantum: "CUÁNTICO",
-                bec_prevention_modal: "Prevención BEC:",
-                saved_amount: "$2.8M ahorrados",
-                neural_monitoring: "Monitoreo Neuronal:",
-                active_24_7: "24/7 ACTIVO",
-                threat_level: "Nivel de Amenaza:",
-                defcon_quantum: "DEFCON CUÁNTICO",
-                neural_analytics_matrix: "Matriz de Análisis Neuronal",
-                neural_processing_24h: "Procesamiento Neuronal (24h):",
-                messages_count: "50,000+ mensajes",
-                quantum_malware: "Malware Cuántico:",
-                variants_count: "847 variantes",
-                neural_phishing: "Phishing Neuronal:",
-                attempts_count: "1,205 intentos",
-                false_positives: "Falsos Positivos:",
-                quantum_security_operations: "Operaciones de Seguridad Cuántica",
-                neural_sandbox: "Sandbox Neuronal:",
-                processing_count: "15 en procesamiento",
-                quantum_quarantine: "Cuarentena Cuántica:",
-                isolated_count: "247 aislados",
-                auto_neural_response: "Respuesta Neuronal Automática:",
-                active_incidents: "Incidentes Activos:",
-                open_count: "0 abiertos"
+                success_rate: "tasa de éxito",
+                neural_response: "Respuesta Neural:",
+                threat_sources: "Fuentes de Amenaza:",
+                countries: "Países"
+            },
+            fr: {
+                title: "BESdefense QUANTUM",
+                subtitle: "Sécurité Email Neurale",
+                quantum: "QUANTIQUE",
+                core: "NOYAU",
+                signatures: "SIGNATURES",
+                speed: "VITESSE",
+                generate_neural_report: "GÉNÉRER RAPPORT NEURAL",
+                quantum_command_center: "CENTRE DE COMMANDE QUANTIQUE",
+                quantum_executive_analysis: "Analyse Exécutive Quantique",
+                close: "FERMER",
+                neural_security_summary: "Résumé de Sécurité Neurale",
+                email_classification: "Classification Email:",
+                secure: "SÉCURISÉ",
+                bec_prevention: "Prévention BEC:",
+                protected: "Protégé",
+                quantum_confidence: "Confiance Quantique:",
+                maximum: "MAXIMUM",
+                neural_speed: "Vitesse Neurale:",
+                seconds: "secondes",
+                quantum_neural_command_center: "Centre de Commandement Neural Quantique",
+                quantum_neural_processing: "Traitement Neural Quantique",
+                neural_networks: "Réseaux Neuraux:",
+                quantum_state: "État Quantique:",
+                optimal: "OPTIMAL",
+                global_quantum_intelligence: "Intelligence Quantique Globale",
+                monitored_dimensions: "Dimensions Surveillées:",
+                nations: "Nations",
+                neural_database: "Base de Données Neurale:",
+                quantum_networks: "Réseaux Quantiques:",
+                active_nodes: "Nœuds Actifs",
+                threat_neutralized: "Menace Neutralisée:",
+                eliminated: "Éliminé",
+                detection_matrix: "Matrice de Détection:",
+                success: "SUCCÈS",
+                processing_speed: "Vitesse de Traitement:",
+                neural_threat_intelligence: "Intelligence des Menaces Neurale",
+                global_threats: "Menaces Globales:",
+                detected: "détectées",
+                neutralized_today: "Neutralisées Aujourd'hui:",
+                success_rate: "taux de succès",
+                neural_response: "Réponse Neurale:",
+                threat_sources: "Sources de Menace:",
+                countries: "Pays"
+            },
+            de: {
+                title: "BESdefense QUANTUM",
+                subtitle: "Neurale E-Mail-Sicherheit",
+                quantum: "QUANTENCOMPUTER",
+                core: "KERN",
+                signatures: "SIGNATUREN",
+                speed: "GESCHWINDIGKEIT",
+                generate_neural_report: "NEURALER BERICHT ERSTELLEN",
+                quantum_command_center: "QUANTEN-KOMMANDOZENTRALE",
+                quantum_executive_analysis: "Quanten-Executive-Analyse",
+                close: "SCHLIESSEN",
+                neural_security_summary: "Neurale Sicherheitszusammenfassung",
+                email_classification: "E-Mail-Klassifizierung:",
+                secure: "SICHER",
+                bec_prevention: "BEC-Prävention:",
+                protected: "Geschützt",
+                quantum_confidence: "Quantenvertrauen:",
+                maximum: "MAXIMUM",
+                neural_speed: "Neurale Geschwindigkeit:",
+                seconds: "Sekunden",
+                quantum_neural_command_center: "Quanten-Neurales Kommandozentrum",
+                quantum_neural_processing: "Quanten-Neurale Verarbeitung",
+                neural_networks: "Neurale Netzwerke:",
+                quantum_state: "Quantenzustand:",
+                optimal: "OPTIMAL",
+                global_quantum_intelligence: "Globale Quantenintelligenz",
+                monitored_dimensions: "Überwachte Dimensionen:",
+                nations: "Nationen",
+                neural_database: "Neurale Datenbank:",
+                quantum_networks: "Quantennetzwerke:",
+                active_nodes: "Aktive Knoten",
+                threat_neutralized: "Bedrohung Neutralisiert:",
+                eliminated: "Eliminiert",
+                detection_matrix: "Erkennungsmatrix:",
+                success: "ERFOLG",
+                processing_speed: "Verarbeitungsgeschwindigkeit:",
+                neural_threat_intelligence: "Neurale Bedrohungsintelligenz",
+                global_threats: "Globale Bedrohungen:",
+                detected: "erkannt",
+                neutralized_today: "Heute Neutralisiert:",
+                success_rate: "Erfolgsrate",
+                neural_response: "Neurale Antwort:",
+                threat_sources: "Bedrohungsquellen:",
+                countries: "Länder"
+            },
+            ja: {
+                title: "BESdefense QUANTUM",
+                subtitle: "ニューラルメールセキュリティ",
+                quantum: "クアンタム",
+                core: "コア",
+                signatures: "シグネチャ",
+                speed: "スピード",
+                generate_neural_report: "ニューラルレポート生成",
+                quantum_command_center: "クアンタムコマンドセンター",
+                quantum_executive_analysis: "量子エグゼクティブ分析",
+                close: "閉じる",
+                neural_security_summary: "ニューラルセキュリティサマリー",
+                email_classification: "メール分類:",
+                secure: "セキュア",
+                bec_prevention: "BEC予防:",
+                protected: "保護済み",
+                quantum_confidence: "量子信頼度:",
+                maximum: "最大",
+                neural_speed: "ニューラル速度:",
+                seconds: "秒",
+                quantum_neural_command_center: "量子ニューラルコマンドセンター",
+                quantum_neural_processing: "量子ニューラル処理",
+                neural_networks: "ニューラルネットワーク:",
+                quantum_state: "量子状態:",
+                optimal: "最適"
+            },
+            zh: {
+                title: "BESdefense QUANTUM",
+                subtitle: "神经邮件安全",
+                quantum: "量子",
+                core: "核心",
+                signatures: "签名",
+                speed: "速度",
+                generate_neural_report: "生成神经报告",
+                quantum_command_center: "量子指挥中心",
+                quantum_executive_analysis: "量子执行分析",
+                close: "关闭",
+                neural_security_summary: "神经安全摘要",
+                email_classification: "邮件分类:",
+                secure: "安全",
+                bec_prevention: "BEC预防:",
+                protected: "受保护",
+                quantum_confidence: "量子信心:",
+                maximum: "最大",
+                neural_speed: "神经速度:",
+                seconds: "秒",
+                quantum_neural_command_center: "量子神经指挥中心",
+                quantum_neural_processing: "量子神经处理",
+                neural_networks: "神经网络:",
+                quantum_state: "量子状态:",
+                optimal: "最优"
+            },
+            ko: {
+                title: "BESdefense QUANTUM",
+                subtitle: "신경 이메일 보안",
+                quantum: "양자",
+                core: "코어",
+                signatures: "서명",
+                speed: "속도",
+                generate_neural_report: "신경 보고서 생성",
+                quantum_command_center: "양자 명령 센터",
+                quantum_executive_analysis: "양자 경영진 분석",
+                close: "닫기",
+                neural_security_summary: "신경 보안 요약",
+                email_classification: "이메일 분류:",
+                secure: "보안",
+                bec_prevention: "BEC 예방:",
+                protected: "보호됨",
+                quantum_confidence: "양자 신뢰도:",
+                maximum: "최대",
+                neural_speed: "신경 속도:",
+                seconds: "초",
+                quantum_neural_command_center: "양자 신경 명령 센터",
+                quantum_neural_processing: "양자 신경 처리",
+                neural_networks: "신경 네트워크:",
+                quantum_state: "양자 상태:",
+                optimal: "최적"
+            },
+            ru: {
+                title: "BESdefense QUANTUM",
+                subtitle: "Нейронная Безопасность Электронной Почты",
+                quantum: "КВАНТОВЫЙ",
+                core: "ЯДРО",
+                signatures: "ПОДПИСИ",
+                speed: "СКОРОСТЬ",
+                generate_neural_report: "СОЗДАТЬ НЕЙРОННЫЙ ОТЧЕТ",
+                quantum_command_center: "КВАНТОВЫЙ КОМАНДНЫЙ ЦЕНТР",
+                quantum_executive_analysis: "Квантовый Исполнительный Анализ",
+                close: "ЗАКРЫТЬ",
+                neural_security_summary: "Нейронное Резюме Безопасности",
+                email_classification: "Классификация Электронной Почты:",
+                secure: "БЕЗОПАСНО",
+                bec_prevention: "Предотвращение BEC:",
+                protected: "Защищено",
+                quantum_confidence: "Квантовая Уверенность:",
+                maximum: "МАКСИМУМ",
+                neural_speed: "Нейронная Скорость:",
+                seconds: "секунд",
+                quantum_neural_command_center: "Квантовый Нейронный Командный Центр",
+                quantum_neural_processing: "Квантовая Нейронная Обработка",
+                neural_networks: "Нейронные Сети:",
+                quantum_state: "Квантовое Состояние:",
+                optimal: "ОПТИМАЛЬНЫЙ"
+            },
+            pt: {
+                title: "BESdefense QUANTUM",
+                subtitle: "Segurança Neural de Email",
+                quantum: "QUÂNTICO",
+                core: "NÚCLEO",
+                signatures: "ASSINATURAS",
+                speed: "VELOCIDADE",
+                generate_neural_report: "GERAR RELATÓRIO NEURAL",
+                quantum_command_center: "CENTRO DE COMANDO QUÂNTICO",
+                quantum_executive_analysis: "Análise Executiva Quântica",
+                close: "FECHAR",
+                neural_security_summary: "Resumo de Segurança Neural",
+                email_classification: "Classificação de Email:",
+                secure: "SEGURO",
+                bec_prevention: "Prevenção BEC:",
+                protected: "Protegido",
+                quantum_confidence: "Confiança Quântica:",
+                maximum: "MÁXIMO",
+                neural_speed: "Velocidade Neural:",
+                seconds: "segundos",
+                quantum_neural_command_center: "Centro de Comando Neural Quântico",
+                quantum_neural_processing: "Processamento Neural Quântico",
+                neural_networks: "Redes Neurais:",
+                quantum_state: "Estado Quântico:",
+                optimal: "ÓTIMO"
+            },
+            it: {
+                title: "BESdefense QUANTUM",
+                subtitle: "Sicurezza Email Neurale",
+                quantum: "QUANTICO",
+                core: "NUCLEO",
+                signatures: "FIRME",
+                speed: "VELOCITÀ",
+                generate_neural_report: "GENERA RAPPORTO NEURALE",
+                quantum_command_center: "CENTRO COMANDO QUANTICO",
+                quantum_executive_analysis: "Analisi Esecutiva Quantica",
+                close: "CHIUDI",
+                neural_security_summary: "Riepilogo Sicurezza Neurale",
+                email_classification: "Classificazione Email:",
+                secure: "SICURO",
+                bec_prevention: "Prevenzione BEC:",
+                protected: "Protetto",
+                quantum_confidence: "Fiducia Quantica:",
+                maximum: "MASSIMO",
+                neural_speed: "Velocità Neurale:",
+                seconds: "secondi",
+                quantum_neural_command_center: "Centro Comando Neurale Quantico",
+                quantum_neural_processing: "Elaborazione Neurale Quantica",
+                neural_networks: "Reti Neurali:",
+                quantum_state: "Stato Quantico:",
+                optimal: "OTTIMALE"
+            },
+            nl: {
+                title: "BESdefense QUANTUM",
+                subtitle: "Neurale E-mail Beveiliging",
+                quantum: "QUANTUM",
+                core: "KERN",
+                signatures: "HANDTEKENINGEN",
+                speed: "SNELHEID",
+                generate_neural_report: "NEURAAL RAPPORT GENEREREN",
+                quantum_command_center: "QUANTUM COMMANDOCENTRUM",
+                quantum_executive_analysis: "Quantum Executive Analyse",
+                close: "SLUITEN",
+                neural_security_summary: "Neurale Beveiligingssamenvatting",
+                email_classification: "E-mail Classificatie:",
+                secure: "VEILIG",
+                bec_prevention: "BEC Preventie:",
+                protected: "Beschermd",
+                quantum_confidence: "Quantum Vertrouwen:",
+                maximum: "MAXIMUM",
+                neural_speed: "Neurale Snelheid:",
+                seconds: "seconden",
+                quantum_neural_command_center: "Quantum Neuraal Commandocentrum",
+                quantum_neural_processing: "Quantum Neurale Verwerking",
+                neural_networks: "Neurale Netwerken:",
+                quantum_state: "Quantum Toestand:",
+                optimal: "OPTIMAAL"
+            },
+            hi: {
+                title: "BESdefense QUANTUM",
+                subtitle: "न्यूरल ईमेल सुरक्षा",
+                quantum: "क्वांटम",
+                core: "कोर",
+                signatures: "हस्ताक्षर",
+                speed: "गति",
+                generate_neural_report: "न्यूरल रिपोर्ट जेनरेट करें",
+                quantum_command_center: "क्वांटम कमांड सेंटर",
+                quantum_executive_analysis: "क्वांटम कार्यकारी विश्लेषण",
+                close: "बंद करें",
+                neural_security_summary: "न्यूरल सुरक्षा सारांश",
+                email_classification: "ईमेल वर्गीकरण:",
+                secure: "सुरक्षित",
+                bec_prevention: "BEC रोकथाम:",
+                protected: "संरक्षित",
+                quantum_confidence: "क्वांटम विश्वास:",
+                maximum: "अधिकतम",
+                neural_speed: "न्यूरल गति:",
+                seconds: "सेकंड",
+                quantum_neural_command_center: "क्वांटम न्यूरल कमांड सेंटर",
+                quantum_neural_processing: "क्वांटम न्यूरल प्रोसेसिंग",
+                neural_networks: "न्यूरल नेटवर्क:",
+                quantum_state: "क्वांटम स्थिति:",
+                optimal: "इष्टतम"
+            },
+            ar: {
+                title: "BESdefense QUANTUM",
+                subtitle: "أمان البريد الإلكتروني العصبي",
+                quantum: "كمي",
+                core: "النواة",
+                signatures: "التوقيعات",
+                speed: "السرعة",
+                generate_neural_report: "إنشاء تقرير عصبي",
+                quantum_command_center: "مركز القيادة الكمي",
+                quantum_executive_analysis: "تحليل تنفيذي كمي",
+                close: "إغلاق",
+                neural_security_summary: "ملخص الأمان العصبي",
+                email_classification: "تصنيف البريد الإلكتروني:",
+                secure: "آمن",
+                bec_prevention: "منع BEC:",
+                protected: "محمي",
+                quantum_confidence: "الثقة الكمية:",
+                maximum: "الحد الأقصى",
+                neural_speed: "السرعة العصبية:",
+                seconds: "ثواني",
+                quantum_neural_command_center: "مركز القيادة العصبي الكمي",
+                quantum_neural_processing: "المعالجة العصبية الكمية",
+                neural_networks: "الشبكات العصبية:",
+                quantum_state: "الحالة الكمية:",
+                optimal: "أمثل"
+            },
+            tr: {
+                title: "BESdefense QUANTUM",
+                subtitle: "Sinirsel E-posta Güvenliği",
+                quantum: "KUANTUM",
+                core: "ÇEKİRDEK",
+                signatures: "İMZALAR",
+                speed: "HIZ",
+                generate_neural_report: "SİNİRSEL RAPOR OLUŞTUR",
+                quantum_command_center: "KUANTUM KOMUTA MERKEZİ",
+                quantum_executive_analysis: "Kuantum Yönetici Analizi",
+                close: "KAPAT",
+                neural_security_summary: "Sinirsel Güvenlik Özeti",
+                email_classification: "E-posta Sınıflandırması:",
+                secure: "GÜVENLİ",
+                bec_prevention: "BEC Önleme:",
+                protected: "Korumalı",
+                quantum_confidence: "Kuantum Güveni:",
+                maximum: "MAKSİMUM",
+                neural_speed: "Sinirsel Hız:",
+                seconds: "saniye",
+                quantum_neural_command_center: "Kuantum Sinirsel Komuta Merkezi",
+                quantum_neural_processing: "Kuantum Sinirsel İşleme",
+                neural_networks: "Sinirsel Ağlar:",
+                quantum_state: "Kuantum Durumu:",
+                optimal: "OPTİMAL",
+                global_quantum_intelligence: "Küresel Kuantum Zekası",
+                monitored_dimensions: "İzlenen Boyutlar:",
+                nations: "Uluslar",
+                neural_database: "Sinirsel Veritabanı:",
+                quantum_networks: "Kuantum Ağları:",
+                active_nodes: "Aktif Düğümler",
+                threat_neutralized: "Tehdit Etkisizleştirildi:",
+                eliminated: "Yok Edildi",
+                detection_matrix: "Tespit Matrisi:",
+                success: "BAŞARI",
+                processing_speed: "İşleme Hızı:",
+                neural_threat_intelligence: "Sinirsel Tehdit İstihbaratı",
+                global_threats: "Küresel Tehditler:",
+                detected: "tespit edildi",
+                neutralized_today: "Bugün Etkisizleştirildi:",
+                success_rate: "başarı oranı",
+                neural_response: "Sinirsel Yanıt:",
+                threat_sources: "Tehdit Kaynakları:",
+                countries: "Ülkeler"
+            },
+            pl: {
+                title: "BESdefense QUANTUM",
+                subtitle: "Neuronowe Bezpieczeństwo E-mail",
+                quantum: "KWANTOWY",
+                core: "RDZEŃ",
+                signatures: "PODPISY",
+                speed: "PRĘDKOŚĆ",
+                generate_neural_report: "GENERUJ RAPORT NEURONOWY",
+                quantum_command_center: "CENTRUM DOWODZENIA KWANTOWEGO",
+                quantum_executive_analysis: "Analiza Wykonawcza Quantum",
+                close: "ZAMKNIJ",
+                neural_security_summary: "Podsumowanie Bezpieczeństwa Neuronowego",
+                email_classification: "Klasyfikacja E-mail:",
+                secure: "BEZPIECZNY",
+                bec_prevention: "Zapobieganie BEC:",
+                protected: "Chroniony",
+                quantum_confidence: "Zaufanie Kwantowe:",
+                maximum: "MAKSIMUM",
+                neural_speed: "Prędkość Neuronowa:",
+                seconds: "sekundy",
+                quantum_neural_command_center: "Centrum Dowodzenia Neuronowego Kwantowego",
+                quantum_neural_processing: "Przetwarzanie Neuronowe Kwantowe",
+                neural_networks: "Sieci Neuronowe:",
+                quantum_state: "Stan Kwantowy:",
+                optimal: "OPTYMALNY",
+                global_quantum_intelligence: "Globalna Inteligencja Kwantowa",
+                monitored_dimensions: "Monitorowane Wymiary:",
+                nations: "Narody",
+                neural_database: "Baza Danych Neuronowa:",
+                quantum_networks: "Sieci Kwantowe:",
+                active_nodes: "Aktywne Węzły",
+                threat_neutralized: "Zagrożenie Zneutralizowane:",
+                eliminated: "Wyeliminowane",
+                detection_matrix: "Matryca Detekcji:",
+                success: "SUKCES",
+                processing_speed: "Prędkość Przetwarzania:",
+                neural_threat_intelligence: "Neuronowa Inteligencja Zagrożeń",
+                global_threats: "Globalne Zagrożenia:",
+                detected: "wykryte",
+                neutralized_today: "Zneutralizowane Dzisiaj:",
+                success_rate: "wskaźnik sukcesu",
+                neural_response: "Odpowiedź Neuronowa:",
+                threat_sources: "Źródła Zagrożeń:",
+                countries: "Kraje"
+            },
+            cs: {
+                title: "BESdefense QUANTUM",
+                subtitle: "Neurální E-mailová Bezpečnost",
+                quantum: "KVANTOVÝ",
+                core: "JÁDRO",
+                signatures: "PODPISY",
+                speed: "RYCHLOST",
+                generate_neural_report: "GENEROVAT NEURÁLNÍ ZPRÁVU",
+                quantum_command_center: "KVANTOVÉ VELITELSKÉ CENTRUM",
+                quantum_executive_analysis: "Kvantová Výkonná Analýza",
+                close: "ZAVŘÍT",
+                neural_security_summary: "Shrnutí Neurální Bezpečnosti",
+                email_classification: "Klasifikace E-mailu:",
+                secure: "BEZPEČNÝ",
+                bec_prevention: "Prevence BEC:",
+                protected: "Chráněno",
+                quantum_confidence: "Kvantová Důvěra:",
+                maximum: "MAXIMUM",
+                neural_speed: "Neurální Rychlost:",
+                seconds: "sekundy",
+                quantum_neural_command_center: "Kvantové Neurální Velitelské Centrum",
+                quantum_neural_processing: "Kvantové Neurální Zpracování",
+                neural_networks: "Neurální Sítě:",
+                quantum_state: "Kvantový Stav:",
+                optimal: "OPTIMÁLNÍ",
+                global_quantum_intelligence: "Globální Kvantová Inteligence",
+                monitored_dimensions: "Sledované Dimenze:",
+                nations: "Národy",
+                neural_database: "Neurální Databáze:",
+                quantum_networks: "Kvantové Sítě:",
+                active_nodes: "Aktivní Uzly",
+                threat_neutralized: "Hrozba Neutralizována:",
+                eliminated: "Eliminováno",
+                detection_matrix: "Detekční Matice:",
+                success: "ÚSPĚCH",
+                processing_speed: "Rychlost Zpracování:",
+                neural_threat_intelligence: "Neurální Zpravodajství Hrozeb",
+                global_threats: "Globální Hrozby:",
+                detected: "detekováno",
+                neutralized_today: "Dnes Neutralizováno:",
+                success_rate: "míra úspěchu",
+                neural_response: "Neurální Odpověď:",
+                threat_sources: "Zdroje Hrozeb:",
+                countries: "Země"
+            },
+            hu: {
+                title: "BESdefense QUANTUM",
+                subtitle: "Neurális E-mail Biztonság",
+                quantum: "KVANTUM",
+                core: "MAG",
+                signatures: "ALÁÍRÁSOK",
+                speed: "SEBESSÉG",
+                generate_neural_report: "NEURÁLIS JELENTÉS LÉTREHOZÁSA",
+                quantum_command_center: "KVANTUM PARANCSNOKI KÖZPONT",
+                quantum_executive_analysis: "Kvantum Vezetői Elemzés",
+                close: "BEZÁR",
+                neural_security_summary: "Neurális Biztonsági Összefoglaló",
+                email_classification: "E-mail Osztályozás:",
+                secure: "BIZTONSÁGOS",
+                bec_prevention: "BEC Megelőzés:",
+                protected: "Védett",
+                quantum_confidence: "Kvantum Bizalom:",
+                maximum: "MAXIMUM",
+                neural_speed: "Neurális Sebesség:",
+                seconds: "másodperc",
+                quantum_neural_command_center: "Kvantum Neurális Parancsnoki Központ",
+                quantum_neural_processing: "Kvantum Neurális Feldolgozás",
+                neural_networks: "Neurális Hálózatok:",
+                quantum_state: "Kvantum Állapot:",
+                optimal: "OPTIMÁLIS",
+                global_quantum_intelligence: "Globális Kvantum Intelligencia",
+                monitored_dimensions: "Figyelt Dimenziók:",
+                nations: "Nemzetek",
+                neural_database: "Neurális Adatbázis:",
+                quantum_networks: "Kvantum Hálózatok:",
+                active_nodes: "Aktív Csomópontok",
+                threat_neutralized: "Fenyegetés Semlegesítve:",
+                eliminated: "Kiiktatva",
+                detection_matrix: "Észlelési Mátrix:",
+                success: "SIKER",
+                processing_speed: "Feldolgozási Sebesség:",
+                neural_threat_intelligence: "Neurális Fenyegetés Intelligencia",
+                global_threats: "Globális Fenyegetések:",
+                detected: "észlelve",
+                neutralized_today: "Ma Semlegesítve:",
+                success_rate: "sikerességi arány",
+                neural_response: "Neurális Válasz:",
+                threat_sources: "Fenyegetés Források:",
+                countries: "Országok"
+            },
+            'pt-br': {
+                title: "BESdefense QUANTUM",
+                subtitle: "Segurança Neural de Email",
+                quantum: "QUÂNTICO",
+                core: "NÚCLEO",
+                signatures: "ASSINATURAS",
+                speed: "VELOCIDADE",
+                generate_neural_report: "GERAR RELATÓRIO NEURAL",
+                quantum_command_center: "CENTRO DE COMANDO QUÂNTICO",
+                quantum_executive_analysis: "Análise Executiva Quântica",
+                close: "FECHAR",
+                neural_security_summary: "Resumo de Segurança Neural",
+                email_classification: "Classificação de Email:",
+                secure: "SEGURO",
+                bec_prevention: "Prevenção BEC:",
+                protected: "Protegido",
+                quantum_confidence: "Confiança Quântica:",
+                maximum: "MÁXIMO",
+                neural_speed: "Velocidade Neural:",
+                seconds: "segundos",
+                quantum_neural_command_center: "Centro de Comando Neural Quântico",
+                quantum_neural_processing: "Processamento Neural Quântico",
+                neural_networks: "Redes Neurais:",
+                quantum_state: "Estado Quântico:",
+                optimal: "ÓTIMO",
+                global_quantum_intelligence: "Inteligência Quântica Global",
+                monitored_dimensions: "Dimensões Monitoradas:",
+                nations: "Nações",
+                neural_database: "Base de Dados Neural:",
+                quantum_networks: "Redes Quânticas:",
+                active_nodes: "Nós Ativos",
+                threat_neutralized: "Ameaça Neutralizada:",
+                eliminated: "Eliminado",
+                detection_matrix: "Matriz de Detecção:",
+                success: "SUCESSO",
+                processing_speed: "Velocidade de Processamento:",
+                neural_threat_intelligence: "Inteligência de Ameaças Neural",
+                global_threats: "Ameaças Globais:",
+                detected: "detectadas",
+                neutralized_today: "Neutralizadas Hoje:",
+                success_rate: "taxa de sucesso",
+                neural_response: "Resposta Neural:",
+                threat_sources: "Fontes de Ameaça:",
+                countries: "Países"
+            },
+            no: {
+                title: "BESdefense QUANTUM",
+                subtitle: "Neural E-post Sikkerhet",
+                quantum: "KVANTE",
+                core: "KJERNE",
+                signatures: "SIGNATURER",
+                speed: "HASTIGHET",
+                generate_neural_report: "GENERER NEURAL RAPPORT",
+                quantum_command_center: "KVANTE KOMMANDOSENTER",
+                quantum_executive_analysis: "Kvante Lederanalyse",
+                close: "LUKK",
+                neural_security_summary: "Neural Sikkerhetssammendrag",
+                email_classification: "E-post Klassifisering:",
+                secure: "SIKKER",
+                bec_prevention: "BEC Forebygging:",
+                protected: "Beskyttet",
+                quantum_confidence: "Kvante Tillit:",
+                maximum: "MAKSIMUM",
+                neural_speed: "Neural Hastighet:",
+                seconds: "sekunder",
+                quantum_neural_command_center: "Kvante Neural Kommandosenter",
+                quantum_neural_processing: "Kvante Neural Behandling",
+                neural_networks: "Neurale Nettverk:",
+                quantum_state: "Kvante Tilstand:",
+                optimal: "OPTIMAL",
+                global_quantum_intelligence: "Global Kvante Intelligens",
+                monitored_dimensions: "Overvåkede Dimensjoner:",
+                nations: "Nasjoner",
+                neural_database: "Neural Database:",
+                quantum_networks: "Kvante Nettverk:",
+                active_nodes: "Aktive Noder",
+                threat_neutralized: "Trussel Nøytralisert:",
+                eliminated: "Eliminert",
+                detection_matrix: "Deteksjonsmatrise:",
+                success: "SUKSESS",
+                processing_speed: "Behandlingshastighet:",
+                neural_threat_intelligence: "Neural Trussel Intelligens",
+                global_threats: "Globale Trusler:",
+                detected: "oppdaget",
+                neutralized_today: "Nøytralisert I Dag:",
+                success_rate: "suksessrate",
+                neural_response: "Neural Respons:",
+                threat_sources: "Trussel Kilder:",
+                countries: "Land"
+            },
+            fi: {
+                title: "BESdefense QUANTUM",
+                subtitle: "Neuraalinen Sähköposti Turvallisuus",
+                quantum: "KVANTTI",
+                core: "YDIN",
+                signatures: "ALLEKIRJOITUKSET",
+                speed: "NOPEUS",
+                generate_neural_report: "LUO NEURAALINEN RAPORTTI",
+                quantum_command_center: "KVANTTI KOMENTOKESKUS",
+                quantum_executive_analysis: "Kvantti Johdon Analyysi",
+                close: "SULJE",
+                neural_security_summary: "Neuraalinen Turvallisuusyhteenveto",
+                email_classification: "Sähköposti Luokitus:",
+                secure: "TURVALLINEN",
+                bec_prevention: "BEC Ennaltaehkäisy:",
+                protected: "Suojattu",
+                quantum_confidence: "Kvantti Luottamus:",
+                maximum: "MAKSIMI",
+                neural_speed: "Neuraalinen Nopeus:",
+                seconds: "sekuntia",
+                quantum_neural_command_center: "Kvantti Neuraalinen Komentokeskus",
+                quantum_neural_processing: "Kvantti Neuraalinen Käsittely",
+                neural_networks: "Neuraaliset Verkot:",
+                quantum_state: "Kvantti Tila:",
+                optimal: "OPTIMAALINEN",
+                global_quantum_intelligence: "Globaali Kvantti Älykkyys",
+                monitored_dimensions: "Valvotut Ulottuvuudet:",
+                nations: "Kansakunnat",
+                neural_database: "Neuraalinen Tietokanta:",
+                quantum_networks: "Kvantti Verkot:",
+                active_nodes: "Aktiiviset Solmut",
+                threat_neutralized: "Uhka Neutralisoitu:",
+                eliminated: "Eliminoitu",
+                detection_matrix: "Tunnistusmatriisi:",
+                success: "MENESTYS",
+                processing_speed: "Käsittelynopeus:",
+                neural_threat_intelligence: "Neuraalinen Uhkatiedustelu",
+                global_threats: "Globaalit Uhat:",
+                detected: "havaittu",
+                neutralized_today: "Tänään Neutralisoitu:",
+                success_rate: "onnistumisprosentti",
+                neural_response: "Neuraalinen Vastaus:",
+                threat_sources: "Uhkalähteet:",
+                countries: "Maat"
+            },
+            th: {
+                title: "BESdefense QUANTUM",
+                subtitle: "ความปลอดภัยอีเมลแบบ Neural",
+                quantum: "ควอนตัม",
+                core: "แกนหลัก",
+                signatures: "ลายเซ็น",
+                speed: "ความเร็ว",
+                generate_neural_report: "สร้างรายงาน Neural",
+                quantum_command_center: "ศูนย์บัญชาการควอนตัม",
+                quantum_executive_analysis: "การวิเคราะห์ผู้บริหารควอนตัม",
+                close: "ปิด",
+                neural_security_summary: "สรุปความปลอดภัยเซลล์ประสาท",
+                email_classification: "การจำแนกอีเมล:",
+                secure: "ปลอดภัย",
+                bec_prevention: "การป้องกัน BEC:",
+                protected: "ได้รับการป้องกัน",
+                quantum_confidence: "ความเชื่อมั่นควอนตัม:",
+                maximum: "สูงสุด",
+                neural_speed: "ความเร็วเซลล์ประสาท:",
+                seconds: "วินาที",
+                quantum_neural_command_center: "ศูนย์บัญชาการประสาทควอนตัม",
+                quantum_neural_processing: "การประมวลผลประสาทควอนตัม",
+                neural_networks: "เครือข่ายประสาท:",
+                quantum_state: "สถานะควอนตัม:",
+                optimal: "เหมาะสมที่สุด",
+                global_quantum_intelligence: "ปัญญาควอนตัมระดับโลก",
+                monitored_dimensions: "มิติที่ได้รับการตรวจสอบ:",
+                nations: "ประเทศต่างๆ",
+                neural_database: "ฐานข้อมูลเซลล์ประสาท:",
+                quantum_networks: "เครือข่ายควอนตัม:",
+                active_nodes: "โหนดที่ใช้งานอยู่",
+                threat_neutralized: "ภัยคุกคามถูกทำลาย:",
+                eliminated: "ถูกกำจัด",
+                detection_matrix: "เมทริกซ์การตรวจจับ:",
+                success: "ความสำเร็จ",
+                processing_speed: "ความเร็วในการประมวลผล:",
+                neural_threat_intelligence: "ข่าวกรองภัยคุกคามประสาท",
+                global_threats: "ภัยคุกคามระดับโลก:",
+                detected: "ตรวจพบ",
+                neutralized_today: "ถูกทำลายวันนี้:",
+                success_rate: "อัตราความสำเร็จ",
+                neural_response: "การตอบสนองของประสาท:",
+                threat_sources: "แหล่งภัยคุกคาม:",
+                countries: "ประเทศ"
+            },
+            vi: {
+                title: "BESdefense QUANTUM",
+                subtitle: "Bảo Mật Email Neural",
+                quantum: "LƯỢNG TỬ",
+                core: "LÕI",
+                signatures: "CHỮ KÝ",
+                speed: "TỐC ĐỘ",
+                generate_neural_report: "TẠO BÁO CÁO NEURAL",
+                quantum_command_center: "TRUNG TÂM CHỈ HUY LƯỢNG TỬ",
+                quantum_executive_analysis: "Phân Tích Điều Hành Lượng Tử",
+                close: "ĐÓNG",
+                neural_security_summary: "Tóm Tắt Bảo Mật Neural",
+                email_classification: "Phân Loại Email:",
+                secure: "AN TOÀN",
+                bec_prevention: "Ngăn chặn BEC:",
+                protected: "Được bảo vệ",
+                quantum_confidence: "Sự tin cậy lượng tử:",
+                maximum: "TỐI ĐA",
+                neural_speed: "Tốc độ Neural:",
+                seconds: "giây",
+                quantum_neural_command_center: "Trung Tâm Chỉ Huy Neural Lượng Tử",
+                quantum_neural_processing: "Xử lý Neural Lượng Tử",
+                neural_networks: "Mạng Neural:",
+                quantum_state: "Trạng thái lượng tử:",
+                optimal: "TỐI ƯU",
+                global_quantum_intelligence: "Trí Tuệ Lượng Tử Toàn Cầu",
+                monitored_dimensions: "Các chiều được giám sát:",
+                nations: "Các quốc gia",
+                neural_database: "Cơ sở dữ liệu Neural:",
+                quantum_networks: "Mạng lượng tử:",
+                active_nodes: "Các nút hoạt động",
+                threat_neutralized: "Mối đe dọa đã được vô hiệu hóa:",
+                eliminated: "Đã loại bỏ",
+                detection_matrix: "Ma trận phát hiện:",
+                success: "THÀNH CÔNG",
+                processing_speed: "Tốc độ xử lý:",
+                neural_threat_intelligence: "Tình báo mối đe dọa Neural",
+                global_threats: "Mối đe dọa toàn cầu:",
+                detected: "đã phát hiện",
+                neutralized_today: "Đã vô hiệu hóa hôm nay:",
+                success_rate: "tỷ lệ thành công",
+                neural_response: "Phản ứng Neural:",
+                threat_sources: "Nguồn mối đe dọa:",
+                countries: "Quốc gia"
+            },
+            id: {
+                title: "BESdefense QUANTUM",
+                subtitle: "Keamanan Email Neural",
+                quantum: "KUANTUM",
+                core: "INTI",
+                signatures: "TANDA TANGAN",
+                speed: "KECEPATAN",
+                generate_neural_report: "BUAT LAPORAN NEURAL",
+                quantum_command_center: "PUSAT KOMANDO KUANTUM",
+                quantum_executive_analysis: "Analisis Eksekutif Kuantum",
+                close: "TUTUP",
+                neural_security_summary: "Ringkasan Keamanan Neural",
+                email_classification: "Klasifikasi Email:",
+                secure: "AMAN",
+                bec_prevention: "Pencegahan BEC:",
+                protected: "Terlindungi",
+                quantum_confidence: "Kepercayaan Kuantum:",
+                maximum: "MAKSIMUM",
+                neural_speed: "Kecepatan Neural:",
+                seconds: "detik",
+                quantum_neural_command_center: "Pusat Komando Neural Kuantum",
+                quantum_neural_processing: "Pemrosesan Neural Kuantum",
+                neural_networks: "Jaringan Neural:",
+                quantum_state: "Keadaan Kuantum:",
+                optimal: "OPTIMAL",
+                global_quantum_intelligence: "Kecerdasan Kuantum Global",
+                monitored_dimensions: "Dimensi yang Dipantau:",
+                nations: "Bangsa",
+                neural_database: "Database Neural:",
+                quantum_networks: "Jaringan Kuantum:",
+                active_nodes: "Node Aktif",
+                threat_neutralized: "Ancaman Dinetralkan:",
+                eliminated: "Dieliminasi",
+                detection_matrix: "Matriks Deteksi:",
+                success: "SUKSES",
+                processing_speed: "Kecepatan Pemrosesan:",
+                neural_threat_intelligence: "Intelijen Ancaman Neural",
+                global_threats: "Ancaman Global:",
+                detected: "terdeteksi",
+                neutralized_today: "Dinetralkan Hari Ini:",
+                success_rate: "tingkat keberhasilan",
+                neural_response: "Respon Neural:",
+                threat_sources: "Sumber Ancaman:",
+                countries: "Negara"
+            },
+            ms: {
+                title: "BESdefense QUANTUM",
+                subtitle: "Keselamatan Email Neural",
+                quantum: "KUANTUM",
+                core: "TERAS",
+                signatures: "TANDATANGAN",
+                speed: "KELAJUAN",
+                generate_neural_report: "JANA LAPORAN NEURAL",
+                quantum_command_center: "PUSAT PERINTAH KUANTUM",
+                quantum_executive_analysis: "Analisis Eksekutif Kuantum",
+                close: "TUTUP",
+                neural_security_summary: "Ringkasan Keselamatan Neural",
+                email_classification: "Klasifikasi Email:",
+                secure: "SELAMAT",
+                bec_prevention: "Pencegahan BEC:",
+                protected: "Dilindungi",
+                quantum_confidence: "Keyakinan Kuantum:",
+                maximum: "MAKSIMUM",
+                neural_speed: "Kelajuan Neural:",
+                seconds: "saat",
+                quantum_neural_command_center: "Pusat Perintah Neural Kuantum",
+                quantum_neural_processing: "Pemprosesan Neural Kuantum",
+                neural_networks: "Rangkaian Neural:",
+                quantum_state: "Keadaan Kuantum:",
+                optimal: "OPTIMUM",
+                global_quantum_intelligence: "Kecerdasan Kuantum Global",
+                monitored_dimensions: "Dimensi Dipantau:",
+                nations: "Bangsa",
+                neural_database: "Pangkalan Data Neural:",
+                quantum_networks: "Rangkaian Kuantum:",
+                active_nodes: "Nod Aktif",
+                threat_neutralized: "Ancaman Dineutralkan:",
+                eliminated: "Dihapuskan",
+                detection_matrix: "Matriks Pengesanan:",
+                success: "KEJAYAAN",
+                processing_speed: "Kelajuan Pemprosesan:",
+                neural_threat_intelligence: "Perisikan Ancaman Neural",
+                global_threats: "Ancaman Global:",
+                detected: "dikesan",
+                neutralized_today: "Dineutralkan Hari Ini:",
+                success_rate: "kadar kejayaan",
+                neural_response: "Sambutan Neural:",
+                threat_sources: "Sumber Ancaman:",
+                countries: "Negara"
+            },
+            sv: {
+                title: "BESdefense QUANTUM",
+                subtitle: "Neural E-postsäkerhet",
+                quantum: "KVANT",
+                core: "KÄRNA",
+                signatures: "SIGNATURER",
+                speed: "HASTIGHET",
+                generate_neural_report: "GENERERA NEURAL RAPPORT",
+                quantum_command_center: "KVANT KOMMANDOCENTRAL",
+                quantum_executive_analysis: "Kvant Verkställande Analys",
+                close: "STÄNG",
+                neural_security_summary: "Neural Säkerhetssammanfattning",
+                email_classification: "E-postklassificering:",
+                secure: "SÄKER",
+                bec_prevention: "BEC Förebyggande:",
+                protected: "Skyddad",
+                quantum_confidence: "Kvant Förtroende:",
+                maximum: "MAXIMUM",
+                neural_speed: "Neural Hastighet:",
+                seconds: "sekunder",
+                quantum_neural_command_center: "Kvant Neural Kommandocentral",
+                quantum_neural_processing: "Kvant Neural Bearbetning",
+                neural_networks: "Neurala Nätverk:",
+                quantum_state: "Kvanttillstånd:",
+                optimal: "OPTIMAL",
+                global_quantum_intelligence: "Global Kvantintelligens",
+                monitored_dimensions: "Övervakade Dimensioner:",
+                nations: "Nationer",
+                neural_database: "Neural Databas:",
+                quantum_networks: "Kvantnätverk:",
+                active_nodes: "Aktiva Noder",
+                threat_neutralized: "Hot Neutraliserat:",
+                eliminated: "Eliminerat",
+                detection_matrix: "Detektionsmatris:",
+                success: "FRAMGÅNG",
+                processing_speed: "Bearbetningshastighet:",
+                neural_threat_intelligence: "Neural Hotintelligens",
+                global_threats: "Globala Hot:",
+                detected: "upptäckta",
+                neutralized_today: "Neutraliserade Idag:",
+                success_rate: "framgångsgrad",
+                neural_response: "Neural Respons:",
+                threat_sources: "Hotkällor:",
+                countries: "Länder"
             }
         };
 
-        let currentLang = 'en';
-
-        function updateContent() {
-            document.querySelectorAll('[data-translate]').forEach(element => {
-                const key = element.getAttribute('data-translate');
-                if (languages[currentLang][key]) {
-                    // Check for values that contain numbers and text, and only translate the text part
-                    const textContent = languages[currentLang][key];
-                    const originalText = element.textContent;
-
-                    // If the original text has a number at the beginning and then a word,
-                    // we try to keep the number and translate the word.
-                    const numberMatch = originalText.match(/^(\$?\d+(\.\d+)?(K|M|\+)?)/);
-                    if (numberMatch) {
-                        const numberPart = numberMatch[1];
-                        const textPartKey = key.replace(numberMatch[0], '').trim(); // Remove number part from key for lookup
-                        
-                        // Special handling for specific values that are already translated strings and not just appended
-                        if (key === 'daily_analysis_value' || key === 'protected_amount' || key === 'compliance_value' ||
-                            key === 'integration_level' || key === 'nanoseconds' || key === 'infinity_calc_sec' ||
-                            key === 'optimal' || key === 'success' || key === 'less_than_seconds' ||
-                            key === 'detected_count' || key === 'success_rate' || key === 'countries_count' ||
-                            key === 'quantum' || key === 'saved_amount' || key === 'active_24_7' ||
-                            key === 'defcon_quantum' || key === 'messages_count' || key === 'variants_count' ||
-                            key === 'attempts_count' || key === 'processing_count' || key === 'isolated_count' ||
-                            key === 'open_count') {
-                                element.textContent = textContent;
-                        } else {
-                            // For other cases, try to split and translate
-                            const translatedTextWithoutNumber = languages[currentLang][key].replace(/^(\$?\d+(\.\d+)?(K|M|\+)?)/, '').trim();
-                            element.textContent = numberPart + ' ' + translatedTextWithoutNumber;
-                        }
-
-                    } else {
-                        element.textContent = textContent;
-                    }
-                }
-            });
-
-            // Update the current language display
-            document.querySelector('.current-lang').textContent = currentLang.toUpperCase();
-            document.documentElement.lang = currentLang; // Update html lang attribute
-        }
-
-
+        let currentLanguage = 'en';
+        
+        // Language functions
         function toggleLanguages() {
-            document.getElementById('languageDropdown').classList.toggle('show');
+            const dropdown = document.getElementById('languageDropdown');
+            dropdown.classList.toggle('show');
         }
 
         function switchLanguage(lang) {
-            currentLang = lang;
-            updateContent();
-            toggleLanguages(); // Hide dropdown after selection
+            currentLanguage = lang;
+            document.querySelector('.current-lang').textContent = lang.toUpperCase();
+            document.getElementById('languageDropdown').classList.remove('show');
+            
+            // Update all translatable elements
+            const elements = document.querySelectorAll('[data-translate]');
+            elements.forEach(element => {
+                const key = element.getAttribute('data-translate');
+                if (translations[lang] && translations[lang][key]) {
+                    element.textContent = translations[lang][key];
+                }
+            });
         }
 
-        function showModal(modalType) {
-            document.getElementById(`${modalType}Modal`).style.display = 'block';
+        // Modal functions
+        function showModal(type) {
+            const modal = type === 'executive' ? 
+                document.getElementById('executiveModal') : 
+                document.getElementById('commandModal');
+            
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
         }
 
-        function hideModal(modalType) {
-            document.getElementById(`${modalType}Modal`).style.display = 'none';
+        function hideModal(type) {
+            const modal = type === 'executive' ? 
+                document.getElementById('executiveModal') : 
+                document.getElementById('commandModal');
+            
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
         }
 
-        // Initialize content on page load
-        document.addEventListener('DOMContentLoaded', updateContent);
+        // Event listeners
+        window.onclick = function(event) {
+            const executiveModal = document.getElementById('executiveModal');
+            const commandModal = document.getElementById('commandModal');
+            
+            if (event.target === executiveModal) {
+                hideModal('executive');
+            }
+            if (event.target === commandModal) {
+                hideModal('command');
+            }
+        }
+
+        // Close language dropdown when clicking outside
+        document.addEventListener('click', function(event) {
+            const selector = document.querySelector('.language-selector');
+            if (!selector.contains(event.target)) {
+                document.getElementById('languageDropdown').classList.remove('show');
+            }
+        });
     </script>
 </body>
 </html>
