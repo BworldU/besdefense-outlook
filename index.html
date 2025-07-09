@@ -152,7 +152,7 @@
             50% { background-position: 100% 50%; } 
         }
         .header p { font-size: 13px; opacity: 0.9; font-weight: 600; color: #cbd5e1; }
-        .status-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; }
+        .status-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 24px; }
         .status-card { 
             background: rgba(15, 23, 42, 0.8); 
             backdrop-filter: blur(25px); 
@@ -193,6 +193,8 @@
         }
         .analysis-section { border: 1px solid rgba(34, 197, 94, 0.4); }
         .intelligence-section { border: 1px solid rgba(251, 146, 60, 0.4); }
+        .outlook-section { border: 1px solid rgba(34, 197, 94, 0.4); }
+        .microsoft-section { border: 1px solid rgba(56, 189, 248, 0.4); }
         .creator-section { 
             background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(147, 51, 234, 0.1) 100%); 
             border: 2px solid rgba(59, 130, 246, 0.4); 
@@ -224,7 +226,7 @@
             -webkit-background-clip: text; 
             -webkit-text-fill-color: transparent; 
         }
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; }
+        .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 16px; }
         .grid-item { 
             text-align: center; 
             padding: 16px; 
@@ -238,10 +240,24 @@
             font-size: 16px; 
             font-weight: 900; 
             margin-bottom: 6px; 
-            background: linear-gradient(135deg, #ff6b35 0%, #ffcd3c 100%);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        }
+        .intel-value { 
+            background: linear-gradient(135deg, #ff6b35 0%, #ffcd3c 100%); 
+            background-clip: text; 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+        }
+        .outlook-value { 
+            background: linear-gradient(135deg, #00ff88 0%, #00ffff 100%); 
+            background-clip: text; 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+        }
+        .ms-value { 
+            background: linear-gradient(135deg, #0078d4 0%, #40e0d0 100%); 
+            background-clip: text; 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
         }
         .grid-label { 
             font-size: 10px; 
@@ -249,7 +265,7 @@
             font-weight: 700; 
             text-transform: uppercase; 
         }
-        .creator-badge { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; }
+        .creator-badge { display: flex; align-items: center; gap: 16px; }
         .creator-avatar { 
             width: 48px; 
             height: 48px; 
@@ -261,6 +277,7 @@
             font-size: 18px; 
             font-weight: 900; 
             color: white; 
+            flex-shrink: 0;
         }
         .creator-name { 
             font-size: 20px; 
@@ -281,9 +298,9 @@
             font-size: 14px; 
             color: #e2e8f0; 
             line-height: 1.5; 
-            margin-bottom: 16px; 
+            margin-top: 16px; 
         }
-        .creator-achievements { display: flex; flex-direction: column; gap: 8px; }
+        .creator-achievements { display: flex; flex-direction: column; gap: 8px; margin-top: 16px;}
         .achievement-item { 
             display: flex; 
             align-items: center; 
@@ -309,7 +326,11 @@
             cursor: pointer; 
             transition: all 0.4s ease; 
             text-transform: uppercase; 
-            text-align: center; 
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
         }
         .action-btn:hover { 
             transform: translateY(-4px); 
@@ -455,44 +476,23 @@
     <div class="modal executive-modal" id="executiveModal">
         <div class="modal-wrapper">
             <div class="modal-header">
-                <div class="modal-title"><span class="icon">🚀</span><span data-translate="quantum_executive_analysis"></span></div>
-                <button class="close-btn" onclick="hideModal('executive')">✕ <span data-translate="close"></span></button>
+                <div class="modal-title"><span class="icon">🚀</span><span data-translate="quantum_executive_analysis">Quantum Executive Analysis</span></div>
+                <button class="close-btn" onclick="hideModal('executive')">✕ <span data-translate="close">CLOSE</span></button>
             </div>
             <div class="modal-body">
                 <div class="modal-section">
-                    <div class="modal-section-header"><span class="modal-section-icon">🛡️</span><span class="modal-section-title" data-translate="neural_security_summary"></span></div>
-                    <div class="modal-row"><span class="modal-label" data-translate="email_classification"></span><span class="modal-value">99.97%<span data-translate="secure"></span></span></div>
-                    <div class="modal-row"><span class="modal-label" data-translate="bec_prevention"></span><span class="modal-value">$285K+<span data-translate="protected"></span></span></div>
-                    <div class="modal-row"><span class="modal-label" data-translate="quantum_confidence"></span><span class="modal-value" data-translate="maximum"></span></div>
-                    <div class="modal-row"><span class="modal-label" data-translate="neural_speed"></span><span class="modal-value">0.001<span data-translate="seconds"></span></span></div>
+                    <div class="modal-section-header"><span class="modal-section-icon">🛡️</span><span class="modal-section-title" data-translate="neural_security_summary">Neural Security Summary</span></div>
+                    <div class="modal-row"><span class="modal-label" data-translate="email_classification">Email Classification:</span><span class="modal-value">99.97% <span data-translate="secure">SECURE</span></span></div>
+                    <div class="modal-row"><span class="modal-label" data-translate="bec_prevention">BEC Prevention:</span><span class="modal-value">$285K+ <span data-translate="protected">Protected</span></span></div>
+                    <div class="modal-row"><span class="modal-label" data-translate="quantum_confidence">Quantum Confidence:</span><span class="modal-value" data-translate="maximum">MAXIMUM</span></div>
+                    <div class="modal-row"><span class="modal-label" data-translate="neural_speed">Neural Speed:</span><span class="modal-value">0.001 <span data-translate="seconds">seconds</span></span></div>
                 </div>
-                <div class="modal-section">
-                    <div class="modal-section-header"><span class="modal-section-icon">🌍</span><span class="modal-section-title" data-translate="global_quantum_intelligence"></span></div>
-                    <div class="modal-row"><span class="modal-label" data-translate="monitored_dimensions"></span><span class="modal-value">195+<span data-translate="nations"></span></span></div>
-                    <div class="modal-row"><span class="modal-label" data-translate="neural_database"></span><span class="modal-value">500M+<span data-translate="signatures"></span></span></div>
-                    <div class="modal-row"><span class="modal-label" data-translate="quantum_networks"></span><span class="modal-value">847<span data-translate="active_nodes"></span></span></div>
-                    <div class="modal-row"><span class="modal-label" data-translate="threat_neutralized"></span><span class="modal-value">1,247<span data-translate="eliminated"></span></span></div>
-                </div>
-                <div class="modal-section">
-                    <div class="modal-section-header"><span class="modal-section-icon">🏢</span><span class="modal-section-title" data-translate="enterprise_quantum_shield"></span></div>
-                    <div class="modal-row"><span class="modal-label" data-translate="neural_analysis"></span><span class="modal-value">50,000+<span data-translate="daily"></span></span></div>
-                    <div class="modal-row"><span class="modal-label" data-translate="quantum_savings"></span><span class="modal-value">$2.8M<span data-translate="protected"></span></span></div>
-                    <div class="modal-row"><span class="modal-label" data-translate="compliance_matrix"></span><span class="modal-value" data-translate="soc_2_quantum"></span></div>
-                    <div class="modal-row"><span class="modal-label" data-translate="neural_integration"></span><span class="modal-value" data-translate="enterprise"></span></div>
-                </div>
-                <div class="modal-section">
-                    <div class="modal-section-header"><span class="modal-section-icon">🔒</span><span class="modal-section-title" data-translate="advanced_quantum_security"></span></div>
-                    <div class="modal-row"><span class="modal-label" data-translate="neural_scanning"></span><span class="modal-value" data-translate="active"></span></div>
-                    <div class="modal-row"><span class="modal-label" data-translate="behavioral_ai"></span><span class="modal-value" data-translate="enabled"></span></div>
-                    <div class="modal-row"><span class="modal-label" data-translate="quantum_encryption"></span><span class="modal-value" data-translate="post_quantum"></span></div>
-                    <div class="modal-row"><span class="modal-label" data-translate="zero_day_neural"></span><span class="modal-value" data-translate="maximum"></span></div>
-                </div>
-                <div class="modal-section">
-                    <div class="modal-section-header"><span class="modal-section-icon">⚡</span><span class="modal-section-title" data-translate="quantum_performance_matrix"></span></div>
-                    <div class="modal-row"><span class="modal-label" data-translate="neural_processing"></span><span class="modal-value">0.001<span data-translate="nanoseconds"></span></span></div>
-                    <div class="modal-row"><span class="modal-label" data-translate="quantum_accuracy"></span><span class="modal-value">99.97%</span></div>
-                    <div class="modal-row"><span class="modal-label" data-translate="system_coherence"></span><span class="modal-value">99.99%</span></div>
-                    <div class="modal-row"><span class="modal-label" data-translate="processing_capacity"></span><span class="modal-value">∞<span data-translate="calc_sec"></span></span></div>
+                 <div class="modal-section">
+                    <div class="modal-section-header"><span class="modal-section-icon">🌍</span><span class="modal-section-title" data-translate="quantum_intelligence">Quantum Intelligence</span></div>
+                    <div class="modal-row"><span class="modal-label" data-translate="active_threats">Active Threats:</span><span class="modal-value">1,247</span></div>
+                    <div class="modal-row"><span class="modal-label" data-translate="success_rate">Success Rate:</span><span class="modal-value">98.7%</span></div>
+                    <div class="modal-row"><span class="modal-label" data-translate="countries">Countries Monitored:</span><span class="modal-value">195+</span></div>
+                    <div class="modal-row"><span class="modal-label" data-translate="response">Response Time:</span><span class="modal-value">&lt;0.001s</span></div>
                 </div>
             </div>
         </div>
@@ -500,44 +500,16 @@
     <div class="modal command-modal" id="commandModal">
         <div class="modal-wrapper">
             <div class="modal-header">
-                <div class="modal-title"><span class="icon">🌌</span><span data-translate="quantum_neural_command_center"></span></div>
-                <button class="close-btn" onclick="hideModal('command')">✕ <span data-translate="close"></span></button>
+                <div class="modal-title"><span class="icon">🌌</span><span data-translate="quantum_command_center">QUANTUM COMMAND CENTER</span></div>
+                <button class="close-btn" onclick="hideModal('command')">✕ <span data-translate="close">CLOSE</span></button>
             </div>
             <div class="modal-body">
                 <div class="modal-section">
-                    <div class="modal-section-header"><span class="modal-section-icon">⚡</span><span class="modal-section-title" data-translate="quantum_neural_processing"></span></div>
-                    <div class="modal-row"><span class="modal-label" data-translate="neural_networks"></span><span class="modal-value">847/891 (95.1%)</span></div>
-                    <div class="modal-row"><span class="modal-label" data-translate="quantum_state"></span><span class="modal-value">99.7%<span data-translate="optimal"></span></span></div>
-                    <div class="modal-row"><span class="modal-label" data-translate="detection_matrix"></span><span class="modal-value">98.7%<span data-translate="success"></span></span></div>
-                    <div class="modal-row"><span class="modal-label" data-translate="processing_speed"></span><span class="modal-value">&lt;0.001<span data-translate="seconds"></span></span></div>
-                </div>
-                <div class="modal-section">
-                    <div class="modal-section-header"><span class="modal-section-icon">🎯</span><span class="modal-section-title" data-translate="neural_threat_intelligence"></span></div>
-                    <div class="modal-row"><span class="modal-label" data-translate="global_threats"></span><span class="modal-value">1,247<span data-translate="detected"></span></span></div>
-                    <div class="modal-row"><span class="modal-label" data-translate="neutralized_today"></span><span class="modal-value">98.7%<span data-translate="success_rate"></span></span></div>
-                    <div class="modal-row"><span class="modal-label" data-translate="neural_response"></span><span class="modal-value">&lt;0.001<span data-translate="seconds"></span></span></div>
-                    <div class="modal-row"><span class="modal-label" data-translate="threat_sources"></span><span class="modal-value">195+<span data-translate="countries"></span></span></div>
-                </div>
-                <div class="modal-section">
-                    <div class="modal-section-header"><span class="modal-section-icon">🏢</span><span class="modal-section-title" data-translate="enterprise_quantum_command"></span></div>
-                    <div class="modal-row"><span class="modal-label" data-translate="integration_level"></span><span class="modal-value" data-translate="quantum"></span></div>
-                    <div class="modal-row"><span class="modal-label" data-translate="bec_prevention"></span><span class="modal-value">$2.8M<span data-translate="saved"></span></span></div>
-                    <div class="modal-row"><span class="modal-label" data-translate="neural_monitoring"></span><span class="modal-value" data-translate="active_24_7"></span></div>
-                    <div class="modal-row"><span class="modal-label" data-translate="threat_level"></span><span class="modal-value" data-translate="defcon_quantum"></span></div>
-                </div>
-                <div class="modal-section">
-                    <div class="modal-section-header"><span class="modal-section-icon">📊</span><span class="modal-section-title" data-translate="neural_analytics_matrix"></span></div>
-                    <div class="modal-row"><span class="modal-label" data-translate="neural_processing_24h"></span><span class="modal-value">50,000+<span data-translate="messages"></span></span></div>
-                    <div class="modal-row"><span class="modal-label" data-translate="quantum_malware"></span><span class="modal-value">847<span data-translate="variants"></span></span></div>
-                    <div class="modal-row"><span class="modal-label" data-translate="neural_phishing"></span><span class="modal-value">1,205<span data-translate="attempts"></span></span></div>
-                    <div class="modal-row"><span class="modal-label" data-translate="false_positives"></span><span class="modal-value">0.03%</span></div>
-                </div>
-                <div class="modal-section">
-                    <div class="modal-section-header"><span class="modal-section-icon">🔐</span><span class="modal-section-title" data-translate="quantum_security_operations"></span></div>
-                    <div class="modal-row"><span class="modal-label" data-translate="neural_sandbox"></span><span class="modal-value">15<span data-translate="processing"></span></span></div>
-                    <div class="modal-row"><span class="modal-label" data-translate="quantum_quarantine"></span><span class="modal-value">247<span data-translate="isolated"></span></span></div>
-                    <div class="modal-row"><span class="modal-label" data-translate="auto_neural_response"></span><span class="modal-value" data-translate="enabled"></span></div>
-                    <div class="modal-row"><span class="modal-label" data-translate="active_incidents"></span><span class="modal-value">0<span data-translate="open"></span></span></div>
+                    <div class="modal-section-header"><span class="modal-section-icon">⚡</span><span class="modal-section-title" data-translate="microsoft_nexus">Microsoft Nexus</span></div>
+                    <div class="modal-row"><span class="modal-label" data-translate="integration">Integration Level:</span><span class="modal-value">QUANTUM</span></div>
+                    <div class="modal-row"><span class="modal-label" data-translate="status">Core Status:</span><span class="modal-value">ONLINE</span></div>
+                    <div class="modal-row"><span class="modal-label" data-translate="platforms">Compatible Platforms:</span><span class="modal-value">∞</span></div>
+                    <div class="modal-row"><span class="modal-label" data-translate="level">Threat Level:</span><span class="modal-value">MAXIMUM</span></div>
                 </div>
             </div>
         </div>
@@ -550,59 +522,82 @@
                     <div class="language-toggle" onclick="toggleLanguages()"><span class="globe-icon">🌍</span><span class="current-lang">EN</span></div>
                     <div class="language-dropdown" id="languageDropdown"></div>
                 </div>
-                <div style="display: flex; gap: 10px;">
-                    <span class="outlook-badge" data-translate="outlook_badge"></span>
-                    <span class="company-badge" data-translate="company_badge"></span>
+                <div style="display: flex; gap: 8px;">
+                    <div class="outlook-badge"><span>📧</span><span data-translate="outlook_badge">Outlook Add-in</span></div>
+                    <div class="company-badge"><span>🏢</span><span data-translate="company_badge">Bright Eke Systems</span></div>
                 </div>
             </div>
-            <h1 data-translate="header_title"></h1>
-            <p data-translate="header_subtitle"></p>
+            <h1 data-translate="title">BESdefense QUANTUM</h1>
+            <p data-translate="subtitle">Neural Email Security</p>
         </div>
+        
         <div class="status-grid">
-            <div class="status-card"><div class="status-value">99.97%</div><div class="status-label" data-translate="secure"></div></div>
-            <div class="status-card"><div class="status-value">$285K+</div><div class="status-label" data-translate="protected"></div></div>
+            <div class="status-card"><div class="status-value">ACTIVE</div><div class="status-label" data-translate="quantum">QUANTUM</div></div>
+            <div class="status-card"><div class="status-value">ONLINE</div><div class="status-label" data-translate="core">CORE</div></div>
+            <div class="status-card"><div class="status-value">500M+</div><div class="status-label" data-translate="signatures">SIGNATURES</div></div>
+            <div class="status-card"><div class="status-value">0.001s</div><div class="status-label" data-translate="speed">SPEED</div></div>
         </div>
+        
         <div class="action-buttons">
-            <button class="action-btn" onclick="showModal('executive')" data-translate="action_btn_1"></button>
-            <button class="action-btn" onclick="showModal('command')" data-translate="action_btn_2"></button>
+            <button class="action-btn" onclick="showModal('executive')"><span class="btn-icon">🚀</span><span data-translate="generate_neural_report">GENERATE NEURAL REPORT</span></button>
+            <button class="action-btn" onclick="showModal('command')"><span class="btn-icon">🌌</span><span data-translate="quantum_command_center">QUANTUM COMMAND CENTER</span></button>
         </div>
+        
         <div class="section analysis-section">
-            <div class="section-header"><span class="section-icon">🔬</span><h2 class="section-title" data-translate="analysis_section_title"></h2></div>
-            <div class="analysis-row"><span class="analysis-label" data-translate="email_classification"></span><span class="analysis-value">99.97%<span data-translate="secure"></span></span></div>
-            <div class="analysis-row"><span class="analysis-label" data-translate="bec_prevention"></span><span class="analysis-value">$285K+<span data-translate="protected"></span></span></div>
-            <div class="analysis-row"><span class="analysis-label" data-translate="quantum_confidence"></span><span class="analysis-value" data-translate="maximum"></span></div>
-            <div class="analysis-row"><span class="analysis-label" data-translate="neural_speed"></span><span class="analysis-value">0.001<span data-translate="seconds"></span></span></div>
+            <div class="section-header"><span class="section-icon">🧠</span><span class="section-title" data-translate="neural_analysis">Neural Email Analysis</span></div>
+            <div class="analysis-row"><span class="analysis-label" data-translate="email_classification">Email Classification:</span><span class="analysis-value" data-translate="secure">SECURE</span></div>
+            <div class="analysis-row"><span class="analysis-label" data-translate="confidence_level">Confidence Level:</span><span class="analysis-value">99.97%</span></div>
+            <div class="analysis-row"><span class="analysis-label" data-translate="bec_risk">BEC Risk:</span><span class="analysis-value" data-translate="minimal">MINIMAL</span></div>
+            <div class="analysis-row"><span class="analysis-label" data-translate="protection_value">Protection Value:</span><span class="analysis-value">$285K+</span></div>
         </div>
+        
         <div class="section intelligence-section">
-            <div class="section-header"><span class="section-icon">🌍</span><h2 class="section-title" data-translate="intelligence_section_title"></h2></div>
+            <div class="section-header"><span class="section-icon">🌌</span><span class="section-title" data-translate="quantum_intelligence">Quantum Intelligence</span></div>
             <div class="grid">
-                <div class="grid-item"><div class="grid-value">195+</div><div class="grid-label" data-translate="nations"></div></div>
-                <div class="grid-item"><div class="grid-value">500M+</div><div class="grid-label" data-translate="signatures"></div></div>
-                <div class="grid-item"><div class="grid-value">847</div><div class="grid-label" data-translate="active_nodes"></div></div>
-                <div class="grid-item"><div class="grid-value">1,247</div><div class="grid-label" data-translate="eliminated"></div></div>
+                <div class="grid-item intel-item"><div class="grid-value intel-value">1,247</div><div class="grid-label" data-translate="active_threats">ACTIVE THREATS</div></div>
+                <div class="grid-item intel-item"><div class="grid-value intel-value">98.7%</div><div class="grid-label" data-translate="success_rate">SUCCESS RATE</div></div>
+                <div class="grid-item intel-item"><div class="grid-value intel-value">195+</div><div class="grid-label" data-translate="countries">COUNTRIES</div></div>
+                <div class="grid-item intel-item"><div class="grid-value intel-value">&lt;0.001s</div><div class="grid-label" data-translate="response">RESPONSE</div></div>
             </div>
         </div>
+        
+        <div class="section outlook-section">
+            <div class="section-header"><span class="section-icon">📧</span><span class="section-title" data-translate="outlook_integration">Outlook Integration</span></div>
+            <div class="grid">
+                <div class="grid-item outlook-item"><div class="grid-value outlook-value" data-translate="real_time">REAL-TIME</div><div class="grid-label" data-translate="scanning">SCANNING</div></div>
+                <div class="grid-item outlook-item"><div class="grid-value outlook-value" data-translate="auto_block">AUTO-BLOCK</div><div class="grid-label" data-translate="threats">THREATS</div></div>
+                <div class="grid-item outlook-item"><div class="grid-value outlook-value">365</div><div class="grid-label" data-translate="compatible">COMPATIBLE</div></div>
+                <div class="grid-item outlook-item"><div class="grid-value outlook-value" data-translate="instant">INSTANT</div><div class="grid-label" data-translate="alerts">ALERTS</div></div>
+            </div>
+        </div>
+        
         <div class="section creator-section">
+            <div class="section-header"><span class="section-icon">👨‍💻</span><span class="section-title" data-translate="created_by">Created by:</span></div>
             <div class="creator-badge">
-                <div class="creator-avatar">FW</div>
-                <div>
-                    <div class="creator-name" data-translate="creator_name"></div>
-                    <div class="creator-title" data-translate="creator_title"></div>
+                <div class="creator-avatar">BE</div>
+                <div class="creator-details">
+                    <div class="creator-name">Bright Eke</div>
+                    <div class="creator-title" data-translate="founder_ceo">Founder and CEO, Bright Eke Systems</div>
                 </div>
             </div>
-            <div class="creator-description"><p data-translate="creator_description"></p></div>
+            <div class="creator-description"><p data-translate="creator_description">Leading revolutionary Neural-Quantum cybersecurity innovation through advanced AI threat intelligence systems.</p></div>
             <div class="creator-achievements">
-                <div class="achievement-item" data-translate="achievement_1"></div>
-                <div class="achievement-item" data-translate="achievement_2"></div>
-                <div class="achievement-item" data-translate="achievement_3"></div>
+                <div class="achievement-item"><span>🏢</span><span>Bright Eke Systems</span></div>
+                <div class="achievement-item"><span>🛡️</span><span data-translate="besdefense_universal">BESdefense Universal Message Shield</span></div>
+                <div class="achievement-item"><span>🌌</span><span data-translate="quantum_pioneer">Quantum Security Pioneer</span></div>
             </div>
         </div>
+        
         <div class="footer">
-            <div class="footer-brand"><p><strong data-translate="footer_brand_1"></strong> <span data-translate="footer_brand_2"></span></p></div>
+            <div class="footer-brand">
+                <p><strong data-translate="footer_brand_1">BESdefense QUANTUM</strong> - <span data-translate="footer_brand_2">Neural Email Security</span></p>
+                <p><span data-translate="powered_by">Powered by</span> <strong>Bright Eke Systems</strong></p>
+                <p>© 2025 <span data-translate="rights_reserved">All Rights Reserved</span></p>
+            </div>
             <div class="footer-links">
-                <span class="footer-link" data-translate="footer_link_1"></span>
-                <span class="footer-link" data-translate="footer_link_2"></span>
-                <span class="footer-link" data-translate="footer_link_3"></span>
+                <div class="footer-link" data-translate="footer_link_1">Support</div>
+                <div class="footer-link" data-translate="footer_link_2">Privacy</div>
+                <div class="footer-link" data-translate="footer_link_3">Terms</div>
             </div>
         </div>
     </div>
@@ -610,55 +605,39 @@
     <script src="translations.js"></script>
     
     <script>
-        const languages = [
-            { code: 'en', name: 'English' }, { code: 'es', name: 'Español' },
-            { code: 'fr', name: 'Français' }, { code: 'de', name: 'Deutsch' },
-            { code: 'it', name: 'Italiano' }, { code: 'pt', name: 'Português' },
-            { code: 'nl', name: 'Nederlands' }, { code: 'ru', name: 'Русский' },
-            { code: 'zh-CN', name: '中文 (简体)' }, { code: 'ja', name: '日本語' },
-            { code: 'ko', name: '한국어' }, { code: 'ar', name: 'العربية' },
-            { code: 'hi', name: 'हिन्दी' }, { code: 'bn', name: 'বাংলা' },
-            { code: 'ur', name: 'اردو' }, { code: 'tr', name: 'Türkçe' },
-            { code: 'vi', name: 'Tiếng Việt' }, { code: 'pl', name: 'Polski' },
-            { code: 'ro', name: 'Română' }, { code: 'sv', name: 'Svenska' },
-            { code: 'no', name: 'Norsk' }, { code: 'da', name: 'Dansk' },
-            { code: 'fi', name: 'Suomi' }, { code: 'el', name: 'Ελληνικά' },
-            { code: 'he', name: 'עברית' }, { code: 'th', name: 'ไทย' },
-        ];
+        const languages = []; // This will be populated from translations.js
 
         function populateLanguages() {
             const dropdown = document.getElementById('languageDropdown');
-            dropdown.innerHTML = '';
-            languages.forEach(lang => {
-                const option = document.createElement('div');
-                option.classList.add('lang-option');
-                option.dataset.lang = lang.code;
-                option.textContent = lang.name;
-                option.onclick = () => {
-                    changeLanguage(lang.code);
-                    document.querySelector('.current-lang').textContent = lang.code.toUpperCase();
-                    toggleLanguages();
-                };
-                dropdown.appendChild(option);
-            });
+            dropdown.innerHTML = ''; // Clear previous
+            for (const langCode in translations) {
+                if (translations.hasOwnProperty(langCode)) {
+                    const option = document.createElement('div');
+                    option.classList.add('lang-option');
+                    option.dataset.lang = langCode;
+                    option.textContent = translations[langCode].language_name || langCode.toUpperCase();
+                    option.onclick = () => {
+                        changeLanguage(langCode);
+                        document.querySelector('.current-lang').textContent = langCode.toUpperCase();
+                        toggleLanguages();
+                    };
+                    dropdown.appendChild(option);
+                }
+            }
         }
 
         function changeLanguage(lang) {
-            // The 'translations' object is loaded from translations.js
+            if (typeof translations === 'undefined') {
+                console.error("Translations data is not loaded. Make sure translations.js is in the same directory and loaded correctly.");
+                return;
+            }
+
             const translationsForLang = translations[lang] || translations['en'];
             
             document.querySelectorAll('[data-translate]').forEach(el => {
                 const key = el.dataset.translate;
                 if (translationsForLang[key] !== undefined) {
-                    const textContent = translationsForLang[key];
-                    
-                    // Clear existing content
-                    while (el.firstChild) {
-                        el.removeChild(el.firstChild);
-                    }
-                    
-                    // Append new text node
-                    el.appendChild(document.createTextNode(textContent));
+                    el.textContent = translationsForLang[key];
                 }
             });
 
@@ -666,10 +645,21 @@
              const isRTL = lang === 'ar' || lang === 'he' || lang === 'ur';
              document.documentElement.dir = isRTL ? 'rtl' : 'ltr';
 
-             document.querySelectorAll('.modal-row, .analysis-row, .creator-badge, .header-top').forEach(row => {
+             document.querySelectorAll('.modal-row, .analysis-row, .creator-badge, .header-top, .achievement-item').forEach(row => {
                 row.style.flexDirection = isRTL ? 'row-reverse' : 'row';
+                if(isRTL) {
+                    row.querySelectorAll('.outlook-badge span, .company-badge span, .btn-icon').forEach(icon => {
+                        icon.style.marginLeft = '8px';
+                        icon.style.marginRight = '0';
+                    });
+                } else {
+                     row.querySelectorAll('.outlook-badge span, .company-badge span, .btn-icon').forEach(icon => {
+                        icon.style.marginRight = '8px';
+                        icon.style.marginLeft = '0';
+                    });
+                }
              });
-             document.querySelectorAll('.modal-section-header, .section-header, .achievement-item').forEach(header => {
+             document.querySelectorAll('.modal-section-header, .section-header').forEach(header => {
                 header.style.flexDirection = isRTL ? 'row-reverse' : 'row';
                 header.querySelectorAll('.section-icon, .modal-section-icon, .icon').forEach(icon => {
                     icon.style.marginRight = isRTL ? '0' : '12px';
@@ -702,16 +692,20 @@
                     }
                 }
             }
+             const executiveModal = document.getElementById('executiveModal');
+             const commandModal = document.getElementById('commandModal');
+             if (event.target == executiveModal) hideModal('executive');
+             if (event.target == commandModal) hideModal('command');
         }
         
         document.addEventListener('DOMContentLoaded', () => {
-            populateLanguages();
             const userLang = navigator.language.split('-')[0];
-            const defaultLang = languages.some(l => l.code === userLang) ? userLang : 'en';
-            document.querySelector('.current-lang').textContent = defaultLang.toUpperCase();
+            const defaultLang = translations.hasOwnProperty(userLang) ? userLang : 'en';
+            
+            populateLanguages();
             changeLanguage(defaultLang);
+            document.querySelector('.current-lang').textContent = defaultLang.toUpperCase();
         });
-
     </script>
 </body>
 </html>
