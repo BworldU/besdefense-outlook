@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BESdefense QUANTUM NEURAL</title>
+    <title data-translate="page_title">BESdefense QUANTUM NEURAL</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { 
@@ -148,7 +148,7 @@
             50% { background-position: 100% 50%; } 
         }
         .header p { font-size: 13px; opacity: 0.9; font-weight: 600; color: #cbd5e1; }
-        .action-buttons { display: flex; flex-direction: column; gap: 16px; margin-top: auto; padding-top: 24px; }
+        .action-buttons { display: flex; flex-direction: column; gap: 16px; margin-top: 24px; }
         .action-btn { background: linear-gradient(135deg, rgba(59, 130, 246, 0.8) 0%, rgba(147, 51, 234, 0.8) 100%); border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 20px; padding: 20px; color: white; font-size: 16px; font-weight: 900; cursor: pointer; transition: all 0.4s ease; text-transform: uppercase; text-align: center; }
         .action-btn:hover { transform: translateY(-4px); box-shadow: 0 15px 30px rgba(59, 130, 246, 0.4); }
         .modal { 
@@ -236,7 +236,7 @@
             gap: 16px;
         }
         .modal-row:last-child { border-bottom: none; }
-        .modal-label { font-size: 14px; color: #f1f5f9; font-weight: 600; flex-shrink: 0; }
+        .modal-label { font-size: 14px; color: #f1f5f9; font-weight: 600; flex-shrink: 0; text-align: left; }
         .modal-value { font-size: 14px; font-weight: 900; color: #00ffff; text-align: right; }
     </style>
 </head>
@@ -360,37 +360,107 @@
                     <div class="language-dropdown" id="languageDropdown">
                     </div>
                 </div>
-                <div class="company-badge">
+                <div class="company-badge" data-translate="company_badge_main">
                     BESdefense
                 </div>
             </div>
-            <h1>BESdefense QUANTUM NEURAL</h1>
-            <p>The world's first Quantum Neural Defense for Microsoft Outlook, developed by a Microsoft Security MVP.</p>
+            <h1 data-translate="header_title">BESdefense QUANTUM NEURAL</h1>
+            <p data-translate="header_subtitle">The world's first Quantum Neural Defense for Microsoft Outlook, developed by a Microsoft Security MVP.</p>
         </div>
         
         <div class="action-buttons">
-            <button class="action-btn" onclick="showModal('executive')">Executive Analysis</button>
-            <button class="action-btn" onclick="showModal('command')">Command Center</button>
+            <button class="action-btn" onclick="showModal('executive')" data-translate="action_btn_executive">Quantum Executive Analysis</button>
+            <button class="action-btn" onclick="showModal('command')" data-translate="action_btn_command">Quantum Neural Command Center</button>
         </div>
     </div>
 
     <script>
         const translations = {
-            // All translations are now included here
+            'en': { "language_name": "English", "page_title": "BESdefense QUANTUM NEURAL", "header_title": "BESdefense QUANTUM NEURAL", "header_subtitle": "The world's first Quantum Neural Defense for Microsoft Outlook, developed by a Microsoft Security MVP.", "company_badge_main": "BESdefense", "action_btn_executive": "Quantum Executive Analysis", "action_btn_command": "Quantum Neural Command Center", "quantum_executive_analysis": "Quantum Executive Analysis", "close": "CLOSE", "neural_security_summary": "Neural Security Summary", "email_classification": "Email Classification:", "secure": "SECURE", "bec_prevention": "BEC Prevention:", "protected": "Protected", "quantum_confidence": "Quantum Confidence:", "maximum": "MAXIMUM", "neural_speed": "Neural Speed:", "seconds": "seconds", "global_quantum_intelligence": "Global Quantum Intelligence", "monitored_dimensions": "Monitored Dimensions:", "nations": "Nations", "neural_database": "Neural Database:", "signatures": "Signatures", "quantum_networks": "Quantum Networks:", "active_nodes": "Active Nodes", "threat_neutralized": "Threat Neutralized:", "eliminated": "Eliminated", "m_shield_title": "Enterprise Quantum Shield", "m_neural_analysis_label": "Neural Analysis:", "daily": "Daily", "m_quantum_savings_label": "Quantum Savings:", "m_compliance_label": "Compliance Matrix:", "m_compliance_value": "SOC 2 Quantum", "m_integration_label": "Neural Integration:", "m_integration_value": "ENTERPRISE", "m_advanced_sec_title": "Advanced Quantum Security", "m_scan_label": "Neural Scanning:", "active": "ACTIVE", "m_ai_label": "Behavioral AI:", "enabled": "ENABLED", "m_encryption_label": "Quantum Encryption:", "m_encryption_value": "Post-Quantum", "m_zeroday_label": "Zero-Day Neural:", "m_performance_title": "Quantum Performance Matrix", "m_processing_label": "Neural Processing:", "nanoseconds": "nanoseconds", "m_accuracy_label": "Quantum Accuracy:", "m_coherence_label": "System Coherence:", "m_capacity_label": "Processing Capacity:", "calc_sec": "calc/sec", "quantum_neural_command_center": "Quantum Neural Command Center", "c_processing_title": "Quantum Neural Processing", "c_networks_label": "Neural Networks:", "c_state_label": "Quantum State:", "optimal": "OPTIMAL", "c_detection_label": "Detection Matrix:", "success": "SUCCESS", "c_speed_label": "Processing Speed:", "c_threat_intel_title": "Neural Threat Intelligence", "c_threats_label": "Global Threats:", "detected": "detected", "c_neutralized_label": "Neutralized Today:", "success_rate": "success rate", "c_response_label": "Neural Response:", "c_sources_label": "Threat Sources:", "countries": "Countries", "c_command_title": "Enterprise Quantum Command", "c_integration_label": "Integration Level:", "quantum": "QUANTUM", "c_bec_label": "BEC Prevention:", "saved": "saved", "c_monitoring_label": "Neural Monitoring:", "active_24_7": "24/7 ACTIVE", "c_threat_level_label": "Threat Level:", "defcon_quantum": "DEFCON QUANTUM", "c_analytics_title": "Neural Analytics Matrix", "c_24h_label": "Neural Processing (24h):", "messages": "messages", "c_malware_label": "Quantum Malware:", "variants": "variants", "c_phishing_label": "Neural Phishing:", "attempts": "attempts", "c_false_positives_label": "False Positives:", "c_sec_ops_title": "Quantum Security Operations", "c_sandbox_label": "Neural Sandbox:", "processing": "processing", "c_quarantine_label": "Quantum Quarantine:", "isolated": "isolated", "c_auto_response_label": "Auto Neural Response:", "c_incidents_label": "Active Incidents:", "open": "open" },
         };
 
+        // Add more languages by extending the translations object
+        Object.assign(translations, {
+            'es': { "language_name": "Español", "page_title": "BESdefense NEURAL CUÁNTICO", "header_title": "BESdefense NEURAL CUÁNTICO", "header_subtitle": "La primera Defensa Neural Cuántica del mundo para Microsoft Outlook, desarrollada por un MVP de Seguridad de Microsoft.", "company_badge_main": "BESdefense", "action_btn_executive": "Análisis Ejecutivo Cuántico", "action_btn_command": "Centro de Comando Neural Cuántico", "quantum_executive_analysis": "Análisis Ejecutivo Cuántico", "close": "CERRAR", "neural_security_summary": "Resumen de Seguridad Neural", "email_classification": "Clasificación de Correo:", "secure": "SEGURO", "bec_prevention": "Prevención de BEC:", "protected": "Protegido", "quantum_confidence": "Confianza Cuántica:", "maximum": "MÁXIMA", "neural_speed": "Velocidad Neural:", "seconds": "segundos", "global_quantum_intelligence": "Inteligencia Cuántica Global", "monitored_dimensions": "Dimensiones Monitoreadas:", "nations": "Naciones", "neural_database": "Base de Datos Neural:", "signatures": "Firmas", "quantum_networks": "Redes Cuánticas:", "active_nodes": "Nodos Activos", "threat_neutralized": "Amenazas Neutralizadas:", "eliminated": "Eliminadas", "m_shield_title": "Escudo Cuántico Empresarial", "m_neural_analysis_label": "Análisis Neural:", "daily": "Diario", "m_quantum_savings_label": "Ahorros Cuánticos:", "m_compliance_label": "Matriz de Cumplimiento:", "m_compliance_value": "SOC 2 Cuántico", "m_integration_label": "Integración Neural:", "m_integration_value": "EMPRESARIAL", "m_advanced_sec_title": "Seguridad Cuántica Avanzada", "m_scan_label": "Escaneo Neural:", "active": "ACTIVO", "m_ai_label": "IA Conductual:", "enabled": "HABILITADO", "m_encryption_label": "Cifrado Cuántico:", "m_encryption_value": "Post-Cuántico", "m_zeroday_label": "Neural de Día Cero:", "m_performance_title": "Matriz de Rendimiento Cuántico", "m_processing_label": "Procesamiento Neural:", "nanoseconds": "nanosegundos", "m_accuracy_label": "Precisión Cuántica:", "m_coherence_label": "Coherencia del Sistema:", "m_capacity_label": "Capacidad de Procesamiento:", "calc_sec": "cálc/s", "quantum_neural_command_center": "Centro de Comando Neural Cuántico", "c_processing_title": "Procesamiento Neural Cuántico", "c_networks_label": "Redes Neuronales:", "c_state_label": "Estado Cuántico:", "optimal": "ÓPTIMO", "c_detection_label": "Matriz de Detección:", "success": "ÉXITO", "c_speed_label": "Velocidad de Procesamiento:", "c_threat_intel_title": "Inteligencia de Amenazas Neural", "c_threats_label": "Amenazas Globales:", "detected": "detectadas", "c_neutralized_label": "Neutralizadas Hoy:", "success_rate": "tasa de éxito", "c_response_label": "Respuesta Neural:", "c_sources_label": "Fuentes de Amenazas:", "countries": "Países", "c_command_title": "Comando Cuántico Empresarial", "c_integration_label": "Nivel de Integración:", "quantum": "CUÁNTICO", "c_bec_label": "Prevención de BEC:", "saved": "ahorrados", "c_monitoring_label": "Monitoreo Neural:", "active_24_7": "24/7 ACTIVO", "c_threat_level_label": "Nivel de Amenaza:", "defcon_quantum": "DEFCON CUÁNTICO", "c_analytics_title": "Matriz de Analítica Neural", "c_24h_label": "Procesamiento Neural (24h):", "messages": "mensajes", "c_malware_label": "Malware Cuántico:", "variants": "variantes", "c_phishing_label": "Phishing Neural:", "attempts": "intentos", "c_false_positives_label": "Falsos Positivos:", "c_sec_ops_title": "Operaciones de Seguridad Cuántica", "c_sandbox_label": "Sandbox Neural:", "processing": "en proceso", "c_quarantine_label": "Cuarentena Cuántica:", "isolated": "aislados", "c_auto_response_label": "Respuesta Neural Automática:", "c_incidents_label": "Incidentes Activos:", "open": "abiertos" },
+            // Add other languages here in the same format
+            'de': {"language_name": "Deutsch", "m_shield_title": "Unternehmens-Quantenschild", "m_neural_analysis_label": "Neuronale Analyse:", "daily": "Täglich", "m_quantum_savings_label": "Quanten-Einsparungen:", "m_compliance_label": "Konformitätsmatrix:", "m_compliance_value": "SOC 2 Quantum", "m_integration_label": "Neuronale Integration:", "m_integration_value": "UNTERNEHMEN", "m_advanced_sec_title": "Erweiterte Quantensicherheit", "m_scan_label": "Neuronales Scannen:", "m_ai_label": "Verhaltens-KI:", "m_encryption_label": "Quanten-Verschlüsselung:", "m_encryption_value": "Post-Quanten", "m_zeroday_label": "Zero-Day-Neuronal:", "m_performance_title": "Quanten-Leistungsmatrix", "m_processing_label": "Neuronale Verarbeitung:", "m_accuracy_label": "Quanten-Genauigkeit:", "m_coherence_label": "Systemkohärenz:", "m_capacity_label": "Verarbeitungskapazität:", "c_processing_title": "Quanten-Neuronale Verarbeitung", "c_networks_label": "Neuronale Netze:", "c_state_label": "Quantenzustand:", "c_detection_label": "Erkennungsmatrix:", "c_speed_label": "Verarbeitungsgeschwindigkeit:", "c_threat_intel_title": "Neuronale Bedrohungsintelligenz", "c_threats_label": "Globale Bedrohungen:", "c_neutralized_label": "Heute neutralisiert:", "c_response_label": "Neuronale Antwort:", "c_sources_label": "Bedrohungsquellen:", "c_command_title": "Unternehmens-Quantenkommando", "c_integration_label": "Integrationslevel:", "c_bec_label": "BEC-Prävention:", "c_monitoring_label": "Neuronale Überwachung:", "c_threat_level_label": "Bedrohungsstufe:", "c_analytics_title": "Neuronale Analyse-Matrix", "c_24h_label": "Neuronale Verarbeitung (24h):", "c_malware_label": "Quanten-Malware:", "c_phishing_label": "Neuronales Phishing:", "c_false_positives_label": "Fehlalarme:", "c_sec_ops_title": "Quanten-Sicherheitsoperationen", "c_sandbox_label": "Neuronale Sandbox:", "c_quarantine_label": "Quanten-Quarantäne:", "c_auto_response_label": "Automatische neuronale Antwort:", "c_incidents_label": "Aktive Vorfälle:"}
+        });
+
         function populateLanguages() {
-            // ... (population logic)
+            const dropdown = document.getElementById('languageDropdown');
+            dropdown.innerHTML = '';
+            for (const langCode in translations) {
+                if (translations.hasOwnProperty(langCode)) {
+                    const option = document.createElement('div');
+                    option.classList.add('lang-option');
+                    option.dataset.lang = langCode;
+                    option.textContent = translations[langCode].language_name || langCode.toUpperCase();
+                    option.onclick = () => {
+                        changeLanguage(langCode);
+                    };
+                    dropdown.appendChild(option);
+                }
+            }
         }
 
         function changeLanguage(lang) {
-            // ... (translation logic)
+            if (!translations[lang]) { lang = 'en'; }
+            
+            const translationsForLang = translations[lang];
+            document.querySelector('.current-lang').textContent = lang.toUpperCase();
+            
+            document.querySelectorAll('[data-translate]').forEach(el => {
+                const key = el.dataset.translate;
+                if (translationsForLang[key] !== undefined) {
+                    // Check for nested spans
+                    const childSpan = el.querySelector('span');
+                    if(childSpan && el.firstChild.nodeType === Node.TEXT_NODE) {
+                         const nestedKey = childSpan.dataset.translate;
+                         if(translationsForLang[nestedKey] !== undefined) {
+                            childSpan.textContent = " " + translationsForLang[nestedKey];
+                         }
+                    } else {
+                        el.textContent = translationsForLang[key];
+                    }
+                }
+            });
+
+             document.documentElement.lang = lang;
+             toggleLanguages(); 
         }
 
-        // ... all other functions (toggleLanguages, showModal, hideModal, event listeners)
+        function toggleLanguages() {
+            document.getElementById('languageDropdown').classList.toggle('show');
+        }
 
+        function showModal(modalName) {
+            const modal = document.getElementById(`${modalName}Modal`);
+            if(modal) modal.style.display = 'flex';
+        }
+
+        function hideModal(modalName) {
+            const modal = document.getElementById(`${modalName}Modal`);
+            if(modal) modal.style.display = 'none';
+        }
+        
+        window.onclick = function(event) {
+            if (!event.target.closest('.language-selector')) {
+                document.getElementById('languageDropdown').classList.remove('show');
+            }
+             const executiveModal = document.getElementById('executiveModal');
+             const commandModal = document.getElementById('commandModal');
+             if (event.target == executiveModal) hideModal('executive');
+             if (event.target == commandModal) hideModal('command');
+        }
+        
         document.addEventListener('DOMContentLoaded', () => {
-            // ... initialization logic
+            const userLang = navigator.language.split('-')[0];
+            const defaultLang = translations.hasOwnProperty(userLang) ? userLang : 'en';
+            
+            populateLanguages();
+            changeLanguage(defaultLang);
+            // Set the initial display without closing the dropdown
+            document.querySelector('.current-lang').textContent = defaultLang.toUpperCase();
         });
     </script>
 </body>
