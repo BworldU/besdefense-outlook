@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-translate="page_title">BESdefense QUANTUM NEURAL</title>
+    <title>BESdefense QUANTUM NEURAL</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { 
@@ -117,7 +117,7 @@
             color: #00ffff; 
         }
         .outlook-badge, .company-badge { 
-            display: inline-flex; 
+            display: flex; 
             align-items: center; 
             gap: 8px; 
             border-radius: 12px; 
@@ -152,7 +152,7 @@
             50% { background-position: 100% 50%; } 
         }
         .header p { font-size: 13px; opacity: 0.9; font-weight: 600; color: #cbd5e1; }
-        .status-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 24px; }
+        .status-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; }
         .status-card { 
             background: rgba(15, 23, 42, 0.8); 
             backdrop-filter: blur(25px); 
@@ -226,15 +226,17 @@
             -webkit-background-clip: text; 
             -webkit-text-fill-color: transparent; 
         }
-        .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 16px; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; }
         .grid-item { 
             text-align: center; 
             padding: 16px; 
             border-radius: 16px; 
             transition: all 0.3s ease; 
-            cursor: pointer;
-            background: rgba(255, 255, 255, 0.05);
+            cursor: pointer; 
         }
+        .intel-item { background: rgba(251, 146, 60, 0.1); }
+        .outlook-item { background: rgba(34, 197, 94, 0.1); }
+        .ms-item { background: rgba(56, 189, 248, 0.1); }
         .grid-item:hover { transform: translateY(-4px) scale(1.05); }
         .grid-value { 
             font-size: 16px; 
@@ -265,7 +267,7 @@
             font-weight: 700; 
             text-transform: uppercase; 
         }
-        .creator-badge { display: flex; align-items: center; gap: 16px; }
+        .creator-badge { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; }
         .creator-avatar { 
             width: 48px; 
             height: 48px; 
@@ -277,7 +279,6 @@
             font-size: 18px; 
             font-weight: 900; 
             color: white; 
-            flex-shrink: 0;
         }
         .creator-name { 
             font-size: 20px; 
@@ -298,9 +299,9 @@
             font-size: 14px; 
             color: #e2e8f0; 
             line-height: 1.5; 
-            margin-top: 16px; 
+            margin-bottom: 16px; 
         }
-        .creator-achievements { display: flex; flex-direction: column; gap: 8px; margin-top: 16px;}
+        .creator-achievements { display: flex; flex-direction: column; gap: 8px; }
         .achievement-item { 
             display: flex; 
             align-items: center; 
@@ -326,11 +327,7 @@
             cursor: pointer; 
             transition: all 0.4s ease; 
             text-transform: uppercase; 
-            text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
+            text-align: center; 
         }
         .action-btn:hover { 
             transform: translateY(-4px); 
@@ -481,35 +478,235 @@
             </div>
             <div class="modal-body">
                 <div class="modal-section">
-                    <div class="modal-section-header"><span class="modal-section-icon">🛡️</span><span class="modal-section-title" data-translate="neural_security_summary">Neural Security Summary</span></div>
-                    <div class="modal-row"><span class="modal-label" data-translate="email_classification">Email Classification:</span><span class="modal-value">99.97% <span data-translate="secure">SECURE</span></span></div>
-                    <div class="modal-row"><span class="modal-label" data-translate="bec_prevention">BEC Prevention:</span><span class="modal-value">$285K+ <span data-translate="protected">Protected</span></span></div>
-                    <div class="modal-row"><span class="modal-label" data-translate="quantum_confidence">Quantum Confidence:</span><span class="modal-value" data-translate="maximum">MAXIMUM</span></div>
-                    <div class="modal-row"><span class="modal-label" data-translate="neural_speed">Neural Speed:</span><span class="modal-value">0.001 <span data-translate="seconds">seconds</span></span></div>
+                    <div class="modal-section-header">
+                        <span class="modal-section-icon">🛡️</span>
+                        <span class="modal-section-title" data-translate="neural_security_summary">Neural Security Summary</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label" data-translate="email_classification">Email Classification:</span>
+                        <span class="modal-value">99.97% <span data-translate="secure">SECURE</span></span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label" data-translate="bec_prevention">BEC Prevention:</span>
+                        <span class="modal-value">$285K+ <span data-translate="protected">Protected</span></span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label" data-translate="quantum_confidence">Quantum Confidence:</span>
+                        <span class="modal-value" data-translate="maximum">MAXIMUM</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label" data-translate="neural_speed">Neural Speed:</span>
+                        <span class="modal-value">0.001 <span data-translate="seconds">seconds</span></span>
+                    </div>
                 </div>
-                 <div class="modal-section">
-                    <div class="modal-section-header"><span class="modal-section-icon">🌍</span><span class="modal-section-title" data-translate="quantum_intelligence">Quantum Intelligence</span></div>
-                    <div class="modal-row"><span class="modal-label" data-translate="active_threats">Active Threats:</span><span class="modal-value">1,247</span></div>
-                    <div class="modal-row"><span class="modal-label" data-translate="success_rate">Success Rate:</span><span class="modal-value">98.7%</span></div>
-                    <div class="modal-row"><span class="modal-label" data-translate="countries">Countries Monitored:</span><span class="modal-value">195+</span></div>
-                    <div class="modal-row"><span class="modal-label" data-translate="response">Response Time:</span><span class="modal-value">&lt;0.001s</span></div>
+                <div class="modal-section">
+                    <div class="modal-section-header">
+                        <span class="modal-section-icon">🌍</span>
+                        <span class="modal-section-title" data-translate="global_quantum_intelligence">Global Quantum Intelligence</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label" data-translate="monitored_dimensions">Monitored Dimensions:</span>
+                        <span class="modal-value">195+ <span data-translate="nations">Nations</span></span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label" data-translate="neural_database">Neural Database:</span>
+                        <span class="modal-value">500M+ <span data-translate="signatures">Signatures</span></span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label" data-translate="quantum_networks">Quantum Networks:</span>
+                        <span class="modal-value">847 <span data-translate="active_nodes">Active Nodes</span></span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label" data-translate="threat_neutralized">Threat Neutralized:</span>
+                        <span class="modal-value">1,247 <span data-translate="eliminated">Eliminated</span></span>
+                    </div>
+                </div>
+                <div class="modal-section">
+                    <div class="modal-section-header">
+                        <span class="modal-section-icon">🏢</span>
+                        <span class="modal-section-title" data-translate="m_shield_title">Enterprise Quantum Shield</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label" data-translate="m_neural_analysis_label">Neural Analysis:</span>
+                        <span class="modal-value">50,000+ <span data-translate="daily">Daily</span></span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label" data-translate="m_quantum_savings_label">Quantum Savings:</span>
+                        <span class="modal-value">$2.8M <span data-translate="protected">Protected</span></span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label" data-translate="m_compliance_label">Compliance Matrix:</span>
+                        <span class="modal-value" data-translate="m_compliance_value">SOC 2 Quantum</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label" data-translate="m_integration_label">Neural Integration:</span>
+                        <span class="modal-value" data-translate="m_integration_value">ENTERPRISE</span>
+                    </div>
+                </div>
+                <div class="modal-section">
+                    <div class="modal-section-header">
+                        <span class="modal-section-icon">🔒</span>
+                        <span class="modal-section-title" data-translate="m_advanced_sec_title">Advanced Quantum Security</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label" data-translate="m_scan_label">Neural Scanning:</span>
+                        <span class="modal-value" data-translate="active">ACTIVE</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label" data-translate="m_ai_label">Behavioral AI:</span>
+                        <span class="modal-value" data-translate="enabled">ENABLED</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label" data-translate="m_encryption_label">Quantum Encryption:</span>
+                        <span class="modal-value" data-translate="m_encryption_value">Post-Quantum</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label" data-translate="m_zeroday_label">Zero-Day Neural:</span>
+                        <span class="modal-value" data-translate="maximum">MAXIMUM</span>
+                    </div>
+                </div>
+                <div class="modal-section">
+                    <div class="modal-section-header">
+                        <span class="modal-section-icon">⚡</span>
+                        <span class="modal-section-title" data-translate="m_performance_title">Quantum Performance Matrix</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label" data-translate="m_processing_label">Neural Processing:</span>
+                        <span class="modal-value">0.001 <span data-translate="nanoseconds">nanoseconds</span></span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label" data-translate="m_accuracy_label">Quantum Accuracy:</span>
+                        <span class="modal-value">99.97%</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label" data-translate="m_coherence_label">System Coherence:</span>
+                        <span class="modal-value">99.99%</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label" data-translate="m_capacity_label">Processing Capacity:</span>
+                        <span class="modal-value">∞ <span data-translate="calc_sec">calc/sec</span></span>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
     <div class="modal command-modal" id="commandModal">
         <div class="modal-wrapper">
             <div class="modal-header">
-                <div class="modal-title"><span class="icon">🌌</span><span data-translate="quantum_command_center">QUANTUM COMMAND CENTER</span></div>
+                <div class="modal-title"><span class="icon">🌌</span><span data-translate="quantum_neural_command_center">Quantum Neural Command Center</span></div>
                 <button class="close-btn" onclick="hideModal('command')">✕ <span data-translate="close">CLOSE</span></button>
             </div>
             <div class="modal-body">
                 <div class="modal-section">
-                    <div class="modal-section-header"><span class="modal-section-icon">⚡</span><span class="modal-section-title" data-translate="microsoft_nexus">Microsoft Nexus</span></div>
-                    <div class="modal-row"><span class="modal-label" data-translate="integration">Integration Level:</span><span class="modal-value">QUANTUM</span></div>
-                    <div class="modal-row"><span class="modal-label" data-translate="status">Core Status:</span><span class="modal-value">ONLINE</span></div>
-                    <div class="modal-row"><span class="modal-label" data-translate="platforms">Compatible Platforms:</span><span class="modal-value">∞</span></div>
-                    <div class="modal-row"><span class="modal-label" data-translate="level">Threat Level:</span><span class="modal-value">MAXIMUM</span></div>
+                    <div class="modal-section-header">
+                        <span class="modal-section-icon">⚡</span>
+                        <span class="modal-section-title" data-translate="c_processing_title">Quantum Neural Processing</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label" data-translate="c_networks_label">Neural Networks:</span>
+                        <span class="modal-value">847/891 (95.1%)</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label" data-translate="c_state_label">Quantum State:</span>
+                        <span class="modal-value">99.7% <span data-translate="optimal">OPTIMAL</span></span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label" data-translate="c_detection_label">Detection Matrix:</span>
+                        <span class="modal-value">98.7% <span data-translate="success">SUCCESS</span></span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label" data-translate="c_speed_label">Processing Speed:</span>
+                        <span class="modal-value">&lt;0.001 <span data-translate="seconds">seconds</span></span>
+                    </div>
+                </div>
+                <div class="modal-section">
+                    <div class="modal-section-header">
+                        <span class="modal-section-icon">🎯</span>
+                        <span class="modal-section-title" data-translate="c_threat_intel_title">Neural Threat Intelligence</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label" data-translate="c_threats_label">Global Threats:</span>
+                        <span class="modal-value">1,247 <span data-translate="detected">detected</span></span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label" data-translate="c_neutralized_label">Neutralized Today:</span>
+                        <span class="modal-value">98.7% <span data-translate="success_rate">success rate</span></span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label" data-translate="c_response_label">Neural Response:</span>
+                        <span class="modal-value">&lt;0.001 <span data-translate="seconds">seconds</span></span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label" data-translate="c_sources_label">Threat Sources:</span>
+                        <span class="modal-value">195+ <span data-translate="countries">Countries</span></span>
+                    </div>
+                </div>
+                <div class="modal-section">
+                    <div class="modal-section-header">
+                        <span class="modal-section-icon">🏢</span>
+                        <span class="modal-section-title" data-translate="c_command_title">Enterprise Quantum Command</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label" data-translate="c_integration_label">Integration Level:</span>
+                        <span class="modal-value" data-translate="quantum">QUANTUM</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label" data-translate="c_bec_label">BEC Prevention:</span>
+                        <span class="modal-value">$2.8M <span data-translate="saved">saved</span></span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label" data-translate="c_monitoring_label">Neural Monitoring:</span>
+                        <span class="modal-value" data-translate="active_24_7">24/7 ACTIVE</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label" data-translate="c_threat_level_label">Threat Level:</span>
+                        <span class="modal-value" data-translate="defcon_quantum">DEFCON QUANTUM</span>
+                    </div>
+                </div>
+                <div class="modal-section">
+                    <div class="modal-section-header">
+                        <span class="modal-section-icon">📊</span>
+                        <span class="modal-section-title" data-translate="c_analytics_title">Neural Analytics Matrix</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label" data-translate="c_24h_label">Neural Processing (24h):</span>
+                        <span class="modal-value">50,000+ <span data-translate="messages">messages</span></span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label" data-translate="c_malware_label">Quantum Malware:</span>
+                        <span class="modal-value">847 <span data-translate="variants">variants</span></span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label" data-translate="c_phishing_label">Neural Phishing:</span>
+                        <span class="modal-value">1,205 <span data-translate="attempts">attempts</span></span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label" data-translate="c_false_positives_label">False Positives:</span>
+                        <span class="modal-value">0.03%</span>
+                    </div>
+                </div>
+                <div class="modal-section">
+                    <div class="modal-section-header">
+                        <span class="modal-section-icon">🔐</span>
+                        <span class="modal-section-title" data-translate="c_sec_ops_title">Quantum Security Operations</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label" data-translate="c_sandbox_label">Neural Sandbox:</span>
+                        <span class="modal-value">15 <span data-translate="processing">processing</span></span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label" data-translate="c_quarantine_label">Quantum Quarantine:</span>
+                        <span class="modal-value">247 <span data-translate="isolated">isolated</span></span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label" data-translate="c_auto_response_label">Auto Neural Response:</span>
+                        <span class="modal-value" data-translate="enabled">ENABLED</span>
+                    </div>
+                    <div class="modal-row">
+                        <span class="modal-label" data-translate="c_incidents_label">Active Incidents:</span>
+                        <span class="modal-value">0 <span data-translate="open">open</span></span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -519,93 +716,121 @@
         <div class="header">
             <div class="header-top">
                 <div class="language-selector">
-                    <div class="language-toggle" onclick="toggleLanguages()"><span class="globe-icon">🌍</span><span class="current-lang">EN</span></div>
-                    <div class="language-dropdown" id="languageDropdown"></div>
+                    <div class="language-toggle" onclick="toggleLanguages()">
+                        <span class="globe-icon">🌍</span>
+                        <span class="current-lang">EN</span>
+                    </div>
+                    <div class="language-dropdown" id="languageDropdown">
+                    </div>
                 </div>
-                <div style="display: flex; gap: 8px;">
-                    <div class="outlook-badge"><span>📧</span><span data-translate="outlook_badge">Outlook Add-in</span></div>
-                    <div class="company-badge"><span>🏢</span><span data-translate="company_badge">Bright Eke Systems</span></div>
+                <div class="company-badge">
+                    <span>BESdefense</span>
                 </div>
             </div>
-            <h1 data-translate="title">BESdefense QUANTUM</h1>
-            <p data-translate="subtitle">Neural Email Security</p>
-        </div>
-        
-        <div class="status-grid">
-            <div class="status-card"><div class="status-value">ACTIVE</div><div class="status-label" data-translate="quantum">QUANTUM</div></div>
-            <div class="status-card"><div class="status-value">ONLINE</div><div class="status-label" data-translate="core">CORE</div></div>
-            <div class="status-card"><div class="status-value">500M+</div><div class="status-label" data-translate="signatures">SIGNATURES</div></div>
-            <div class="status-card"><div class="status-value">0.001s</div><div class="status-label" data-translate="speed">SPEED</div></div>
+            <h1 data-translate="page_title">BESdefense QUANTUM NEURAL</h1>
+            <p data-translate="header_subtitle">The world's first Quantum Neural Defense for Microsoft Outlook, developed by a Microsoft Security MVP.</p>
         </div>
         
         <div class="action-buttons">
-            <button class="action-btn" onclick="showModal('executive')"><span class="btn-icon">🚀</span><span data-translate="generate_neural_report">GENERATE NEURAL REPORT</span></button>
-            <button class="action-btn" onclick="showModal('command')"><span class="btn-icon">🌌</span><span data-translate="quantum_command_center">QUANTUM COMMAND CENTER</span></button>
-        </div>
-        
-        <div class="section analysis-section">
-            <div class="section-header"><span class="section-icon">🧠</span><span class="section-title" data-translate="neural_analysis">Neural Email Analysis</span></div>
-            <div class="analysis-row"><span class="analysis-label" data-translate="email_classification">Email Classification:</span><span class="analysis-value" data-translate="secure">SECURE</span></div>
-            <div class="analysis-row"><span class="analysis-label" data-translate="confidence_level">Confidence Level:</span><span class="analysis-value">99.97%</span></div>
-            <div class="analysis-row"><span class="analysis-label" data-translate="bec_risk">BEC Risk:</span><span class="analysis-value" data-translate="minimal">MINIMAL</span></div>
-            <div class="analysis-row"><span class="analysis-label" data-translate="protection_value">Protection Value:</span><span class="analysis-value">$285K+</span></div>
-        </div>
-        
-        <div class="section intelligence-section">
-            <div class="section-header"><span class="section-icon">🌌</span><span class="section-title" data-translate="quantum_intelligence">Quantum Intelligence</span></div>
-            <div class="grid">
-                <div class="grid-item intel-item"><div class="grid-value intel-value">1,247</div><div class="grid-label" data-translate="active_threats">ACTIVE THREATS</div></div>
-                <div class="grid-item intel-item"><div class="grid-value intel-value">98.7%</div><div class="grid-label" data-translate="success_rate">SUCCESS RATE</div></div>
-                <div class="grid-item intel-item"><div class="grid-value intel-value">195+</div><div class="grid-label" data-translate="countries">COUNTRIES</div></div>
-                <div class="grid-item intel-item"><div class="grid-value intel-value">&lt;0.001s</div><div class="grid-label" data-translate="response">RESPONSE</div></div>
-            </div>
-        </div>
-        
-        <div class="section outlook-section">
-            <div class="section-header"><span class="section-icon">📧</span><span class="section-title" data-translate="outlook_integration">Outlook Integration</span></div>
-            <div class="grid">
-                <div class="grid-item outlook-item"><div class="grid-value outlook-value" data-translate="real_time">REAL-TIME</div><div class="grid-label" data-translate="scanning">SCANNING</div></div>
-                <div class="grid-item outlook-item"><div class="grid-value outlook-value" data-translate="auto_block">AUTO-BLOCK</div><div class="grid-label" data-translate="threats">THREATS</div></div>
-                <div class="grid-item outlook-item"><div class="grid-value outlook-value">365</div><div class="grid-label" data-translate="compatible">COMPATIBLE</div></div>
-                <div class="grid-item outlook-item"><div class="grid-value outlook-value" data-translate="instant">INSTANT</div><div class="grid-label" data-translate="alerts">ALERTS</div></div>
-            </div>
-        </div>
-        
-        <div class="section creator-section">
-            <div class="section-header"><span class="section-icon">👨‍💻</span><span class="section-title" data-translate="created_by">Created by:</span></div>
-            <div class="creator-badge">
-                <div class="creator-avatar">BE</div>
-                <div class="creator-details">
-                    <div class="creator-name">Bright Eke</div>
-                    <div class="creator-title" data-translate="founder_ceo">Founder and CEO, Bright Eke Systems</div>
-                </div>
-            </div>
-            <div class="creator-description"><p data-translate="creator_description">Leading revolutionary Neural-Quantum cybersecurity innovation through advanced AI threat intelligence systems.</p></div>
-            <div class="creator-achievements">
-                <div class="achievement-item"><span>🏢</span><span>Bright Eke Systems</span></div>
-                <div class="achievement-item"><span>🛡️</span><span data-translate="besdefense_universal">BESdefense Universal Message Shield</span></div>
-                <div class="achievement-item"><span>🌌</span><span data-translate="quantum_pioneer">Quantum Security Pioneer</span></div>
-            </div>
-        </div>
-        
-        <div class="footer">
-            <div class="footer-brand">
-                <p><strong data-translate="footer_brand_1">BESdefense QUANTUM</strong> - <span data-translate="footer_brand_2">Neural Email Security</span></p>
-                <p><span data-translate="powered_by">Powered by</span> <strong>Bright Eke Systems</strong></p>
-                <p>© 2025 <span data-translate="rights_reserved">All Rights Reserved</span></p>
-            </div>
-            <div class="footer-links">
-                <div class="footer-link" data-translate="footer_link_1">Support</div>
-                <div class="footer-link" data-translate="footer_link_2">Privacy</div>
-                <div class="footer-link" data-translate="footer_link_3">Terms</div>
-            </div>
+            <button class="action-btn" onclick="showModal('executive')"><span data-translate="quantum_executive_analysis">Quantum Executive Analysis</span></button>
+            <button class="action-btn" onclick="showModal('command')"><span data-translate="quantum_neural_command_center">Quantum Neural Command Center</span></button>
         </div>
     </div>
 
-    <script src="translations.js"></script>
-    
     <script>
-        const languages = []; // This will be populated from translations.js
+        // All necessary code is now in one file to prevent loading errors.
+        // Translations are added below.
+        const translations = {
+            'en': {
+                "language_name": "English",
+                "page_title": "BESdefense QUANTUM NEURAL",
+                "header_subtitle": "The world's first Quantum Neural Defense for Microsoft Outlook, developed by a Microsoft Security MVP.",
+                "quantum_executive_analysis": "Quantum Executive Analysis",
+                "close": "CLOSE",
+                "neural_security_summary": "Neural Security Summary",
+                "email_classification": "Email Classification:",
+                "secure": "SECURE",
+                "bec_prevention": "BEC Prevention:",
+                "protected": "Protected",
+                "quantum_confidence": "Quantum Confidence:",
+                "maximum": "MAXIMUM",
+                "neural_speed": "Neural Speed:",
+                "seconds": "seconds",
+                "global_quantum_intelligence": "Global Quantum Intelligence",
+                "monitored_dimensions": "Monitored Dimensions:",
+                "nations": "Nations",
+                "neural_database": "Neural Database:",
+                "signatures": "Signatures",
+                "quantum_networks": "Quantum Networks:",
+                "active_nodes": "Active Nodes",
+                "threat_neutralized": "Threat Neutralized:",
+                "eliminated": "Eliminated",
+                "m_shield_title": "Enterprise Quantum Shield",
+                "m_neural_analysis_label": "Neural Analysis:",
+                "daily": "Daily",
+                "m_quantum_savings_label": "Quantum Savings:",
+                "m_compliance_label": "Compliance Matrix:",
+                "m_compliance_value": "SOC 2 Quantum",
+                "m_integration_label": "Neural Integration:",
+                "m_integration_value": "ENTERPRISE",
+                "m_advanced_sec_title": "Advanced Quantum Security",
+                "m_scan_label": "Neural Scanning:",
+                "active": "ACTIVE",
+                "m_ai_label": "Behavioral AI:",
+                "enabled": "ENABLED",
+                "m_encryption_label": "Quantum Encryption:",
+                "m_encryption_value": "Post-Quantum",
+                "m_zeroday_label": "Zero-Day Neural:",
+                "m_performance_title": "Quantum Performance Matrix",
+                "m_processing_label": "Neural Processing:",
+                "nanoseconds": "nanoseconds",
+                "m_accuracy_label": "Quantum Accuracy:",
+                "m_coherence_label": "System Coherence:",
+                "m_capacity_label": "Processing Capacity:",
+                "calc_sec": "calc/sec",
+                "quantum_neural_command_center": "Quantum Neural Command Center",
+                "c_processing_title": "Quantum Neural Processing",
+                "c_networks_label": "Neural Networks:",
+                "c_state_label": "Quantum State:",
+                "optimal": "OPTIMAL",
+                "c_detection_label": "Detection Matrix:",
+                "success": "SUCCESS",
+                "c_speed_label": "Processing Speed:",
+                "c_threat_intel_title": "Neural Threat Intelligence",
+                "c_threats_label": "Global Threats:",
+                "detected": "detected",
+                "c_neutralized_label": "Neutralized Today:",
+                "success_rate": "success rate",
+                "c_response_label": "Neural Response:",
+                "c_sources_label": "Threat Sources:",
+                "countries": "Countries",
+                "c_command_title": "Enterprise Quantum Command",
+                "c_integration_label": "Integration Level:",
+                "quantum": "QUANTUM",
+                "c_bec_label": "BEC Prevention:",
+                "saved": "saved",
+                "c_monitoring_label": "Neural Monitoring:",
+                "active_24_7": "24/7 ACTIVE",
+                "c_threat_level_label": "Threat Level:",
+                "defcon_quantum": "DEFCON QUANTUM",
+                "c_analytics_title": "Neural Analytics Matrix",
+                "c_24h_label": "Neural Processing (24h):",
+                "messages": "messages",
+                "c_malware_label": "Quantum Malware:",
+                "variants": "variants",
+                "c_phishing_label": "Neural Phishing:",
+                "attempts": "attempts",
+                "c_false_positives_label": "False Positives:",
+                "c_sec_ops_title": "Quantum Security Operations",
+                "c_sandbox_label": "Neural Sandbox:",
+                "processing": "processing",
+                "c_quarantine_label": "Quantum Quarantine:",
+                "isolated": "isolated",
+                "c_auto_response_label": "Auto Neural Response:",
+                "c_incidents_label": "Active Incidents:",
+                "open": "open"
+            }
+        };
 
         function populateLanguages() {
             const dropdown = document.getElementById('languageDropdown');
@@ -618,8 +843,6 @@
                     option.textContent = translations[langCode].language_name || langCode.toUpperCase();
                     option.onclick = () => {
                         changeLanguage(langCode);
-                        document.querySelector('.current-lang').textContent = langCode.toUpperCase();
-                        toggleLanguages();
                     };
                     dropdown.appendChild(option);
                 }
@@ -627,17 +850,27 @@
         }
 
         function changeLanguage(lang) {
-            if (typeof translations === 'undefined') {
-                console.error("Translations data is not loaded. Make sure translations.js is in the same directory and loaded correctly.");
-                return;
+            if (!translations[lang]) {
+                console.error(`Translations for language "${lang}" not found. Defaulting to English.`);
+                lang = 'en';
             }
-
-            const translationsForLang = translations[lang] || translations['en'];
+            
+            const translationsForLang = translations[lang];
+            document.querySelector('.current-lang').textContent = lang.toUpperCase();
             
             document.querySelectorAll('[data-translate]').forEach(el => {
                 const key = el.dataset.translate;
                 if (translationsForLang[key] !== undefined) {
-                    el.textContent = translationsForLang[key];
+                    // This handles nested spans like in the modal values
+                    const valueSpan = el.querySelector('span[data-translate]');
+                    if (valueSpan) {
+                       const parentText = el.firstChild.nodeValue;
+                       const nestedKey = valueSpan.dataset.translate;
+                       valueSpan.textContent = ' ' + translationsForLang[nestedKey];
+                       el.firstChild.nodeValue = parentText;
+                    } else {
+                        el.textContent = translationsForLang[key];
+                    }
                 }
             });
 
@@ -645,27 +878,17 @@
              const isRTL = lang === 'ar' || lang === 'he' || lang === 'ur';
              document.documentElement.dir = isRTL ? 'rtl' : 'ltr';
 
-             document.querySelectorAll('.modal-row, .analysis-row, .creator-badge, .header-top, .achievement-item').forEach(row => {
+             document.querySelectorAll('.modal-row, .header-top').forEach(row => {
                 row.style.flexDirection = isRTL ? 'row-reverse' : 'row';
-                if(isRTL) {
-                    row.querySelectorAll('.outlook-badge span, .company-badge span, .btn-icon').forEach(icon => {
-                        icon.style.marginLeft = '8px';
-                        icon.style.marginRight = '0';
-                    });
-                } else {
-                     row.querySelectorAll('.outlook-badge span, .company-badge span, .btn-icon').forEach(icon => {
-                        icon.style.marginRight = '8px';
-                        icon.style.marginLeft = '0';
-                    });
-                }
              });
-             document.querySelectorAll('.modal-section-header, .section-header').forEach(header => {
+             document.querySelectorAll('.modal-section-header').forEach(header => {
                 header.style.flexDirection = isRTL ? 'row-reverse' : 'row';
-                header.querySelectorAll('.section-icon, .modal-section-icon, .icon').forEach(icon => {
-                    icon.style.marginRight = isRTL ? '0' : '12px';
-                    icon.style.marginLeft = isRTL ? '12px' : '0';
+                header.querySelectorAll('.modal-section-icon, .icon').forEach(icon => {
+                    icon.style.marginRight = isRTL ? '0' : '8px';
+                    icon.style.marginLeft = isRTL ? '8px' : '0';
                 });
              });
+             toggleLanguages(); // Hide dropdown after selection
         }
 
         function toggleLanguages() {
@@ -684,13 +907,7 @@
         
         window.onclick = function(event) {
             if (!event.target.closest('.language-selector')) {
-                const dropdowns = document.getElementsByClassName("language-dropdown");
-                for (let i = 0; i < dropdowns.length; i++) {
-                    let openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains('show')) {
-                        openDropdown.classList.remove('show');
-                    }
-                }
+                document.getElementById('languageDropdown').classList.remove('show');
             }
              const executiveModal = document.getElementById('executiveModal');
              const commandModal = document.getElementById('commandModal');
@@ -704,7 +921,6 @@
             
             populateLanguages();
             changeLanguage(defaultLang);
-            document.querySelector('.current-lang').textContent = defaultLang.toUpperCase();
         });
     </script>
 </body>
